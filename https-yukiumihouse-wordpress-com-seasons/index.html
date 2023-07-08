@@ -640,6 +640,26 @@ var actionbardata = {"siteID":"212972958","siteURL":"http:\/\/yukiumihouse.wordp
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#wrapper .text {
+position:relative;
+bottom:50%;
+left:37%;
+visibility:hidden;
+color: white;
+}
+
+#wrapper:hover .text {
+visibility:visible;
+}
+
 </style>
 </head>
 
@@ -648,7 +668,8 @@ var actionbardata = {"siteID":"212972958","siteURL":"http:\/\/yukiumihouse.wordp
 <div class="wp-site-blocks"><header class="wp-block-template-part">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-3 wp-block-group-is-layout-flex" style="padding-top:var(--wp--custom--spacing--outer);padding-bottom:var(--wp--custom--spacing--outer)">
-<figure class="wp-block-image size-large is-resized"><a href="../index.html"><img decoding="async" src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024" alt="" class="wp-image-301" width="322" height="123" /></a></figure>
+<figure class="wp-block-image size-large is-resized"><a href="../index.html">
+	<img decoding="async" src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024" alt="" class="wp-image-301" width="322" height="123" /></a></figure>
 
 
 <nav style="font-style:normal;" class="has-small-font-size is-responsive items-justified-left wp-block-navigation has-small-font-size is-content-justification-left is-layout-flex wp-container-2 wp-block-navigation-is-layout-flex" aria-label="Header navigation" 
@@ -700,28 +721,36 @@ var actionbardata = {"siteID":"212972958","siteURL":"http:\/\/yukiumihouse.wordp
 
     <div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <div class="wp-block-columns alignwide is-layout-flex wp-container-8 wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large is-resized"><a href="../winter.html"><img decoding="async" data-attachment-id="67" data-permalink="https://yukiumihouse.wordpress.com/vlcsnap-2022-11-14-04h41m48s319-3-2/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg" data-orig-size="1920,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vlcsnap-2022-11-14-04h41m48s319-3" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024" src="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024" alt="" class="wp-image-67" width="542" height="304" srcset="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024 1024w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=540 540w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1081 1081w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=300 300w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=768 768w" sizes="(max-width: 542px) 100vw, 542px" /></a></figure>
+<div id="wrapper" class="wp-block-column is-layout-flow wp-block-column-is-layout-flow zoom">
+	<figure class="wp-block-image size-large is-resized "><a href="../winter.html"><img decoding="async" data-attachment-id="67" data-permalink="https://yukiumihouse.wordpress.com/vlcsnap-2022-11-14-04h41m48s319-3-2/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg" data-orig-size="1920,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vlcsnap-2022-11-14-04h41m48s319-3" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024" 
+		src="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024" alt="" class="wp-image-67" width="542" height="304" srcset="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1024 1024w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=540 540w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=1081 1081w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=300 300w, https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-3.jpg?w=768 768w" sizes="(max-width: 542px) 100vw, 542px" /></a></figure>
+	<p class="text">WINTER</p>
 </div>
 
 
 
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large is-resized"><a href="../spring/index.html"><img decoding="async" data-attachment-id="204" data-permalink="https://yukiumihouse.wordpress.com/img_7480/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;11&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS Kiss X7&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1615550801&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;55&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.004&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_7480" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=1024" src="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=1024" alt="" class="wp-image-204" width="460" height="305" srcset="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=458 458w, https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=300 300w" sizes="(max-width: 460px) 100vw, 460px" /></a></figure>
-</div>
+<div id="wrapper" class="wp-block-column is-layout-flow wp-block-column-is-layout-flow zoom">
+	<figure class="wp-block-image size-large is-resized"><a href="../spring/index.html"><img decoding="async" data-attachment-id="204" data-permalink="https://yukiumihouse.wordpress.com/img_7480/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;11&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS Kiss X7&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1615550801&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;55&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.004&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_7480" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=1024" 
+		src="../img/spring.webp" alt="" class="wp-image-204" width="542" height="304" srcset="../img/spring.webp 458w, https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/img_7480.jpg?w=300 300w" sizes="(max-width: 460px) 100vw, 460px" /></a></figure>
+		<p class="text">SPRING</p>
+		</div>
 </div>
 
 
 
 <div class="wp-block-columns alignwide is-layout-flex wp-container-11 wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
-<figure class="wp-block-image size-large is-resized"><a href="../summer/index.html"><img decoding="async" data-attachment-id="211" data-permalink="https://yukiumihouse.wordpress.com/kayak-daisetsu/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg" data-orig-size="1477,759" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="KAYAK DAISETSU" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=1024" src="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=1024" alt="" class="wp-image-211" width="542" height="278" srcset="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=1024 1024w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=542 542w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=1082 1082w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=300 300w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=768 768w" sizes="(max-width: 542px) 100vw, 542px" /></a></figure>
+<div id="wrapper" class="wp-block-column is-layout-flow wp-block-column-is-layout-flow zoom" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+<figure class="wp-block-image size-large is-resized"><a href="../summer/index.html"><img decoding="async" data-attachment-id="211" data-permalink="https://yukiumihouse.wordpress.com/kayak-daisetsu/" data-orig-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg" data-orig-size="1477,759" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="KAYAK DAISETSU" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=1024" 
+	src="../img/kayak.webp" alt="" class="wp-image-211" width="542" height="304" srcset="../img/kayak.webp 1024w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=542 542w, ../img/kayak.webp 1082w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=150 150w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=300 300w, https://yukiumihouse.files.wordpress.com/2022/12/kayak-daisetsu.jpg?w=768 768w" sizes="(max-width: 542px) 100vw, 542px" /></a></figure>
+	<p class="text">SUMMER</p>
 </div>
 
 
 
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large is-resized"><a href="https://yukiumihouse.wordpress.com/pagina-pureba-fondo/"><img decoding="async" data-attachment-id="276" data-permalink="https://yukiumihouse.wordpress.com/copia-de-dsc05392-7/" data-orig-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg" data-orig-size="6000,3754" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;5.6&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;ILCE-9&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1656746703&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;28&quot;,&quot;iso&quot;:&quot;1000&quot;,&quot;shutter_speed&quot;:&quot;0.0025&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Copia de DSC05392" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg?w=1024" src="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg" alt="" class="wp-image-276" width="465" /></a></figure>
+<div id="wrapper" class="wp-block-column is-layout-flow wp-block-column-is-layout-flow zoom">
+<figure class="wp-block-image size-large is-resized"><a href="../new-autumn/index.html"><img decoding="async" data-attachment-id="276" data-permalink="https://yukiumihouse.wordpress.com/copia-de-dsc05392-7/" data-orig-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg" data-orig-size="6000,3754" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;5.6&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;ILCE-9&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1656746703&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;28&quot;,&quot;iso&quot;:&quot;1000&quot;,&quot;shutter_speed&quot;:&quot;0.0025&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Copia de DSC05392" data-image-description="" data-image-caption="" data-medium-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg?w=300" data-large-file="https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-5.jpg?w=1024" 
+	src="../img/autum.jpg" alt="" class="wp-image-276" width="542" height="304" /></a></figure>
+	<p class="text">AUTUMN</p>
 </div>
 </div>
 </div>
