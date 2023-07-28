@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-	<ShortName>YUKIUMHOUE</ShortName>
-	<Description>Search YUKIUMHOUE - </Description>
+	<ShortName>YUKIUMIHOUSE</ShortName>
+	<Description>Search YUKIUMIHOUSE - </Description>
 	<Contact>yukiumihouse@gmail.com</Contact>
 	<Url type="application/atom+xml" template="https://yukiumihouse.wordpress.com/?s={searchTerms}&amp;feed=atom" />
 	<Url type="rss+xml" template="https://yukiumihouse.wordpress.com/?s={searchTerms}&amp;feed=rss2" />
 	<Url type="text/html" template="https://yukiumihouse.wordpress.com/?s={searchTerms}" method="GET" />
 	<Url type="application/opensearchdescription+xml" rel="self" template="https://yukiumihouse.wordpress.com/osd.xml" />
-	<LongName>YUKIUMHOUE</LongName>
+	<LongName>YUKIUMIHOUSE</LongName>
 	<Image height="16" width="16" type="image/vnd.microsoft.icon">https://yukiumihouse.com/img/favicon_tori.png</Image>
 	<Image height="64" width="64" type="image/png">https://yukiumihouse.com/img/favicon_tori.png</Image>
 	<Query role="example" searchTerms="photography" />
