@@ -4,7 +4,13 @@ export default async function Page() {
   async function getSpots() {
     "use server";
     const auth = await google.auth.getClient({
-      credentials: JSON.parse(process.env.GOOGLE_KEY!),
+      // credentials,
+      credentials: {
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        project_id: process.env.GOOGLE_PROJECT_ID,
+        private_key: process.env.GOOGLE_PRIVATE_KEY,
+      },
       // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
       scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
     });
@@ -19,8 +25,6 @@ export default async function Page() {
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
         range: "Sheet1!A2:B9",
       });
-
-      console.log(response.data.values);
 
       return response.data.values;
     } catch (error) {
