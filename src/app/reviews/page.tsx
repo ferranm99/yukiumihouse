@@ -4,7 +4,8 @@ export default async function Page() {
   async function getReviews() {
     "use server";
     const auth = await google.auth.getClient({
-      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+      credentials: JSON.parse(process.env.GOOGLE_KEY!),
+      // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
       scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
     });
 
