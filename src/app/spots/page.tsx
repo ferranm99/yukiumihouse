@@ -37,6 +37,7 @@ export default async function Page() {
 
   return (
     <div>
+      <h1> Spots</h1>
       {spots &&
         spots.map((spot, index) => (
           <div key={index}>
