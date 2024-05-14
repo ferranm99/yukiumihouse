@@ -11,7 +11,7 @@ export default async function Page() {
         private_key: process.env.GOOGLE_PRIVATE_KEY,
       },
       // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-      scopes: ["https://www.googleapis.com/auth/places.readonly"],
+      scopes: ["https://www.googleapis.com/auth/cloud-platform"],
     });
 
     const places = google.places({
@@ -28,7 +28,7 @@ export default async function Page() {
       });
       return placeData.data.reviews;
     } catch (error) {
-      console.error("Error getching sheets data:", error);
+      console.error("Error fetching reviews data:", error);
       return [];
     }
   }
