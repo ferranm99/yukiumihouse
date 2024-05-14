@@ -11,7 +11,7 @@ export default async function Page() {
         private_key: process.env.GOOGLE_PRIVATE_KEY,
       },
       // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-      scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+      scopes: ["https://www.googleapis.com/auth/places.readonly"],
     });
 
     const places = google.places({
