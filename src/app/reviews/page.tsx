@@ -22,9 +22,9 @@ export default async function Page() {
     try {
       const placeData = await places.places.get({
         languageCode: "en",
-        name: `places/${process.env.MAPS_PLACE_ID}`,
+        // name: `places/${process.env.MAPS_PLACE_ID}`,
         // Does this get reviews directly?
-        // name: `places/${process.env.MAPS_PLACE_ID}?fields=reviews`,
+        name: `places/${process.env.MAPS_PLACE_ID}?fields=reviews`,
       });
       return placeData.data.reviews;
     } catch (error) {
