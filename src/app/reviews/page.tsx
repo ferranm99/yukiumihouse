@@ -1,54 +1,62 @@
-import { google } from "googleapis";
+import ReviewCard from "./_components/review-card";
 
-export default async function Page() {
-  async function getReviews() {
-    const auth = await google.auth.getClient({
-      credentials: {
-        client_id: process.env.GOOGLE_CLIENT_ID,
-        client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        project_id: process.env.GOOGLE_PROJECT_ID,
-        private_key: process.env.GOOGLE_PRIVATE_KEY,
-      },
-      // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-      scopes: ["https://www.googleapis.com/auth/business.manage"],
-    });
+interface Review {
+  name: string | null | undefined;
+  rating: number | null | undefined;
+  text: string | null | undefined;
+  originalText: string | null | undefined;
+  relativePublishTimeDescription: string | null | undefined;
+}
 
-    const mybusiness = google.mybusinessplaceactions({
-      version: "v1",
-      auth,
-    });
+async function getReviews() {
+  const res = await fetch("/api/reviews");
 
-    try {
-      const placeData = await mybusiness.locations.placeActionLinks.get({
-        // name: `places/${process.env.MAPS_PLACE_ID}`,
-        // Does this get reviews directly?
-        // name: `places/${process.env.MAPS_PLACE_ID}?fields=reviews`,
-        name: `accounts/${process.env.GOOGLE_PROJECT_ID}/locations/${process.env.MAPS_PLACE_ID}/reviews`,
-      });
-      return placeData;
-    } catch (error) {
-      console.error("Error fetching reviews data:", error);
-      return [];
-    }
+  if (!res.ok) {
+    // This will activate the closest `error.ts` Error Boundary
+    throw new Error("Failed to fetch data");
   }
 
-  const reviews = await getReviews();
-  console.log(reviews);
+  return res.json();
+}
+
+export default async function Page() {
+  // const reviews = await getReviews();
+  const reviews: Review[] = [
+    {
+      name: "John Doe",
+      rating: 4.5,
+      text: "This is a great product!",
+      originalText: "Ceci est un excellent produit!",
+      relativePublishTimeDescription: "1 week ago",
+    },
+    {
+      name: "Jane Smith",
+      rating: 5,
+      text: "Absolutely loved it!",
+      originalText: "Absolutamente me encantó!",
+      relativePublishTimeDescription: "2 weeks ago",
+    },
+    // Add more reviews as needed
+  ];
 
   return (
     <div>
-      {" "}
-      Hello
-      {/* {reviews  &&
+      {reviews ? (
         reviews.map((review, index) => (
-          <div key={index}>
-            <strong>{review.authorAttribution?.displayName}</strong>:{" "}
-            {review.rating}, {review.relativePublishTimeDescription}
-            <p>{review.text?.text}</p>
-            <strong>Original Text</strong>
-            <p>{review.originalText?.text}</p>
-          </div>
-        ))} */}
+          <ReviewCard
+            key={index}
+            review={{
+              name: review.name,
+              rating: review.rating,
+              text: review.text,
+              relativePublishTimeDescription:
+                review.relativePublishTimeDescription,
+            }}
+          />
+        ))
+      ) : (
+        <div>There was an error fetching the reviews</div>
+      )}
     </div>
   );
 }
