@@ -63,7 +63,7 @@ const packsAndTours: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return (
-    <div className="mt-10 flex items-center justify-center gap-20">
+    <div className="mt-10 flex items-center justify-center gap-[22rem]">
       <div className="">
         <Link href="/landing" legacyBehavior passHref>
           <Image

@@ -7,9 +7,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "yukiumihouse.wordpress.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "yukiumihouse.files.wordpress.com",
         port: "",
-        pathname: "/2023/04/**",
+        pathname: "/**",
       },
     ],
   },

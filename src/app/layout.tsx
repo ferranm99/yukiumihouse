@@ -24,18 +24,17 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "relative flex flex-col min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
-        <div className="hidden sm:block ">
+        <nav className="hidden sm:block mb-12">
           <Navbar />
-          {children}
-        </div>
-        <div className="sm:hidden block">
+        </nav>
+        <nav className="sm:hidden block">
           <MobileNav />
-          {children}
-        </div>
+        </nav>
+        {children}
       </body>
     </html>
   );
