@@ -15,10 +15,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-interface NavbarProps {
-  className?: string;
-}
-
 const seasons: { name: string; href: string; description: string }[] = [
   {
     name: "Winter",
@@ -65,18 +61,21 @@ const packsAndTours: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export const Navbar: React.FC<NavbarProps> = ({ className }) => {
+export default function Navbar() {
   return (
-    <div className="flex">
-      <Image
-        src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
-        alt=""
-        width={322}
-        height={123}
-      />
-      {/*  <figure class="wp-block-image size-large is-resized"><a href="../index.html"><img decoding="async" src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024" alt="" class="wp-image-301" width="322" height="123" /></a></figure>
-       */}
-      <NavigationMenu className={className}>
+    <div className="mt-10 flex items-center justify-center gap-20">
+      <div className="">
+        <Link href="/landing" legacyBehavior passHref>
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
+            alt=""
+            width={322}
+            height={123}
+            className="cursor-pointer"
+          />
+        </Link>
+      </div>
+      <NavigationMenu className="">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/house" legacyBehavior passHref>
@@ -141,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
       </NavigationMenu>
     </div>
   );
-};
+}
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
