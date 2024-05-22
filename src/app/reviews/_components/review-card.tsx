@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardFooter,
 } from "@/components/ui/card";
-import StarRating from "./star-rating"; // Import the StarRating component
+import StarRating from "@/components/star-rating"; // Import the StarRating component
 
 interface Review {
   name: string | null | undefined;

@@ -24,11 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen font-sans antialiased flex flex-col",
           fontSans.variable
         )}
       >
-        <nav className="hidden sm:block mb-12">
+        <nav className="hidden sm:flex py-2 bg-slate-200 h-[4.7vw]">
           <Navbar />
         </nav>
         <nav className="sm:hidden block">

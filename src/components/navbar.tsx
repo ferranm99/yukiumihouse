@@ -63,19 +63,19 @@ const packsAndTours: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return (
-    <div className="mt-10 flex items-center justify-center gap-[22rem]">
+    <div className="pl-64 flex items-center justify-start gap-64">
       <div className="">
         <Link href="/landing" legacyBehavior passHref>
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
             alt=""
-            width={322}
-            height={123}
+            width={193.2}
+            height={73.8}
             className="cursor-pointer"
           />
         </Link>
       </div>
-      <NavigationMenu className="">
+      <NavigationMenu className="z-[100]">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/house" legacyBehavior passHref>

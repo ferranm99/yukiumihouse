@@ -22,6 +22,11 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      colors: {
+        slate: {
+          "350": "rgb(176, 188, 205)",
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
