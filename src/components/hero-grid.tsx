@@ -12,11 +12,11 @@ export function LayoutGridDemo() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">House in the woods</p>
+      <p className="font-bold text-4xl text-white">Yukiumi House</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        This is where you will be staying! A place where you can relax and
+        unwind, and enjoy the beauty of nature.
       </p>
     </div>
   );
@@ -25,12 +25,12 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">House above the clouds</p>
+      <p className="font-bold text-4xl text-white">Rafting</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        Rafting is a fun and exciting activity that you can enjoy while staying
+        at Yukiumi House. It&apos;s the perfect way to experience the beauty of
+        nature and have a great time with friends and family.
       </p>
     </div>
   );
@@ -38,11 +38,11 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Greens all over</p>
+      <p className="font-bold text-4xl text-white">Snowboarding</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        At Yukiumi we are snow lovers! We know the best spots for the greatests
+        descends that will pump your adrenaline to the max.
       </p>
     </div>
   );
@@ -50,11 +50,12 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rivers are serene</p>
+      <p className="font-bold text-4xl text-white">Trail Running</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        Trail running is a great way to stay fit and enjoy the outdoors. At
+        Yukiumi House we have a variety of trails that are perfect for runners
+        of all levels.
       </p>
     </div>
   );
