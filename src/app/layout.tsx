@@ -31,7 +31,7 @@ export default function RootLayout({
         <nav className="hidden sm:flex py-2 bg-slate-200 h-[4.7vw]">
           <Navbar />
         </nav>
-        <nav className="sm:hidden block">
+        <nav className="sm:hidden flex z-50">
           <MobileNav />
         </nav>
         {children}
