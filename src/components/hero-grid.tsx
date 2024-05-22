@@ -64,14 +64,14 @@ const SkeletonFour = () => {
 const cards = [
   {
     id: 1,
-    content: <SkeletonThree />,
+    content: <SkeletonOne />,
     className: "col-span-1",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/psx_20230225_053505.jpg?w=2000&h=",
   },
   {
     id: 2,
-    content: <SkeletonFour />,
+    content: <SkeletonTwo />,
     className: "md:col-span-2",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/dsc_0740_original.jpg",
@@ -79,7 +79,7 @@ const cards = [
 
   {
     id: 3,
-    content: <SkeletonOne />,
+    content: <SkeletonThree />,
     className: "md:col-span-2",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_20210215_124534.jpg?w=5122048",
@@ -87,7 +87,7 @@ const cards = [
   },
   {
     id: 4,
-    content: <SkeletonTwo />,
+    content: <SkeletonFour />,
     className: "col-span-1",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-4.jpg",
