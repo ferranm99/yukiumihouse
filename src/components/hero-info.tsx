@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import StarRating from "./star-rating";
 
-export function HeroHighlightDemo() {
+export function HeroInfo() {
   return (
     <HeroHighlight>
       <motion.div
@@ -25,11 +25,11 @@ export function HeroHighlightDemo() {
         </h1>
         <h2 className="text-lg font-normal text-gray-500 lg:text-2xl dark:text-gray-400">
           Located in the Heart of Daisetsuzan National Park it offers {""}
+          <Highlight className="text-lg font-normal text-gray-500 lg:text-2xl dark:text-gray-400">
+            Cozy Accommodations and Year-Round Adventures
+          </Highlight>
         </h2>
-        <Highlight className="text-lg font-normal text-gray-500 lg:text-2xl dark:text-gray-400">
-          Cozy Accommodations and Year-Round Adventures
-        </Highlight>
-        <div className="flex flex-col mt-16 lg:mb-14 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col mt-8 mb-4 md:mt-16 lg:mb-14 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
             href="#"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
@@ -63,7 +63,7 @@ export function HeroHighlightDemo() {
             </svg>
           </a>
         </div>
-        <button className="flex flex-col cursor-pointer">
+        <button className="flex flex-col cursor-pointer mb-2">
           <div className="flex items-center">
             <StarRating rating={5} />
             <div className="">&nbsp;5.0</div>

@@ -22,6 +22,9 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      screens: {
+        xs: "420px",
+      },
       colors: {
         slate: {
           "350": "rgb(176, 188, 205)",

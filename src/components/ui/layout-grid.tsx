@@ -9,6 +9,8 @@ type Card = {
   content: JSX.Element | React.ReactNode | string;
   className: string;
   thumbnail: string;
+  fitX: number;
+  fitY: number;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -26,7 +28,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4">
+    <div className="w-full h-full md:p-10 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3  max-w-7xl mx-auto gap-4">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -68,9 +70,10 @@ const BlurImage = ({ card }: { card: Card }) => {
       width="500"
       onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-700 cursor-pointer",
+        "object-cover absolute inset-0 h-full w-full transition duration-700 cursor-pointer",
         loaded ? "blur-none" : "blur-md"
       )}
+      style={{ objectPosition: `${card.fitX}% ${card.fitY}%` }}
       alt="thumbnail"
     />
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 
-export function LayoutGridDemo() {
+export function HeroLayoutGrid() {
   return (
     <div className="h-full w-full relative">
       <LayoutGrid cards={cards} />
@@ -68,6 +68,8 @@ const cards = [
     className: "col-span-1",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/psx_20230225_053505.jpg?w=2000&h=",
+    fitX: 0,
+    fitY: 25,
   },
   {
     id: 2,
@@ -75,6 +77,8 @@ const cards = [
     className: "md:col-span-2",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/dsc_0740_original.jpg",
+    fitX: 25,
+    fitY: 10,
   },
 
   {
@@ -83,7 +87,8 @@ const cards = [
     className: "md:col-span-2",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_20210215_124534.jpg?w=5122048",
-    // "https://yukiumihouse.files.wordpress.com/2023/04/caldera-1.jpg?w=1024",
+    fitX: 75,
+    fitY: 10,
   },
   {
     id: 4,
@@ -91,6 +96,7 @@ const cards = [
     className: "col-span-1",
     thumbnail:
       "https://yukiumihouse.files.wordpress.com/2023/04/copia-de-dsc05392-edited-4.jpg",
-    // "https://yukiumihouse.files.wordpress.com/2023/04/img_20210215_124534.jpg?w=2048",
+    fitX: 25,
+    fitY: 0,
   },
 ];
