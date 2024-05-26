@@ -32,9 +32,30 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
+  /* useEffect(() => {
     addAnimation();
-  }, []);
+  }, []); */
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    let loadedImages = 0;
+    items.forEach((item) => {
+      const img = new Image();
+      img.src = item.photoUri;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === items.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, [items]);
+
+  useEffect(() => {
+    if (imagesLoaded) {
+      addAnimation();
+    }
+  }, [imagesLoaded]);
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -52,6 +73,14 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
+  //   useEffect(() => {
+  //     items.forEach((item) => {
+  //       const img = new Image();
+  //       img.src = item.photoUri;
+  //     });
+  //   }, [items]);
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -114,7 +143,7 @@ export const InfiniteMovingCards = ({
                 </span>
               </div>
             </div>
-            <div className="text-sm leading-[1.6] text-gray-100 font-normal mt-4">
+            <div className="text-base leading-[1.6] text-gray-100 font-medium mt-4">
               {item.text}
             </div>
             {/* <div>

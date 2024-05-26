@@ -66,7 +66,7 @@ export default function Landing() {
           className="pb-8"
           items={reviews}
           direction="right"
-          speed="normal"
+          speed="fast"
         />
         <Link href="/reviews" className="self-end pr-20">
           Read All The Reviews
