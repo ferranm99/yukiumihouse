@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { HeroLayoutGrid } from "@/components/hero-layout-grid";
 import { HeroInfo } from "@/components/hero-info";
@@ -58,15 +59,81 @@ export default function Landing() {
         <HoverEffect items={projects} />
       </section>
       <section className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+        <h1 className="text-4xl font-bold text-black pb-8">
+          What Our Guests Say About Yukiumi House?
+        </h1>
         <InfiniteMovingCards
-          items={testimonials}
+          className="pb-8"
+          items={reviews}
           direction="right"
-          speed="slow"
+          speed="normal"
         />
+        <Link href="/reviews" className="self-end pr-20">
+          Read All The Reviews
+        </Link>
       </section>
     </div>
   );
 }
+
+const reviews = [
+  {
+    relativePublishTimeDescription: "a week ago",
+    rating: 5,
+    text: "Absolutely stunning stay at the house! From the moment we arrived, we were blown away by the beauty of the surroundings and the impeccable attention to detail in every aspect of the property. The accommodations were luxurious and comfortable, providing the perfect setting for a relaxing getaway. The amenities were top-notch, and the hospitality of the hosts exceeded our expectations. Overall, an unforgettable experience that we can't wait to repeat!",
+
+    name: "angel tribaldos",
+    uri: "https://www.google.com/maps/contrib/111268539421912082651/reviews",
+    photoUri:
+      "https://lh3.googleusercontent.com/a/ACg8ocJ3Ok4hzybod6FyMsEy-pfiR2YsVTAfaQjabUFoZEhf5J9xzDg=s128-c0x00000000-cc-rp-mo",
+    publishTime: "2024-05-04T22:37:27Z",
+  },
+  {
+    relativePublishTimeDescription: "2 months ago",
+    rating: 5,
+    text: "We spent an amazing week in Yukiumi house with Gerard as a guide. House is cozy and food prepared (breakfast and dinner) is delicious and very filling. Every day he found us a new spot for skiing with great conditions, always ending with an onsen as reward 😍. Thanks a lot Yukiumi team!",
+
+    name: "Alan Goron",
+    uri: "https://www.google.com/maps/contrib/116237468294531301162/reviews",
+    photoUri:
+      "https://lh3.googleusercontent.com/a/ACg8ocJq6vDAUIyplrenGvTUQ4nqLONb3_E_63ttohRqzAXdeWZaCA=s128-c0x00000000-cc-rp-mo-ba3",
+
+    publishTime: "2024-03-02T09:43:30Z",
+  },
+  {
+    relativePublishTimeDescription: "2 months ago",
+    rating: 5,
+    text: "We spent an amazing week in Yukiumi house with Gerard as a guide. House is cozy and food prepared (breakfast and dinner) is delicious and very filling. Every day he found us a new spot for skiing with great conditions, always ending with an onsen as reward 😍. Thanks a lot Yukiumi team!",
+    name: "Alan Goron",
+    uri: "https://www.google.com/maps/contrib/116237468294531301162/reviews",
+    photoUri:
+      "https://lh3.googleusercontent.com/a/ACg8ocJq6vDAUIyplrenGvTUQ4nqLONb3_E_63ttohRqzAXdeWZaCA=s128-c0x00000000-cc-rp-mo-ba3",
+
+    publishTime: "2024-03-02T09:43:30Z",
+  },
+  {
+    relativePublishTimeDescription: "2 months ago",
+    rating: 5,
+    text: "We spent an amazing week in Yukiumi house with Gerard as a guide. House is cozy and food prepared (breakfast and dinner) is delicious and very filling. Every day he found us a new spot for skiing with great conditions, always ending with an onsen as reward 😍. Thanks a lot Yukiumi team!",
+    name: "Alan Goron",
+    uri: "https://www.google.com/maps/contrib/116237468294531301162/reviews",
+    photoUri:
+      "https://lh3.googleusercontent.com/a/ACg8ocJq6vDAUIyplrenGvTUQ4nqLONb3_E_63ttohRqzAXdeWZaCA=s128-c0x00000000-cc-rp-mo-ba3",
+
+    publishTime: "2024-03-02T09:43:30Z",
+  },
+  {
+    relativePublishTimeDescription: "2 months ago",
+    rating: 5,
+    text: "We spent an amazing week in Yukiumi house with Gerard as a guide. House is cozy and food prepared (breakfast and dinner) is delicious and very filling. Every day he found us a new spot for skiing with great conditions, always ending with an onsen as reward 😍. Thanks a lot Yukiumi team!",
+    name: "Alan Goron",
+    uri: "https://www.google.com/maps/contrib/116237468294531301162/reviews",
+    photoUri:
+      "https://lh3.googleusercontent.com/a/ACg8ocJq6vDAUIyplrenGvTUQ4nqLONb3_E_63ttohRqzAXdeWZaCA=s128-c0x00000000-cc-rp-mo-ba3",
+
+    publishTime: "2024-03-02T09:43:30Z",
+  },
+];
 
 const testimonials = [
   {

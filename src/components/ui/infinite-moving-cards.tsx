@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import StarRating from "@components/star-rating";
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,9 +13,16 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    /* title: string;
     quote: string;
+    name: string; */
+    relativePublishTimeDescription: string;
+    rating: number;
+    text: string;
     name: string;
-    title: string;
+    uri: string;
+    photoUri: string;
+    publishTime: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -73,7 +82,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-[90vw] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_8%,white_92%,transparent)]",
+        "scroller relative z-20  w-full overflow-hidden" /* [mask-image:linear-gradient(to_right,transparent,white_2%,white_98%,transparent)] */,
         className
       )}
     >
@@ -90,7 +99,25 @@ export const InfiniteMovingCards = ({
             className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-t from-slate-800 to-slate-900"
             key={item.name}
           >
-            <blockquote>
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src={item.photoUri} alt="avatar" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col">
+                <span className="text-sm leading-[1.6] text-gray-300 font-normal">
+                  <span className="font-bold">{item.name}</span> -{" "}
+                  {item.relativePublishTimeDescription}
+                </span>
+                <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  <StarRating rating={item.rating} />
+                </span>
+              </div>
+            </div>
+            <div className="text-sm leading-[1.6] text-gray-100 font-normal mt-4">
+              {item.text}
+            </div>
+            {/* <div>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
@@ -108,7 +135,7 @@ export const InfiniteMovingCards = ({
                   </span>
                 </span>
               </div>
-            </blockquote>
+            </div> */}
           </li>
         ))}
       </ul>
