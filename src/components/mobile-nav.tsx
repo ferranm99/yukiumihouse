@@ -87,7 +87,7 @@ const MobileNav = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
-      className={`inset-0 w-full md:hidden ${
+      className={`inset-0 w-full lg:hidden ${
         isOpen ? "" : "pointer-events-none"
       }`}
       ref={containerRef}

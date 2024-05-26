@@ -28,10 +28,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <nav className="hidden sm:flex py-2 bg-slate-200 h-[4.7vw]">
+        <nav className="hidden lg:flex py-3 bg-slate-200 h-[4.7vw]">
           <Navbar />
         </nav>
-        <nav className="sm:hidden flex z-50">
+        <nav className="lg:hidden flex z-50">
           <MobileNav />
         </nav>
         {children}

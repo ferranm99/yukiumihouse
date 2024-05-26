@@ -63,15 +63,15 @@ const packsAndTours: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return (
-    <div className="md:pl-[10%] flex items-center justify-start md:gap-[10%] h-full">
-      <div className="">
+    <div className="md:pl-[16%] flex items-center justify-start md:gap-[16%] h-full w-full">
+      <div className="cursor-pointer h-full max-h-[4.7vw] rounded-md overflow-hidden">
         <Link href="/landing" legacyBehavior passHref>
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
             alt=""
-            width={193.2}
-            height={73.8}
-            className="cursor-pointer rounded-md"
+            width={164.22}
+            height={62.73}
+            className="h-full w-full object-contain"
           />
         </Link>
       </div>

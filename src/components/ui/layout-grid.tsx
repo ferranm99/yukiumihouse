@@ -42,7 +42,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
             )}
-            whileHover={selected?.id === card.id ? {} : { scale: 1.03 }}
+            whileHover={selected?.id === card.id ? {} : { scale: 1.02 }}
             layout
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
