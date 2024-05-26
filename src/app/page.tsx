@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { HeroLayoutGrid } from "@/components/hero-layout-grid";
+import { HeroInfo } from "@/components/hero-info";
 
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
@@ -43,35 +44,17 @@ const projects = [
 export default function Landing() {
   return (
     <div className="flex flex-col">
-      <section className="flex flex-col lg:flex-row items-start sm:items-center justify-between xl:pl-[6rem] xl:pr-[6rem] pb-20 bg-slate-900 h-screen">
-        <div className="flex flex-col gap-4 p-4 w-full lg:w-[30%] text-white">
-          <h1 className="font-bold text-xl">KAMIKAWA, DAISETSU-SAN</h1>
-          <p>
-            Yukimi House is the concept of the Sea of Snow, what Hokkaido
-            becomes in winter time. We are a small Ski lodge in the heart of
-            Daisetsuzan National Park, ready to host and guide you around one of
-            the most magical places you have ever skied. We do backcountry
-            guides in the Furano-Asahidake valley, Kurodake valley and north
-            Hokkaido. We are experts in main and popular areas of central
-            Hokkaido, also knowing many hidden gems with untouched powder snow.
-            We love to keep things simple, humble and easy, providing one unique
-            experience full of feelings of joy and nature power.
-          </p>
+      <section className="flex flex-col md:flex-row h-[85rem] xs:h-[60rem] md:h-[90vh] p-6 md:p-8 gap-4">
+        <div className="w-full md:w-[45%] flex items-start md:items-center mt-4 md:mt-0">
+          <HeroInfo />
         </div>
-        <div className="flex w-full lg:w-[70%] h-full items-center justify-center">
-          <Image
-            src="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-8.jpg?w=1024"
-            alt=""
-            width={1000}
-            height={1000}
-          />
+        <div className="w-full md:w-[55%] h-full">
+          <HeroLayoutGrid />
         </div>
       </section>
 
-      <section className="bg-slate-900">
-        <div className="max-w-4xl mx-auto px-8">
-          <HoverEffect items={projects} />
-        </div>
+      <section className="max-w-4xl mx-auto px-8">
+        <HoverEffect items={projects} />
       </section>
     </div>
   );

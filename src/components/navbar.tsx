@@ -63,7 +63,7 @@ const packsAndTours: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return (
-    <div className="pl-64 flex items-center justify-start gap-64">
+    <div className="md:pl-[10%] flex items-center justify-start md:gap-[10%] h-full">
       <div className="">
         <Link href="/landing" legacyBehavior passHref>
           <Image
@@ -71,7 +71,7 @@ export default function Navbar() {
             alt=""
             width={193.2}
             height={73.8}
-            className="cursor-pointer"
+            className="cursor-pointer rounded-md"
           />
         </Link>
       </div>

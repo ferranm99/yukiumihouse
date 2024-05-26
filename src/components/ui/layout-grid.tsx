@@ -42,6 +42,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
             )}
+            whileHover={selected?.id === card.id ? {} : { scale: 1.03 }}
             layout
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
@@ -66,8 +67,10 @@ const BlurImage = ({ card }: { card: Card }) => {
   return (
     <Image
       src={card.thumbnail}
-      height="500"
-      width="500"
+      /* height="500"
+      width="500" */
+      fill
+      sizes="(min-width: 768px) 33vw, (min-width: 420px) 50vw, 95vw"
       onLoad={() => setLoaded(true)}
       className={cn(
         "object-cover absolute inset-0 h-full w-full transition duration-700 cursor-pointer",
