@@ -13,9 +13,6 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    /* title: string;
-    quote: string;
-    name: string; */
     relativePublishTimeDescription: string;
     rating: number;
     text: string;
@@ -31,31 +28,14 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
-
-  /* useEffect(() => {
-    addAnimation();
-  }, []); */
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadedImagesCount, setLoadedImagesCount] = useState(0);
 
   useEffect(() => {
-    let loadedImages = 0;
-    items.forEach((item) => {
-      const img = new Image();
-      img.src = item.photoUri;
-      img.onload = () => {
-        loadedImages++;
-        if (loadedImages === items.length) {
-          setImagesLoaded(true);
-        }
-      };
-    });
-  }, [items]);
-
-  useEffect(() => {
-    if (imagesLoaded) {
+    if (loadedImagesCount === items.length) {
       addAnimation();
     }
-  }, [imagesLoaded]);
+  }, [loadedImagesCount]);
+
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -73,13 +53,6 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
-
-  //   useEffect(() => {
-  //     items.forEach((item) => {
-  //       const img = new Image();
-  //       img.src = item.photoUri;
-  //     });
-  //   }, [items]);
 
   const getDirection = () => {
     if (containerRef.current) {
@@ -130,7 +103,11 @@ export const InfiniteMovingCards = ({
           >
             <div className="flex items-center gap-4">
               <Avatar>
-                <AvatarImage src={item.photoUri} alt="avatar" />
+                <AvatarImage
+                  src={item.photoUri}
+                  alt="avatar"
+                  onLoad={() => setLoadedImagesCount((count) => count + 1)}
+                />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div className="flex flex-col">
