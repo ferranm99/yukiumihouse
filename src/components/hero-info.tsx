@@ -63,7 +63,13 @@ export function HeroInfo() {
             </svg>
           </a>
         </div>
-        <button className="flex flex-col cursor-pointer mb-2">
+        <button
+          className="flex flex-col cursor-pointer mb-2"
+          onClick={() => {
+            const testimonialsSection = document.getElementById("testimonials");
+            testimonialsSection?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           <div className="flex items-center">
             <StarRating rating={5} />
             <div className="">&nbsp;5.0</div>

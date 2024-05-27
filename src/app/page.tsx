@@ -58,7 +58,10 @@ export default function Landing() {
       <section className="max-w-4xl mx-auto px-8">
         <HoverEffect items={projects} />
       </section>
-      <section className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+      <section
+        id="testimonials"
+        className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
+      >
         <h1 className="text-4xl font-bold text-black pb-8">
           What Our Guests Say About Yukiumi House?
         </h1>
@@ -66,10 +69,13 @@ export default function Landing() {
           className="pb-8"
           items={reviews}
           direction="right"
-          speed="fast"
+          speed="normal"
         />
-        <Link href="/reviews" className="self-end pr-20">
-          Read All The Reviews
+        <Link
+          href="/reviews"
+          className="self-end mr-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+        >
+          Read All The Reviews {">>"}
         </Link>
       </section>
     </div>
@@ -132,37 +138,5 @@ const reviews = [
       "https://lh3.googleusercontent.com/a/ACg8ocJq6vDAUIyplrenGvTUQ4nqLONb3_E_63ttohRqzAXdeWZaCA=s128-c0x00000000-cc-rp-mo-ba3",
 
     publishTime: "2024-03-02T09:43:30Z",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
   },
 ];
