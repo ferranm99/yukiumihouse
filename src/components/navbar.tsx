@@ -41,7 +41,7 @@ const seasons: { name: string; href: string; description: string }[] = [
   },
 ];
 
-const packsAndTours: { title: string; href: string; description: string }[] = [
+const locations: { title: string; href: string; description: string }[] = [
   {
     title: "Daily Tours",
     href: "/daily-tours/index.html",
@@ -65,7 +65,7 @@ export default function Navbar() {
   return (
     <div className="md:pl-[16%] flex items-center justify-start md:gap-[16%] h-full w-full">
       <div className="cursor-pointer h-full max-h-[4.7vw] rounded-md overflow-hidden">
-        <Link href="/landing" legacyBehavior passHref>
+        <Link href="/" legacyBehavior passHref>
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
             alt=""
@@ -77,7 +77,7 @@ export default function Navbar() {
       </div>
       <NavigationMenu className="z-[100]">
         <NavigationMenuList>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <Link href="/house" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn("no-underline", navigationMenuTriggerStyle())}
@@ -85,18 +85,14 @@ export default function Navbar() {
                 HOUSE
               </NavigationMenuLink>
             </Link>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>TOURS & PACKS</NavigationMenuTrigger>
+            <NavigationMenuTrigger>LOCATIONS</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {packsAndTours.map((tour) => (
-                  <ListItem
-                    key={tour.title}
-                    title={tour.title}
-                    href={tour.href}
-                  >
-                    {tour.description}
+                {locations.map((loc) => (
+                  <ListItem key={loc.title} title={loc.title} href={loc.href}>
+                    {loc.description}
                   </ListItem>
                 ))}
               </ul>
@@ -112,20 +108,22 @@ export default function Navbar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>SEASONS</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {seasons.map((season) => (
-                  <ListItem
-                    key={season.name}
-                    title={season.name}
-                    href={season.href}
-                  >
-                    {season.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
+            <Link href="/reviews" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn("no-underline", navigationMenuTriggerStyle())}
+              >
+                REVIEWS
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/blog" legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn("no-underline", navigationMenuTriggerStyle())}
+              >
+                BLOG
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/contact.html" legacyBehavior passHref>
