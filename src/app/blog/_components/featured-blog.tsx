@@ -9,6 +9,7 @@ const featuredBlog = {
     "We decided to join our Japanese friends in the traverse south to north of the Daisetsuzan National Park! We did pack our big backpacks with food, fuel, and sleeping gear to be able to be self-sufficient for at least 6 days out in the mountains. Backpacks were heavy!! But our stoke was higher.",
   href: "/blog/5-days-daisetsu-san-traverse",
   date: "April 6, 2023",
+  category: "Hike",
 };
 
 const FeaturedBlog = async () => {
@@ -33,7 +34,7 @@ const FeaturedBlog = async () => {
         <div className="sm:w-1/2 lg:w-1/3 bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 relative">
           <Link href={featuredBlog.href} className="cursor-pointer">
             <div className="font-display uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content">
-              {featuredBlog.title}
+              {featuredBlog.category}
             </div>
             <div className="border-b-2 border-primary-500 w-8"></div>
             <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
