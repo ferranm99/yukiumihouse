@@ -3,11 +3,11 @@ import React from "react";
 type Review = [
   string, // name
   string, // date
-  string, // rating (as string)
-  string | null | undefined, // serviceRating
-  number | null | undefined, // roomRating
-  number | null | undefined, // locationRating
-  string | null | undefined // reviewText
+  number, // rating (as string)
+  number | null , // serviceRating
+  number | null, // roomRating
+  number | null, // locationRating
+  string | null // reviewText
 ];
 
 const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
@@ -46,12 +46,12 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
                       className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[3] * 2 * 10
+                        review[3] ? review[3] * 2 * 10 : 0
                       }%]`}
                     ></div>
                   </div>
                   <span className="text-sm font-medium text-gray-500">
-                    {review[3]}
+                    {review[3] ? review[3] : "?"}
                   </span>
                 </dd>
               </dl>
@@ -61,12 +61,12 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
                       className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[4] * 2 * 10
+                        review[4] ? review[4] * 2 * 10 : 0
                       }%]`}
                     ></div>
                   </div>
                   <span className="text-sm font-medium text-gray-500">
-                    {review[4]}
+                    {review[4] ? review[4] : "?"}
                   </span>
                 </dd>
               </dl>
@@ -77,12 +77,12 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
                       className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[5] * 2 * 10
+                        review[5] ? review[5] * 2 * 10 : 0
                       }%]`}
                     ></div>
                   </div>
                   <span className="text-sm font-medium text-gray-500">
-                    {review[5]}
+                    {review[5] ? review[5] : "?"}
                   </span>
                 </dd>
               </dl>
@@ -100,7 +100,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
             </footer>
           </div>
         </div>
-        <p className="mb-2 text-gray-500">{review[6]}</p>
+        <p className="mb-2 text-gray-500">{review[6] ? review[6] : ""}</p>
       </div>
     </article>
   );

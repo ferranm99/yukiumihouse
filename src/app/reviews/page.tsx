@@ -4,8 +4,8 @@ import { google } from "googleapis";
 type Review = [
   string, // name
   string, // date
-  string, // rating (as string)
-  string | null , // serviceRating
+  number, // rating (as string)
+  number | null , // serviceRating
   number | null, // roomRating
   number | null, // locationRating
   string | null // reviewText
@@ -37,17 +37,33 @@ export default async function Page() {
       });
       const values = response.data.values;
       if (!values) return [];
-      return values.map((row) => {
-        if (row.length < 3) return null;
-
-      }
+      const reviews: Review[] = [];
+      values.map((review) => {
+        if (review.length >= 3 && review[0] !== "" && review[1] !== "" && review[2] !== "") {
+          for (let i = 0; i < 7; i++) {
+            if (i < review.length) {
+              if (i === 2) {
+                review[i] = Number(review[i]);
+              } else if (i >= 3 && i <= 5) {
+                review[i] = review[i] !== "" ? Number(review[i]) : null;
+              } else {
+                review[i] = review[i] !== "" ? review[i] : null;
+              }
+            } else {
+              review.push(null);
+            }
+          }
+          reviews.push(review as Review);
+        }
+      });
+      return reviews;
     } catch (error) {
       console.error("Error getching sheets data:", error);
       return [];
     }
   }
 
-  const reviews: Review = await getReviews();
+  const reviews: Review[] = await getReviews();
 
   return (
     <div>
