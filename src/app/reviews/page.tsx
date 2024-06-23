@@ -1,13 +1,15 @@
 import ReviewCard from "./_components/review-card";
 import { google } from "googleapis";
 
-interface Review {
-  name: string | null | undefined;
-  rating: number | null | undefined;
-  text: string | null | undefined;
-  originalText: string | null | undefined;
-  relativePublishTimeDescription: string | null | undefined;
-}
+type Review = [
+  string, // name
+  string, // date
+  string, // rating (as string)
+  string | null , // serviceRating
+  number | null, // roomRating
+  number | null, // locationRating
+  string | null // reviewText
+];
 
 export default async function Page() {
   async function getReviews() {
@@ -33,16 +35,19 @@ export default async function Page() {
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
         range: "Sheet1!A21:G",
       });
+      const values = response.data.values;
+      if (!values) return [];
+      return values.map((row) => {
+        if (row.length < 3) return null;
 
-      return response.data.values;
+      }
     } catch (error) {
       console.error("Error getching sheets data:", error);
       return [];
     }
   }
 
-  // const spots = await getReviews();
-  // const reviews = await getReviews();
+  const reviews: Review = await getReviews();
 
   return (
     <div>
@@ -177,32 +182,13 @@ export default async function Page() {
           </span>
         </div>
       </div>
-      <ReviewCard
-        review={{
-          name: null,
-          rating: null,
-          text: null,
-          relativePublishTimeDescription: null,
-        }}
-      />
+      <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 2xl:grid-cols-2 gap-4">
+        {reviews.map((review, index) => (
+          <ReviewCard review={review} key={index}/>
+        ))}
+      </div>
     </div>
-    /*     <div>
-      {reviews ? (
-        reviews.map((review, index) => (
-          <ReviewCard
-            key={index}
-            review={{
-              name: review.name,
-              rating: review.rating,
-              text: review.text,
-              relativePublishTimeDescription:
-                review.relativePublishTimeDescription,
-            }}
-          />
-        ))
-      ) : (
-        <div>There was an error fetching the reviews</div>
-      )}
-    </div> */
+    </div>
   );
 }
