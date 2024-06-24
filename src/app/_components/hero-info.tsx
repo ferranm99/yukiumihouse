@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import StarRating from "./star-rating";
+import StarRating from "@/components/star-rating";
 
 export function HeroInfo() {
   return (

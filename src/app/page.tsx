@@ -3,42 +3,42 @@
 import React from "react";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { HeroLayoutGrid } from "@/components/hero-layout-grid";
-import { HeroInfo } from "@/components/hero-info";
+import { HeroLayoutGrid } from "@app/_components/hero-layout-grid";
+import { HeroInfo } from "@app/_components/hero-info";
 
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const projects = [
   {
-    title: "5 days Daisetsu san traverse",
+    title: "Kamikawa: Hokkaido north side",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     description:
-      "We decided to join our Japanese friends in the traverse south to north of the Daisetsuzan National Park! We did pack our big backpacks with food, fuel, and sleeping gear to be able to be self-sufficient for at least 6 days out in the mountains. Backpacks were heavy!! But our stoke was higher.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2023/04/06/315/index.html",
   },
   {
-    title: "Ishimuro hut mission",
+    title: "Furano: Sea of Snow",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     description:
-      "Early season (7-9/11/22) conditions where looking on point up high in Daisetzuzan Naional Park. Super hungry for drawing the first turns we set up ourselves and head to Ishimuro mountain hut…. Kamui no mintara blessed us!!",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2022/12/01/mayan-history/index.html",
   },
   {
-    title: "Behind the mountains: Point of view",
+    title: "Day tours to all central and North Hokkaido locations",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     description:
-      "This short film is an introduction of Yukiumi House, here in north Daisetsuzan, Hokkaido. We have been working hard for the last two years to put together many things. We built up a Hostel, we explored Daisetsuzan on all its beauty and in the meanwhile we got to eat many Ramens. We are hoping you all can come to visit us so we can keep exploring and sharing with you. ",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2022/12/01/nunnery-quadrangle/index.html",
   },
   {
-    title: "Trail running Numanodaira",
+    title: "Surf tour: Hokkaido pacífic and Okhotsk sea (autumn)",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
     description:
-      "Hike from Aizankei onsen, filmed in Numanodaira, with snowed Asahidake at the background.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2022/12/01/pyramid-of-the-magician/index.html",
   },
 ];
@@ -55,9 +55,10 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-8">
-        <HoverEffect items={projects} />
-      </section>
+      <section className="flex flex-col items-center w-full px-8">
+    <h1 className="text-2xl font-bold w-full"> Our Tours </h1>
+    <HoverEffect className="max-w-4xl" items={projects} />
+</section>
       <section
         id="testimonials"
         className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
