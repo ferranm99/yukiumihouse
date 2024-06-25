@@ -99,11 +99,11 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/book-your-bed-room/index.html" legacyBehavior passHref>
+            <Link href="/bookings" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn("no-underline", navigationMenuTriggerStyle())}
               >
-                BOOKING
+                BOOKINGS
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

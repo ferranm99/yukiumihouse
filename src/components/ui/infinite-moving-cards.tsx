@@ -98,7 +98,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-gradient-to-t from-slate-800 to-slate-900"
+            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 bg-slate-200 px-8 py-6 md:w-[450px] "
             key={item.name}
           >
             <div className="flex items-center gap-4">
@@ -111,16 +111,16 @@ export const InfiniteMovingCards = ({
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div className="flex flex-col">
-                <span className="text-sm leading-[1.6] text-gray-300 font-normal">
+                <span className="text-sm leading-[1.6] text-gray-800 font-normal">
                   <span className="font-bold">{item.name}</span> -{" "}
                   {item.relativePublishTimeDescription}
                 </span>
-                <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                <span className=" text-sm leading-[1.6] text-gray-800 font-normal">
                   <StarRating rating={item.rating} />
                 </span>
               </div>
             </div>
-            <div className="text-base leading-[1.6] text-gray-100 font-medium mt-4">
+            <div className="text-base leading-[1.6] text-gray-800 font-medium mt-4">
               {item.text}
             </div>
             {/* <div>

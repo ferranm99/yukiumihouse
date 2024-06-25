@@ -14,10 +14,10 @@ const posts = [
     url: "/blog/ishimuro-hut-mission",
   },
   {
-    title: "Behind the mountains: Point of view",
+    title: "Beyond the mountains",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
-    alt: "Behind the mountains: Point of view",
+    alt: "Beyond the mountains",
     category: "Short film",
     date: "April 6, 2023",
     url: "/2022/12/01/nunnery-quadrangle/index.html",
@@ -51,7 +51,7 @@ const BlogSection = () => {
                       sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   </div>
-                  <div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
+                  <div className="bg-slate-200 p-8 border-2 border-t-0 rounded-b-lg">
                     <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
                       {post.category}
                     </div>

@@ -26,8 +26,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.href}
+        <div
           key={item?.title}
           className="relative group  block p-3 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -36,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-300  block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -57,10 +56,10 @@ export const HoverEffect = ({
             <div className="p-4 pb-6 flex flex-col">
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
-            <CardButton />
+            <CardButton link={item?.href}/>
             </div>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -76,7 +75,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-xl h-full w-full overflow-hidden bg-slate-300 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl h-full w-full overflow-hidden bg-slate-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -87,21 +86,24 @@ export const Card = ({
   );
 };
 export const CardButton = ({
+  link,
   className,
   children,
 }: {
+  link: string;
   className?: string;
   children?: React.ReactNode;
 }) => {
   return (
-    <button
+    <Link
+    href={link}
       className={cn(
-        "mt-4 bg-primary-500 ml-auto text-white py-2 px-4 rounded-md text-sm font-bold tracking-wide",
+        "mt-4 bg-orange-400 hover:bg-orange-500 ml-auto text-white py-2 px-4 rounded-md text-sm font-bold tracking-wide",
         className
       )}
     >
-      {children || "Read More"}
-    </button>
+      {children || "Book Now"}
+    </Link>
   );
 
 };
@@ -113,7 +115,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-800 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-900 text-xl font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -128,7 +130,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-zinc-600 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-800 tracking-wide leading-relaxed text-sm",
         className
       )}
     >

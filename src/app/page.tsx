@@ -5,43 +5,43 @@ import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { HeroLayoutGrid } from "@app/_components/hero-layout-grid";
 import { HeroInfo } from "@app/_components/hero-info";
-
+import BlogSection from "@app/_components/blog-section";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
-const projects = [
-  {
-    title: "Kamikawa: Hokkaido north side",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2023/04/06/315/index.html",
-  },
-  {
-    title: "Furano: Sea of Snow",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2022/12/01/mayan-history/index.html",
-  },
-  {
-    title: "Day tours to all central and North Hokkaido locations",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2022/12/01/nunnery-quadrangle/index.html",
-  },
-  {
-    title: "Surf tour: Hokkaido pacífic and Okhotsk sea (autumn)",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2022/12/01/pyramid-of-the-magician/index.html",
-  },
-];
+  const tours = [
+    {
+      title: "Kamikawa: Hokkaido north side",
+      image:
+        "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
+      description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      href: "/2023/04/06/315/index.html",
+    },
+    {
+      title: "Furano: Sea of Snow",
+      image:
+        "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+      description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      href: "/2022/12/01/mayan-history/index.html",
+    },
+    {
+      title: "Day tours to all central and North Hokkaido locations",
+      image:
+        "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
+      description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      href: "/2022/12/01/nunnery-quadrangle/index.html",
+    },
+    {
+      title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
+      image:
+        "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
+      description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      href: "/2022/12/01/pyramid-of-the-magician/index.html",
+    },
+  ];
 
 export default function Landing() {
   return (
@@ -54,11 +54,17 @@ export default function Landing() {
           <HeroLayoutGrid />
         </div>
       </section>
-
-      <section className="flex flex-col items-center w-full px-8">
-    <h1 className="text-2xl font-bold w-full"> Our Tours </h1>
-    <HoverEffect className="max-w-4xl" items={projects} />
-</section>
+      <section id="about us" className="bg-slate-200 flex justify-center items-center h-[50rem]">
+        <div className="bg-white w-[80%] h-[80%] flex items-center justify-center text-xl">
+          Video goes here
+        </div>
+      </section>
+      <section id="tours" className="flex flex-col items-center w-full px-8 pt-12">
+      <h1 className="text-4xl font-bold text-black">
+          Our Tours
+        </h1>
+        <HoverEffect className="max-w-4xl" items={tours} />
+      </section>
       <section
         id="testimonials"
         className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
@@ -77,6 +83,18 @@ export default function Landing() {
           className="self-end mr-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
         >
           Read All The Reviews {">>"}
+        </Link>
+      </section>
+      <section id="blogs" className="flex flex-col items-center gap-8">
+        <h1 className="text-4xl font-bold text-black">
+          Blogs
+        </h1>
+        <BlogSection />
+        <Link
+          href="/reviews"
+          className="self-end mr-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+        >
+          See all Blogs {">>"}
         </Link>
       </section>
     </div>
