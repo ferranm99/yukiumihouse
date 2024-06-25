@@ -54,8 +54,11 @@ export const HoverEffect = ({
             <CardImage>
               <Image src={item.image} alt={item.title} fill={true} />
             </CardImage>
+            <div className="p-4 pb-6 flex flex-col">
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
+            <CardButton />
+            </div>
           </Card>
         </Link>
       ))}
@@ -73,15 +76,34 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-slate-300 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl h-full w-full overflow-hidden bg-slate-300 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-2">{children}</div>
+        <div className="">{children}</div>
       </div>
     </div>
   );
+};
+export const CardButton = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: React.ReactNode;
+}) => {
+  return (
+    <button
+      className={cn(
+        "mt-4 bg-primary-500 ml-auto text-white py-2 px-4 rounded-md text-sm font-bold tracking-wide",
+        className
+      )}
+    >
+      {children || "Read More"}
+    </button>
+  );
+
 };
 export const CardTitle = ({
   className,
@@ -106,7 +128,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-600 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-600 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
@@ -123,7 +145,7 @@ export const CardImage = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className={cn("relative h-40 w-full overflow-hidden", className)}>
+    <div className={cn("relative h-64 w-full overflow-hidden", className)}>
       {children}
     </div>
   );
