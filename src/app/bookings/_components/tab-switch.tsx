@@ -3,27 +3,35 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import KamikawaTour from "./kamikawa-tour";
+import FuranoTour from "./furano-tour";
+import DayTours from "./day-tours";
+import SurfTour from "./surf-tour";
 
 const tabs = [
   {
     title: "Kamikawa: Hokkaido north side",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
+    content: <KamikawaTour />,
   },
   {
     title: "Furano: Sea of Snow",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+    content: <FuranoTour />,
   },
   {
     title: "Day tours to all central and North Hokkaido locations",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
+    content: <DayTours />,
   },
   {
     title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
+    content: <SurfTour />,
   },
 ];
 
@@ -73,7 +81,7 @@ export default function TabSwitch() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            Content goes here
+            {selectedTab.content}
           </motion.div>
         </AnimatePresence>
       </main>
