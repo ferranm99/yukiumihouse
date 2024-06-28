@@ -4,7 +4,7 @@ type Review = [
   string, // name
   string, // date
   number, // rating (as string)
-  number | null , // serviceRating
+  number | null, // serviceRating
   number | null, // roomRating
   number | null, // locationRating
   string | null // reviewText
@@ -12,9 +12,9 @@ type Review = [
 
 const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
   return (
-    <article className="md:gap-8 sm:grid sm:grid-cols-3 2xl:ml-20 2xl:mr-80">
-      <div className="col-span-1 mt-6 md:mt-0 mr-16 flex flex-col items-center justify-start">
-        <div className=" mb-6 w-full">
+    <article className="md:gap-4 sm:grid sm:grid-cols-3 2xl:ml-2 2xl:mr-4">
+      <div className="col-span-1 mt-6 md:mt-0 mr-6 ml-4 flex flex-col items-center justify-start">
+        <div className="w-full">
           <div className="font-medium">
             <p>{review[0]}</p>
             <div className="text-sm text-gray-500">
@@ -95,7 +95,9 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
           <div className="pe-4">
             <footer>
               <p className="mb-2 text-sm text-gray-500">
-                Reviewed: <time>{review[1]}</time>
+                <i>
+                  Reviewed: <time>{review[1]}</time>
+                </i>
               </p>
             </footer>
           </div>
