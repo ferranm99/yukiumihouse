@@ -45,10 +45,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                 <dd className="flex items-center mb-3">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
-                      className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[3] ? review[3] * 2 * 10 : 0
-                      }%]`}
-                    ></div>
+                      style={{
+                        width: `${review[3] ? review[3] * 2 * 10 : 0}%`,
+                      }}
+                      className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                    />
                   </div>
                   <span className="text-sm font-medium text-gray-500">
                     {review[3] ? review[3] : "?"}
@@ -60,10 +61,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                 <dd className="flex items-center mb-3">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
-                      className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[4] ? review[4] * 2 * 10 : 0
-                      }%]`}
-                    ></div>
+                      style={{
+                        width: `${review[4] ? review[4] * 2 * 10 : 0}%`,
+                      }}
+                      className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                    />
                   </div>
                   <span className="text-sm font-medium text-gray-500">
                     {review[4] ? review[4] : "?"}
@@ -76,10 +78,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                 <dd className="flex items-center">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
-                      className={`bg-blue-600 h-2.5 rounded dark:bg-blue-500 w-[${
-                        review[5] ? review[5] * 2 * 10 : 0
-                      }%]`}
-                    ></div>
+                      style={{
+                        width: `${review[5] ? review[5] * 2 * 10 : 0}%`,
+                      }}
+                      className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
+                    />
                   </div>
                   <span className="text-sm font-medium text-gray-500">
                     {review[5] ? review[5] : "?"}

@@ -97,7 +97,8 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
         </a>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
           <div
-            className={`h-5 bg-yellow-400 rounded w-[${fiveStarPercentage}%]`}
+            style={{ width: `${fiveStarPercentage}%` }}
+            className="h-5 bg-yellow-400 rounded"
           />
         </div>
         <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -113,7 +114,8 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
         </a>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
           <div
-            className={`h-5 bg-yellow-400 rounded w-[${fourStarPercentage}\%\]`}
+            style={{ width: `${fourStarPercentage}%` }}
+            className="h-5 bg-yellow-400 rounded"
           />
         </div>
         <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -129,7 +131,8 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
         </a>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
           <div
-            className={`h-5 bg-yellow-400 rounded w-[${threeStarPercentage}%]`}
+            style={{ width: `${threeStarPercentage}%` }}
+            className="h-5 bg-yellow-400 rounded"
           />
         </div>
         <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -145,7 +148,8 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
         </a>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
           <div
-            className={`h-5 bg-yellow-400 rounded w-[${twoStarPercentage}%]`}
+            style={{ width: `${twoStarPercentage}%` }}
+            className="h-5 bg-yellow-400 rounded"
           />
         </div>
         <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -161,7 +165,8 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
         </a>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
           <div
-            className={`h-5 bg-yellow-400 rounded w-[${oneStarPercentage}%]`}
+            style={{ width: `${oneStarPercentage}%` }}
+            className="h-5 bg-yellow-400 rounded"
           />
         </div>
         <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
