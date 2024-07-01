@@ -17,8 +17,8 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
         <div className="w-full">
           <div className="font-medium">
             <p>{review[0]}</p>
-            <div className="text-sm text-gray-500">
-              <div className="flex items-center mb-1">
+            <div className="text-sm">
+              <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
@@ -34,14 +34,12 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                     <path d="M9.049 2.927a1 1 0 011.902 0l1.135 3.495h3.692a1 1 0 01.594 1.81l-2.986 2.173 1.135 3.495a1 1 0 01-1.537 1.11L10 12.347l-2.986 2.173a1 1 0 01-1.537-1.11l1.135-3.495-2.986-2.173a1 1 0 01.594-1.81h3.692L9.049 2.927z" />
                   </svg>
                 ))}
-                <h3 className="ml-2 text-sm font-semibold text-gray-90">
-                  {review[2]}/5
-                </h3>
+                <h3 className="ml-2 text-sm font-semibold">{review[2]}/5</h3>
               </div>
             </div>
             <div>
               <dl>
-                <dt className="text-sm font-medium text-gray-500">Service</dt>
+                <dt className="text-sm font-medium">Service</dt>
                 <dd className="flex items-center mb-3">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
@@ -51,13 +49,13 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                       className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
                     />
                   </div>
-                  <span className="text-sm font-medium text-gray-500">
-                    {review[3] ? review[3] : "?"}
+                  <span className="text-sm font-medium">
+                    {review[3] ? review[3] : "NA"}
                   </span>
                 </dd>
               </dl>
               <dl>
-                <dt className="text-sm font-medium text-gray-500">Room</dt>
+                <dt className="text-sm font-medium">Room</dt>
                 <dd className="flex items-center mb-3">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
@@ -67,14 +65,14 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                       className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
                     />
                   </div>
-                  <span className="text-sm font-medium text-gray-500">
-                    {review[4] ? review[4] : "?"}
+                  <span className="text-sm font-medium">
+                    {review[4] ? review[4] : "NA"}
                   </span>
                 </dd>
               </dl>
 
               <dl>
-                <dt className="text-sm font-medium text-gray-500">Location</dt>
+                <dt className="text-sm font-medium">Location</dt>
                 <dd className="flex items-center">
                   <div className="w-full bg-gray-200 rounded h-2.5 me-2">
                     <div
@@ -84,8 +82,8 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
                       className="bg-blue-600 h-2.5 rounded dark:bg-blue-500"
                     />
                   </div>
-                  <span className="text-sm font-medium text-gray-500">
-                    {review[5] ? review[5] : "?"}
+                  <span className="text-sm font-medium">
+                    {review[5] ? review[5] : "NA"}
                   </span>
                 </dd>
               </dl>
@@ -105,7 +103,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
             </footer>
           </div>
         </div>
-        <p className="mb-2 text-gray-500">{review[6] ? review[6] : ""}</p>
+        <p className="mb-2">
+          {review[6]
+            ? review[6]
+            : "There are no comments available for this review"}
+        </p>
       </div>
     </article>
   );

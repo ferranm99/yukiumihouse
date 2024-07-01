@@ -72,17 +72,18 @@ export default async function Page() {
   const reviews: Review[] = await getReviews();
 
   return (
-    <div>
+    <div className="flex flex-col items-center my-10">
+      <h1 className="text-4xl font-bold text-black">
+        What Our Guests Say About Yukiumi House?
+      </h1>
       <ReviewStats reviews={reviews} />
-      <div className="px-16 w-full">
-        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 w-full">
+      <div className="px-16 2xl:px-24 w-full">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
           {reviews.map((review, index) => (
             <div
               key={index}
               className="border border-gray-300 p-8 rounded-xl shadow-md"
             >
-              {" "}
-              {/* Adjust margins and padding as needed */}
               <ReviewCard review={review} />
             </div>
           ))}
