@@ -40,17 +40,17 @@ export default function TabSwitch() {
 
   return (
     <div className="w-[90%] h-full flex flex-col gap-4 overflow-auto">
-      <nav className="h-72">
-        <ul className="flex w-full h-full items-center gap-5">
+      <nav className="h-80 md:h-48 xl:h-72">
+        <ul className="grid grid-cols-2 md:grid-cols-4 w-full h-full items-center gap-2 xl:gap-5">
           {tabs.map((item) => (
             <li
               key={item.title}
               className={`${
                 item === selectedTab ? "bg-[#eee]" : ""
-              } w-full h-full flex flex-col gap-4 rounded-xl bg-gray-200 cursor-pointer items-center min-w-0 relative select-none`}
+              } w-full h-full flex flex-col rounded-xl bg-gray-200 cursor-pointer items-center min-w-0 relative select-none`}
               onClick={() => setSelectedTab(item)}
             >
-              <div className="h-[70%] w-full relative">
+              <div className="h-[72%] w-full relative">
                 <Image
                   className="rounded-t-xl"
                   src={item.image}
@@ -58,7 +58,7 @@ export default function TabSwitch() {
                   fill
                 />
               </div>
-              <div className="w-full h-[20%] flex justify-center items-center text-lg font-bold text-center">
+              <div className="w-full h-[28%] px-4 flex justify-center items-center text-xs md:text-sm xl:text-base 2xl:text-lg font-bold text-center">
                 {item.title}
               </div>
               {item === selectedTab ? (
@@ -81,7 +81,8 @@ export default function TabSwitch() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {selectedTab.content}
+            Whatever
+            {/* {selectedTab.content} */}
           </motion.div>
         </AnimatePresence>
       </main>
