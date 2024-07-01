@@ -40,8 +40,8 @@ export default function TabSwitch() {
 
   return (
     <div className="w-[90%] h-full flex flex-col gap-4 overflow-auto">
-      <nav className=" h-72">
-        <ul className="flex w-full h-full items-center gap-3">
+      <nav className="h-72">
+        <ul className="flex w-full h-full items-center gap-5">
           {tabs.map((item) => (
             <li
               key={item.title}

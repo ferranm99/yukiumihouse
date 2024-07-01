@@ -2,7 +2,6 @@
 
 import React, { ReactNode, useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import { usePathname } from "next/navigation";
@@ -22,9 +21,8 @@ type MenuItemWithSubMenuProps = {
 };
 
 const navItemsTop: NavLink[] = [
-  { label: "HOUSE", href: "/house" },
   {
-    label: "TOURS & PACKS",
+    label: "LOCATIONS",
     href: "",
     subMenu: true,
     subMenuItems: [
@@ -33,18 +31,10 @@ const navItemsTop: NavLink[] = [
       { label: "Furano", href: "/furano/index.html" },
     ],
   },
-  { label: "BOOKING", href: "/materials" },
-  {
-    label: "SEASONS",
-    href: "",
-    subMenu: true,
-    subMenuItems: [
-      { label: "Winter", href: "/winter.html" },
-      { label: "Spring", href: "/spring.html" },
-      { label: "Summer", href: "/summer.html" },
-      { label: "Autumn", href: "/autumn.html" },
-    ],
-  },
+  { label: "BOOKING", href: "/bookings" },
+  { label: "REVIEWS", href: "/reviews" },
+
+  { label: "BLOG", href: "/blog" },
   { label: "CONTACT", href: "/contact" },
 ];
 
