@@ -71,7 +71,7 @@ export default function TabSwitch() {
           ))}
         </ul>
       </nav>
-      <main className="flex justify-center w-full h-full items-center select-none bg-gray-50 dark:bg-slate-600 overflow-hidden">
+      <main className="flex justify-center w-full h-full items-center select-none overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             className="relative w-full h-full" /* px-4 py-4 xl:px-24 xl:py-6" */
@@ -81,8 +81,7 @@ export default function TabSwitch() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            Whatever
-            {/* {selectedTab.content} */}
+            {selectedTab.content}
           </motion.div>
         </AnimatePresence>
       </main>
