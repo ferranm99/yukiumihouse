@@ -7,6 +7,14 @@ import KamikawaTour from "./kamikawa-tour";
 import FuranoTour from "./furano-tour";
 import DayTours from "./day-tours";
 import SurfTour from "./surf-tour";
+import BookButton from "./book-button";
+
+enum Tours {
+  Kamikawa,
+  Furano,
+  DayTours,
+  SurfTour,
+}
 
 const tabs = [
   {
@@ -14,24 +22,28 @@ const tabs = [
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     content: <KamikawaTour />,
+    tour: Tours.Kamikawa,
   },
   {
     title: "Furano: Sea of Snow",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     content: <FuranoTour />,
+    tour: Tours.Furano,
   },
   {
     title: "Day tours to all central and North Hokkaido locations",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     content: <DayTours />,
+    tour: Tours.DayTours,
   },
   {
     title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
     content: <SurfTour />,
+    tour: Tours.SurfTour,
   },
 ];
 
@@ -81,7 +93,26 @@ export default function TabSwitch() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {selectedTab.content}
+            <div className="w-full h-full flex flex-col gap-4 pb-10">
+              {selectedTab.content}
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <BookButton tour={selectedTab.tour} />
+            </div>
           </motion.div>
         </AnimatePresence>
       </main>

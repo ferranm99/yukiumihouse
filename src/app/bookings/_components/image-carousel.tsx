@@ -40,14 +40,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-full h-[30rem]">
+    <div className="relative flex items-center justify-center w-full h-[36rem]">
       <button
         onClick={goToPrevious}
         className="absolute left-2 bg-black text-white p-2 rounded-full z-10"
       >
         &lt;
       </button>
-      <div className="flex justify-center w-[90%] h-full overflow-hidden relative">
+      <div className="w-full h-full overflow-hidden relative">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}

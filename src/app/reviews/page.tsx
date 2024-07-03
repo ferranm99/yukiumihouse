@@ -34,7 +34,7 @@ export default async function Page() {
     try {
       const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
-        range: "Sheet1!A22:G",
+        range: "Reviews!A2:G",
       });
       const values = response.data.values;
       if (!values) return [];
