@@ -38,7 +38,6 @@ export async function GET(req: Request) {
   }
 
   const tour = parseInt(tourParam, 10) as Tours;
-  console.log("Tour:", tour);
 
   const auth = await google.auth.getClient({
     // credentials,
