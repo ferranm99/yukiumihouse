@@ -34,7 +34,7 @@ const BookButton = ({ tour }: { tour: Tours }) => {
           Book Now
         </button>
       </DialogTrigger>
-      <DialogContent className="p-5 w-[80%] lg:w-[50%] 2xl:w-[30%] h-[80%] bg-white border-none overflow-x-hidden">
+      <DialogContent className="p-5 w-[80%] lg:w-[50%] 2xl:w-[30%] h-[82.5%] bg-white border-none overflow-x-hidden">
         <DialogTitle className="mx-auto mt-5 text-3xl">
           {tourNames[tour]}
         </DialogTitle>
