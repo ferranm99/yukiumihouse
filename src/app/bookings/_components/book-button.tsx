@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useQueryClient } from "react-query";
 import {
   Dialog,
   DialogContent,
@@ -24,8 +25,28 @@ const tourNames = {
   [Tours.SurfTour]: "Surf Tour",
 };
 
+const fetchSlots = async (tour: Tours) => {
+  const res = await fetch(`/api/slots?tour=${encodeURIComponent(tour)}`, {
+    method: "GET",
+  });
+  if (!res.ok) {
+    throw new Error("Something went wrong!");
+  }
+  const data = await res.json();
+  return data.map((slot: [string, string]) => ({
+    period: slot[0],
+    availableSpots: parseInt(slot[1], 10),
+  }));
+};
+
 const BookButton = ({ tour }: { tour: Tours }) => {
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    // Prefetch data when the component mounts
+    queryClient.prefetchQuery(["slots", tour], () => fetchSlots(tour));
+  }, [queryClient, tour]);
 
   return (
     <Dialog>
