@@ -4,6 +4,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
+import { QuestionnaireSchema } from "@/schemas";
 import {
   Tooltip,
   TooltipContent,
@@ -28,50 +29,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { booking } from "@actions/booking";
 
 interface QuestionnaireProps {
   onBack: () => void;
 }
 
-const QuestionnaireSchema = z.object({
-  country: z
-    .string({
-      required_error: "Country is required.",
-    })
-    .min(2, { message: "Invalid country." })
-    .max(200, { message: "Invalid country." }),
-  age: z
-    .number({ required_error: "Age is required." })
-    .int({ message: "Invalid age." })
-    .min(18, { message: "You must be at least 18 years old." })
-    .max(99, { message: "Invalid age." }),
-  modality: z.enum(["Snowboard", "Ski"], {
-    required_error: "Please select modality",
-  }),
-  level: z.enum(["Medium", "Advance", "Expert"], {
-    required_error: "Please select level",
-  }),
-  experience: z
-    .string({ required_error: "Experience is required." })
-    .min(5, { message: "Please tell us more about your experience" })
-    .max(2500, { message: "You exceeded the maximum characters limit." }),
-  elevationGain: z
-    .number({ required_error: "Elevation gain is required." })
-    .int({ message: "Invalid elevation gain." })
-    .min(0, { message: "Invalid elevation gain." })
-    .max(9000, { message: "Invalid elevation gain." }),
-});
-
 const Questionnaire = ({ onBack }: QuestionnaireProps) => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
-  /*   const [country, setCountry] = useState("");
-  const [age, setAge] = useState("");
-  const [modality, setModality] = useState("");
-  const [level, setLevel] = useState("");
-  const [experience, setExperience] = useState("");
-  const [elevationGain, setElevationGain] = useState(""); */
 
   const form = useForm<z.infer<typeof QuestionnaireSchema>>({
     resolver: zodResolver(QuestionnaireSchema),
@@ -82,7 +49,19 @@ const Questionnaire = ({ onBack }: QuestionnaireProps) => {
     setSuccess("");
 
     startTransition(() => {
-      // submit form
+      booking(data)
+        .then((response) => {
+          if (response?.error) {
+            setError(response.error);
+          }
+          if (response?.success) {
+            setSuccess(response.success);
+          }
+        })
+        .catch((error) => {
+          console.error("Error submitting questionnaire:", error);
+          setError("Something went wrong. Please try again!");
+        });
     });
   };
 
@@ -108,6 +87,23 @@ const Questionnaire = ({ onBack }: QuestionnaireProps) => {
             </Tooltip>
           </TooltipProvider>
         </div>
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  disabled={isPending}
+                  placeholder="example@example.com"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="country"
@@ -179,6 +175,7 @@ const Questionnaire = ({ onBack }: QuestionnaireProps) => {
                 {...field}
                 disabled={isPending}
                 defaultValue={field.value}
+                onValueChange={field.onChange}
               >
                 <FormControl>
                   <SelectTrigger>
@@ -244,6 +241,7 @@ const Questionnaire = ({ onBack }: QuestionnaireProps) => {
           <button
             type="submit"
             className="ml-2 bg-orange-500 text-white p-2 rounded hover:bg-orange-600"
+            disabled={isPending}
           >
             Submit
           </button>

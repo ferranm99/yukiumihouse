@@ -45,15 +45,18 @@ const BookButton = ({ tour }: { tour: Tours }) => {
 
   useEffect(() => {
     // Prefetch data when the component mounts
-    queryClient.prefetchQuery(["slots", tour], () => fetchSlots(tour));
+    queryClient.prefetchQuery(
+      ["slots", tour],
+      () => fetchSlots(tour) /* , {
+      staleTime: 60000, // Data is considered fresh for 1 minute (60000 milliseconds)
+    } */
+    );
   }, [queryClient, tour]);
 
   return (
     <Dialog>
-      <DialogTrigger>
-        <button className="ml-auto w-[10%] h-14 bg-orange-400 text-white p-2 rounded-md">
-          Book Now
-        </button>
+      <DialogTrigger className="ml-auto w-[30%] md:w-[20%] xl:w-[12%] h-14 bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md">
+        Book Now
       </DialogTrigger>
       <DialogContent className="p-5 w-[80%] lg:w-[50%] 2xl:w-[30%] h-[82.5%] bg-white border-none overflow-x-hidden">
         <DialogTitle className="mx-auto mt-5 text-3xl">

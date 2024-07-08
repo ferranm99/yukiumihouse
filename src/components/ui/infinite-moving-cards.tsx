@@ -99,7 +99,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 bg-slate-200 px-8 py-6 md:w-[450px] "
-            key={item.name}
+            key={idx}
           >
             <div className="flex items-center gap-4">
               <Avatar>
