@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import Link from "next/link";
 import StarRating from "@/components/star-rating";
 
 export function HeroInfo() {
@@ -30,7 +31,7 @@ export function HeroInfo() {
           </Highlight>
         </h2>
         <div className="flex flex-col mt-8 mb-4 md:mt-16 lg:mb-14 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-          <a
+          <Link
             href="#"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
           >
@@ -43,9 +44,9 @@ export function HeroInfo() {
               <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
             </svg>
             Watch video
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/bookings"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Book now
@@ -61,7 +62,7 @@ export function HeroInfo() {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
         <button
           className="flex flex-col cursor-pointer mb-2"

@@ -126,7 +126,7 @@ export default function Navbar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/contact.html" legacyBehavior passHref>
+            <Link href="/contact" legacyBehavior passHref>
               <NavigationMenuLink
                 className={cn("no-underline", navigationMenuTriggerStyle())}
               >

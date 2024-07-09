@@ -21,3 +21,9 @@ export const QuestionnaireSchema = z.object({
     .max(2500, { message: "You exceeded the maximum characters limit." }),
   elevationGain: z.string({ required_error: "Elevation gain is required." }),
 });
+
+export const ContactUsSchema = z.object({
+  name: z.string().min(2, { message: "Name is required." }),
+  email: z.string().email({ message: "Email is required." }),
+  message: z.string().min(5, { message: "Message is required." }),
+});

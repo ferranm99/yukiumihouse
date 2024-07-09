@@ -47,7 +47,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       >
         &lt;
       </button>
-      <div className="w-full h-full overflow-hidden relative">
+      <div className="w-full h-full overflow-hidden relative rounded-xl">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}

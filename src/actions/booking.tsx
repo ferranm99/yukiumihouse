@@ -26,7 +26,7 @@ export const booking = async (
     await sendBookingEmail(validatedData.data, selectedSlot, tour);
     return {
       success:
-        "Your answers have been submitted! We will review them and get back to you as soon as possible.",
+        "Your answers have been submitted! We will review them and get back to you as soon as possible. You can close this now.",
     };
   } catch (error) {
     console.error("Error sending email:", error);

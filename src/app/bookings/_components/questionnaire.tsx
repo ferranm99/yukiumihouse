@@ -107,6 +107,7 @@ const Questionnaire = ({ onBack, selectedSlot, tour }: QuestionnaireProps) => {
                   {...field}
                   disabled={isPending}
                   placeholder="example@example.com"
+                  type="email"
                 />
               </FormControl>
               <FormMessage />

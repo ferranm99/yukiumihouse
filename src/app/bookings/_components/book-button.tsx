@@ -87,7 +87,7 @@ const BookButton = ({ tour }: { tour: Tours }) => {
                 className="absolute inset-0"
               >
                 <Questionnaire
-                  selectedSlot={selectedSlot ? selectedSlot : "nothing"}
+                  selectedSlot={selectedSlot!}
                   tour={tour}
                   onBack={() => setShowQuestionnaire(false)}
                 />
