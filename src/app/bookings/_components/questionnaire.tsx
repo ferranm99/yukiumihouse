@@ -31,11 +31,20 @@ import {
 } from "@/components/ui/select";
 import { booking } from "@actions/booking";
 
-interface QuestionnaireProps {
-  onBack: () => void;
+enum Tours {
+  Kamikawa,
+  Furano,
+  DayTours,
+  SurfTour,
 }
 
-const Questionnaire = ({ onBack }: QuestionnaireProps) => {
+interface QuestionnaireProps {
+  onBack: () => void;
+  tour: Tours;
+  selectedSlot: string;
+}
+
+const Questionnaire = ({ onBack, selectedSlot, tour }: QuestionnaireProps) => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
@@ -49,7 +58,7 @@ const Questionnaire = ({ onBack }: QuestionnaireProps) => {
     setSuccess("");
 
     startTransition(() => {
-      booking(data)
+      booking(data, selectedSlot, tour)
         .then((response) => {
           if (response?.error) {
             setError(response.error);

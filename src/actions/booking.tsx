@@ -4,7 +4,18 @@ import * as z from "zod";
 import { QuestionnaireSchema } from "@schemas";
 import { sendBookingEmail } from "@lib/mail";
 
-export const booking = async (data: z.infer<typeof QuestionnaireSchema>) => {
+enum Tours {
+  Kamikawa,
+  Furano,
+  DayTours,
+  SurfTour,
+}
+
+export const booking = async (
+  data: z.infer<typeof QuestionnaireSchema>,
+  selectedSlot: string,
+  tour: Tours
+) => {
   const validatedData = QuestionnaireSchema.safeParse(data);
 
   if (!validatedData.success) {
@@ -12,7 +23,7 @@ export const booking = async (data: z.infer<typeof QuestionnaireSchema>) => {
   }
 
   try {
-    await sendBookingEmail(validatedData.data);
+    await sendBookingEmail(validatedData.data, selectedSlot, tour);
     return {
       success:
         "Your answers have been submitted! We will review them and get back to you as soon as possible.",

@@ -40,17 +40,13 @@ const fetchSlots = async (tour: Tours) => {
 };
 
 const BookButton = ({ tour }: { tour: Tours }) => {
-  const [showQuestionnaire, setShowQuestionnaire] = useState(false);
+  const [showQuestionnaire, setShowQuestionnaire] = useState<boolean>(false);
+  const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
   useEffect(() => {
     // Prefetch data when the component mounts
-    queryClient.prefetchQuery(
-      ["slots", tour],
-      () => fetchSlots(tour) /* , {
-      staleTime: 60000, // Data is considered fresh for 1 minute (60000 milliseconds)
-    } */
-    );
+    queryClient.prefetchQuery(["slots", tour], () => fetchSlots(tour));
   }, [queryClient, tour]);
 
   return (
@@ -75,7 +71,10 @@ const BookButton = ({ tour }: { tour: Tours }) => {
               >
                 <AvailableSlots
                   tour={tour}
-                  onSlotSelect={() => setShowQuestionnaire(true)}
+                  onSlotSelect={(slot) => {
+                    setShowQuestionnaire(true);
+                    setSelectedSlot(slot);
+                  }}
                 />
               </motion.div>
             ) : (
@@ -87,7 +86,11 @@ const BookButton = ({ tour }: { tour: Tours }) => {
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
-                <Questionnaire onBack={() => setShowQuestionnaire(false)} />
+                <Questionnaire
+                  selectedSlot={selectedSlot ? selectedSlot : "nothing"}
+                  tour={tour}
+                  onBack={() => setShowQuestionnaire(false)}
+                />
               </motion.div>
             )}
           </AnimatePresence>

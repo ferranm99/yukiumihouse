@@ -4,15 +4,31 @@ import { QuestionnaireSchema } from "@/schemas";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+enum Tours {
+  Kamikawa,
+  Furano,
+  DayTours,
+  SurfTour,
+}
+
+const tourNames = {
+  [Tours.Kamikawa]: "Kamikawa Tour",
+  [Tours.Furano]: "Furano Tour",
+  [Tours.DayTours]: "Day Tours",
+  [Tours.SurfTour]: "Surf Tour",
+};
+
 export const sendBookingEmail = async (
-  data: z.infer<typeof QuestionnaireSchema>
+  data: z.infer<typeof QuestionnaireSchema>,
+  selectedSlot: string,
+  tour: Tours
 ) => {
   await resend.emails.send({
     from: "onboarding@resend.dev",
     to: process.env.EMAIL_ADDRESS!,
     subject: "Booking Request",
     html: `
-      <h1>Booking Request</h1>
+      <h1>Nova reserva per ${tourNames[tour]} al slot de ${selectedSlot}</h1>
       <h3>Email del client</h3>
       <p><a href="mailto:${data.email}">${data.email}</a></p>
       <h3>País</h3>

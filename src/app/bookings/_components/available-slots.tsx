@@ -16,7 +16,7 @@ interface Slot {
 
 interface AvailableSlotsProps {
   tour: Tours;
-  onSlotSelect: (tour: Tours) => void;
+  onSlotSelect: (slot: string) => void;
 }
 
 const fetchSlots = async (tour: Tours) => {
@@ -57,7 +57,7 @@ const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
             <button
               className="w-40 h-14 disabled:cursor-not-allowed bg-slate-100 text-black p-2 rounded-md hover:bg-slate-200 font-semibold border-black border-[1px]"
               disabled={slot.availableSpots === 0}
-              onClick={() => onSlotSelect(tour)}
+              onClick={() => onSlotSelect(slot.period)}
             >
               {slot.period}
             </button>
