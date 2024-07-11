@@ -92,12 +92,13 @@ const MobileNav = () => {
       >
         <motion.ul variants={variants} className="grid gap-3">
           <MenuItem className="mx-auto mb-2">
-            <Link href={"/landing"} onClick={() => toggleOpen()}>
+            <Link href="/" onClick={() => toggleOpen()}>
               <Image
-                src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
-                alt=""
-                width={322}
-                height={123}
+                src="/logos/logo_rectangular.JPG"
+                alt="yukiumi house logo"
+                width={160}
+                height={80}
+                className=""
               />
             </Link>
           </MenuItem>

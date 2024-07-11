@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "3xl": "1660px",
+      },
       /* fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       }, */

@@ -28,7 +28,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <nav className="hidden lg:flex py-3 bg-slate-200 h-[4.7vw]">
+        <nav className="hidden lg:flex py-2 2xl:py-3 bg-slate-200 h-[4.7vw]">
           <Navbar />
         </nav>
         <nav className="lg:hidden flex z-50">

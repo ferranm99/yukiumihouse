@@ -64,14 +64,14 @@ const locations: { title: string; href: string; description: string }[] = [
 export default function Navbar() {
   return (
     <div className="md:pl-[16%] flex items-center justify-start md:gap-[16%] h-full w-full">
-      <div className="cursor-pointer h-full max-h-[4.7vw] rounded-md overflow-hidden">
+      <div className="relative cursor-pointer h-full w-[10%] rounded-md overflow-hidden">
         <Link href="/" legacyBehavior passHref>
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/senal-yukiumi-colors.png?w=1024"
-            alt=""
-            width={164.22}
-            height={62.73}
-            className="h-full w-full object-contain"
+            src="/logos/logo_rectangular.JPG"
+            alt="yukiumi house logo"
+            fill
+            /* width={160}
+            height={80} */
           />
         </Link>
       </div>
