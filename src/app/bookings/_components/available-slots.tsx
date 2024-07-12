@@ -38,12 +38,7 @@ const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
     data: slots = [],
     isLoading,
     isError,
-  } = useQuery<Slot[], Error>(
-    ["slots", tour],
-    () => fetchSlots(tour) /* , {
-    staleTime: 60000, // Data is considered fresh for 1 minute (60000 milliseconds)
-  } */
-  );
+  } = useQuery<Slot[], Error>(["slots", tour], () => fetchSlots(tour));
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error loading slots</p>;

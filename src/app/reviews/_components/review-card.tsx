@@ -1,9 +1,10 @@
 import React from "react";
+import StarRating from "@components/star-rating";
 
 type Review = [
   string, // name
   string, // date
-  number, // rating (as string)
+  number, // rating
   number | null, // serviceRating
   number | null, // roomRating
   number | null, // locationRating
@@ -19,21 +20,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
             <p>{review[0]}</p>
             <div className="text-sm">
               <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    aria-hidden="true"
-                    className={`w-5 h-5 ${
-                      i < review[2] ? "text-yellow-400" : "text-gray-400"
-                    }`}
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>{`${i + 1} star`}</title>
-                    <path d="M9.049 2.927a1 1 0 011.902 0l1.135 3.495h3.692a1 1 0 01.594 1.81l-2.986 2.173 1.135 3.495a1 1 0 01-1.537 1.11L10 12.347l-2.986 2.173a1 1 0 01-1.537-1.11l1.135-3.495-2.986-2.173a1 1 0 01.594-1.81h3.692L9.049 2.927z" />
-                  </svg>
-                ))}
+                <StarRating rating={review[2]} />
                 <h3 className="ml-2 text-sm font-semibold">{review[2]}/5</h3>
               </div>
             </div>

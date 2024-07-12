@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
+import ReactQueryProvider from "@/app/react-query-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,20 +23,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen font-sans antialiased flex flex-col",
-          fontSans.variable
-        )}
-      >
-        <nav className="hidden lg:flex py-2 2xl:py-3 bg-slate-200 h-[4.7vw]">
-          <Navbar />
-        </nav>
-        <nav className="lg:hidden flex z-50">
-          <MobileNav />
-        </nav>
-        {children}
-      </body>
+      <ReactQueryProvider>
+        <body
+          className={cn(
+            "min-h-screen font-sans antialiased flex flex-col",
+            fontSans.variable
+          )}
+        >
+          <nav className="hidden lg:flex py-2 2xl:py-3 bg-slate-200 h-[4.7vw]">
+            <Navbar />
+          </nav>
+          <nav className="lg:hidden flex z-50">
+            <MobileNav />
+          </nav>
+          {children}
+        </body>
+      </ReactQueryProvider>
     </html>
   );
 }

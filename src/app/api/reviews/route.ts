@@ -1,4 +1,15 @@
 import { google } from "googleapis";
+import { NextResponse } from "next/server";
+
+type Review = [
+  string, // name
+  string, // date
+  number, // rating
+  number | null, // serviceRating
+  number | null, // roomRating
+  number | null, // locationRating
+  string | null // reviewText
+];
 
 export async function GET() {
   const auth = await google.auth.getClient({
@@ -9,24 +20,51 @@ export async function GET() {
       private_key: process.env.GOOGLE_PRIVATE_KEY,
     },
     // keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-    scopes: ["https://www.googleapis.com/auth/cloud-platform"],
+    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
   });
 
-  const places = google.places({
-    version: "v1",
+  const sheets = google.sheets({
+    version: "v4",
     auth,
   });
 
   try {
-    const placeData = await places.places.get({
-      languageCode: "en",
-      // name: `places/${process.env.MAPS_PLACE_ID}`,
-      // Does this get reviews directly?
-      name: `places/${process.env.MAPS_PLACE_ID}?fields=reviews`,
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: "Reviews!A2:G",
     });
-    return Response.json(placeData.data.reviews);
+    const values = response.data.values;
+    if (!values) return NextResponse.json([]);
+    const reviews: Review[] = [];
+    values.map((review) => {
+      if (
+        review.length >= 3 &&
+        review[0] !== "" &&
+        review[1] !== "" &&
+        review[2] !== ""
+      ) {
+        for (let i = 0; i < 7; i++) {
+          if (i < review.length) {
+            if (i === 2) {
+              review[i] = Number(review[i]);
+            } else if (i >= 3 && i <= 5) {
+              review[i] = review[i] !== "" ? Number(review[i]) : null;
+            } else {
+              review[i] = review[i] !== "" ? review[i] : null;
+            }
+          } else {
+            review.push(null);
+          }
+        }
+        reviews.push(review as Review);
+      }
+    });
+    return NextResponse.json(reviews);
   } catch (error) {
-    console.error("Error fetching reviews data:", error);
-    return Response.json({ error: "Internal Server Error" });
+    console.error("Error getching sheets data:", error);
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }

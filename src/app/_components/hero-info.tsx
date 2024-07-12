@@ -2,9 +2,15 @@
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import Link from "next/link";
+import Image from "next/image";
 import StarRating from "@/components/star-rating";
 
-export function HeroInfo() {
+interface HeroInfoProps {
+  rating: number;
+  numOfReviews: number;
+}
+
+export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
   return (
     <HeroHighlight>
       <motion.div
@@ -64,22 +70,34 @@ export function HeroInfo() {
             </svg>
           </Link>
         </div>
-        <button
-          className="flex flex-col cursor-pointer mb-2"
-          onClick={() => {
-            const testimonialsSection = document.getElementById("testimonials");
-            testimonialsSection?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <div className="flex items-center">
-            <StarRating rating={5} />
-            <div className="">&nbsp;5.0</div>
+        <div className="flex gap-5 items-center text-lg">
+          <div className="relative rounded-full w-28 h-28">
+            <Image
+              src="/logos/logo_circular.JPG"
+              alt="Yukiumi House logo"
+              fill
+              className="rounded-full"
+            />
           </div>
-          <div className="flex">
-            Rated Best Over&nbsp;<span className="font-bold">1.2k</span>
-            &nbsp;Reviews
-          </div>
-        </button>
+          <button
+            className="flex flex-col cursor-pointer mb-2"
+            onClick={() => {
+              const testimonialsSection =
+                document.getElementById("testimonials");
+              testimonialsSection?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <div className="flex items-center gap-2">
+              <StarRating rating={rating} />
+              <div>{rating}</div>
+            </div>
+            <div className="flex">
+              Rated Best Over&nbsp;
+              <span className="font-bold">{numOfReviews}</span>
+              &nbsp;Reviews
+            </div>
+          </button>
+        </div>
       </motion.div>
     </HeroHighlight>
   );
