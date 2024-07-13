@@ -21,14 +21,14 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2  py-10",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 w-[80%] py-10",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={item?.title}
-          className="relative group  block p-3 h-full w-full"
+          className="relative group block p-3 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -54,9 +54,11 @@ export const HoverEffect = ({
               <Image src={item.image} alt={item.title} fill={true} />
             </CardImage>
             <div className="p-4 pb-6 flex flex-col">
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <CardButton link={item?.href}/>
+              <CardTitle className="text-center text-2xl">
+                {item.title}
+              </CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+              <CardButton link={item?.href} />
             </div>
           </Card>
         </div>
@@ -96,7 +98,7 @@ export const CardButton = ({
 }) => {
   return (
     <Link
-    href={link}
+      href={link}
       className={cn(
         "mt-4 bg-orange-400 hover:bg-orange-500 ml-auto text-white py-2 px-4 rounded-md text-sm font-bold tracking-wide",
         className
@@ -105,7 +107,6 @@ export const CardButton = ({
       {children || "Book Now"}
     </Link>
   );
-
 };
 export const CardTitle = ({
   className,
@@ -115,7 +116,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-900 text-xl font-bold tracking-wide mt-4", className)}>
+    <h4
+      className={cn(
+        "text-zinc-900 text-xl font-bold tracking-wide mt-4",
+        className
+      )}
+    >
       {children}
     </h4>
   );

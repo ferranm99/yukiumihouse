@@ -35,7 +35,7 @@ const posts = [
 
 const BlogSection = () => {
   return (
-    <div className="relative px-8 mb-12">
+    <div className="relative px-8 mb-6">
       <div className="max-w-screen-xl mx-auto">
         <div className="">
           <div className="grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">

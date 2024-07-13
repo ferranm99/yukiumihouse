@@ -53,14 +53,14 @@ const tours = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2022/12/01/nunnery-quadrangle/index.html",
   },
-  {
+  /*   {
     title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     href: "/2022/12/01/pyramid-of-the-magician/index.html",
-  },
+  }, */
 ];
 
 export default function Landing() {
@@ -91,30 +91,27 @@ export default function Landing() {
           <HeroLayoutGrid />
         </div>
       </section>
-      <section
+      {/* <section
         id="about us"
         className="bg-slate-200 flex justify-center items-center h-[50rem]"
       >
         <div className="bg-white w-[80%] h-[80%] flex items-center justify-center text-xl">
           Video goes here
         </div>
-      </section>
-      <section
-        id="tours"
-        className="flex flex-col items-center w-full px-8 pt-12"
-      >
+      </section> */}
+      <section id="tours" className="flex flex-col items-center w-full px-8">
         <h1 className="text-4xl font-bold text-black">Our Tours</h1>
-        <HoverEffect className="max-w-4xl" items={tours} />
+        <HoverEffect items={tours} />
       </section>
       <section
         id="testimonials"
-        className="pb-8 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
+        className="pt-4 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden"
       >
         <h1 className="text-4xl font-bold text-black pb-8">
           What Our Guests Say About Yukiumi House?
         </h1>
         <InfiniteMovingCards
-          className="pb-8"
+          className="pb-8 pt-4"
           items={reviews}
           direction="right"
           speed="normal"
@@ -126,8 +123,8 @@ export default function Landing() {
           Read All The Reviews {">>"}
         </Link>
       </section>
-      <section id="blogs" className="flex flex-col items-center gap-8">
-        <h1 className="text-4xl font-bold text-black">Blogs</h1>
+      <section id="blogs" className="pt-8 flex flex-col items-center gap-8">
+        <h1 className="text-4xl font-bold text-black pb-4 ">Blogs</h1>
         <BlogSection />
         <Link
           href="/reviews"
