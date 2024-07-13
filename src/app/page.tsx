@@ -123,7 +123,7 @@ export default function Landing() {
           Read All The Reviews {">>"}
         </Link>
       </section>
-      <section id="blogs" className="pt-8 flex flex-col items-center gap-8">
+      <section id="blogs" className="py-8 flex flex-col items-center gap-8">
         <h1 className="text-4xl font-bold text-black pb-4 ">Blogs</h1>
         <BlogSection />
         <Link

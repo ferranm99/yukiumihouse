@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
 import ReactQueryProvider from "@/app/react-query-provider";
+import Footer from "@/components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
             <MobileNav />
           </nav>
           {children}
+          <Footer />
         </body>
       </ReactQueryProvider>
     </html>

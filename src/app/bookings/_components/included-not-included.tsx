@@ -13,10 +13,10 @@ const IncludedNotIncluded: React.FC<IncludedNotIncludedProps> = ({
 }) => {
   return (
     <div className="mx-auto w-[90%] sm:w-[80%] xl:w-[70%] flex flex-col">
-      <div className="container p-0 border border-black rounded-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 rounded-xl bg-slate-100">
-          <div className="flex flex-col items-center justify-center rounded-l-xl border-r border-black">
-            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-300 w-full rounded-tl-xl border-b border-black">
+      <div className="container p-0 shadow-md rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-xl gap-2">
+          <div className="flex flex-col items-center justify-center rounded-xl">
+            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-200 w-full rounded-tl-xl">
               Included
             </h2>
             <ul className="w-full p-4 rounded-bl-xl">
@@ -47,7 +47,7 @@ const IncludedNotIncluded: React.FC<IncludedNotIncludedProps> = ({
             </ul>
           </div>
           <div>
-            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-300 w-full rounded-tr-xl border-b border-black">
+            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-200 w-full rounded-tr-xl">
               Not Included
             </h2>
             <ul className="w-full p-4 rounded-br-xl">
