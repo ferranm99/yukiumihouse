@@ -29,12 +29,12 @@ const ContactPage: React.FC = () => {
   });
   return (
     <div className="flex flex-col my-6 gap-10">
-      <section className="pt-8 flex flex-col items-center">
+      <section className="pt-8 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-black pb-8 ">Who Are We?</h1>
-        <div className="flex gap-12">
-          <Card className="w-[40rem] h-[47rem] border-[1px] shadow-md">
-            <CardHeader className="flex flex-col gap-3 items-center justify-center mx-28 rounded-t-xl pt-4 h-[57%]">
-              <div className="w-[87%] h-full overflow-hidden rounded-t-xl">
+        <div className="w-full flex flex-col justify-center items-center gap-12 lg:flex-row">
+          <Card className="w-[92%] h-auto md:w-[40rem] border-[1px] shadow-md py-5">
+            <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
+              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
                   src="https://yukiumihouse.files.wordpress.com/2023/04/sergi-1.png"
                   alt="Sergi Martinez"
@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
               <CardTitle className="text-2xl">Sergi Martínez</CardTitle>
               <hr className="w-full border-gray-300" />
             </CardHeader>
-            <CardContent className="px-14">
+            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0">
               Sergi is a POW rider. Usually on his board, he loves to ride deep
               powder snow. Eider spinning laps in the resort or taking you to
               the untouched backcountry terrain, you will have a blast joining
@@ -57,12 +57,12 @@ const ContactPage: React.FC = () => {
               and Japanese avalanche Network, ski and snowboard instructor,
               kitesurfer and drone pilot. If you are a snow surfer and you are
               looking for a great day out in the Furano area or central Hokkaido
-              don’t miss a day with Sergi.
+              don't miss a day with Sergi.
             </CardContent>
           </Card>
-          <Card className="w-[40rem] h-[47rem] border-[1px] shadow-md">
-            <CardHeader className="flex flex-col gap-3 items-center justify-center mx-28 rounded-t-xl pt-4 h-[57%]">
-              <div className="w-[87%] h-full overflow-hidden rounded-t-xl">
+          <Card className="w-[92%] h-auto md:w-[40rem] border-[1px] shadow-md py-5">
+            <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
+              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
                   src="https://yukiumihouse.files.wordpress.com/2023/04/geri-copia.png"
                   alt="Gerard Martinez"
@@ -74,7 +74,7 @@ const ContactPage: React.FC = () => {
               <CardTitle className="text-2xl">Gerard Martínez</CardTitle>
               <hr className="w-full border-gray-300" />
             </CardHeader>
-            <CardContent className="px-14">
+            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0">
               Gerard is a mountain lover and over all, a ski geek. He likes to
               go out for long days, push the vertical gain in the backcountry
               and summit some special mountains. He will always be talking about
@@ -85,7 +85,7 @@ const ContactPage: React.FC = () => {
               avalanche association and Japanese avalanche Network, ski
               instructor, surfer, trail runner, agriculture engineer and cook.
               If you are looking for an adventure day in Central Hokkaido,
-              tailor made for you, based on your skills and desires don’t miss
+              tailor made for you, based on your skills and desires don't miss
               to hit him out as he is your guide!
             </CardContent>
           </Card>
@@ -100,7 +100,7 @@ const ContactPage: React.FC = () => {
             action="https://formsubmit.co/yukiumihouse@gmail.com"
             method="POST"
             target="_parent"
-            className="p-4 space-y-6 w-[30%]"
+            className="p-4 space-y-6 w-[92%] md:w-[80%] lg:w-[70%] xl:w-[50%] 2xl:w-[40%]"
           >
             <FormField
               control={form.control}
@@ -170,7 +170,7 @@ const ContactPage: React.FC = () => {
           </form>
         </Form>
       </section>
-      <section>
+      <section className="w-full">
         <h1 className="text-4xl font-bold text-black pb-8 text-center">
           You can also contact us through our social media!
         </h1>
@@ -220,7 +220,7 @@ const ContactPage: React.FC = () => {
                   <stop
                     offset=".999"
                     stop-color="#4168c9"
-                    stop-opacity="0"
+                    stopOpacity="0"
                   ></stop>
                 </radialGradient>
                 <path
@@ -273,7 +273,7 @@ const ContactPage: React.FC = () => {
               <span className="sr-only">Whatsapp account</span>
             </a>
           </div>
-          <div className="flex items-center gap-6 w-full px-60 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-3 2xl:gap-6 w-[92%] mx-auto h-full">
             <iframe
               className="instagram-media instagram-media-rendered"
               id="instagram-embed-0"
