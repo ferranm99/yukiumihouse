@@ -93,9 +93,8 @@ export default function TabSwitch() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="w-full h-full flex flex-col gap-4 pb-10">
+            <div className="w-full flex flex-col xl:gap-12 gap-[4.5rem] pb-10">
               {selectedTab.content}
-
               <BookButton tour={selectedTab.tour} />
             </div>
           </motion.div>

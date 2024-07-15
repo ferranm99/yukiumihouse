@@ -71,7 +71,7 @@ export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
           </Link>
         </div>
         <div className="flex gap-5 items-center text-lg">
-          <div className="relative rounded-full w-28 h-28">
+          <div className="relative rounded-full w-20 h-20 border-[1px] border-gray-300">
             <Image
               src="/logos/logo_circular.JPG"
               alt="Yukiumi House logo"
