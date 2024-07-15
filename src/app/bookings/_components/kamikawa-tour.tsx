@@ -41,7 +41,7 @@ const KamikawaTour: React.FC = () => {
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
       <h1 className="text-4xl font-bold text-black">KURODAKE KAMIKAWA</h1>
-      <div className="w-[90%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <Image
           src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0945.jpg"
           alt="Kurodake Kamikawa"
@@ -50,17 +50,28 @@ const KamikawaTour: React.FC = () => {
           layout="responsive"
         />
       </div>
-      <h2 className="text-2xl font-bold text-black">HOKKAIDO NORTHSIDE</h2>
-      <p className="w-[90%] mx-auto">
-        Hokkaido Northside is a multi-day tour where clients can explore beyond
-        what Hokkaido's best mountains have to offer. We will locate you in the
-        northern side of Daisetsuzan National Park. We will use Kurodake ropeway
-        to access the mountain and get to a huge backcountry paradise. During
-        the high season, we will also hike from the road, as there are many
-        secret spots where we can ski for a great day. We will need to be
-        versatile and adapt to different situations to make the most of the day
-        and the conditions we deserve.
-      </p>
+      <h2 className="text-2xl font-bold text-black pt-6">HOKKAIDO NORTHSIDE</h2>
+      <section className="w-[90%] mx-auto sm:text-lg flex gap-16 justify-center pb-7">
+        <p className="w-[43%] sm:text-lg">
+          Hokkaido Northside is a multi-day tour where clients can explore
+          beyond what Hokkaido's best mountains have to offer. We will locate
+          you in the northern side of Daisetsuzan National Park. We will use
+          Kurodake ropeway to access the mountain and get to a huge backcountry
+          paradise. During the high season, we will also hike from the road, as
+          there are many secret spots where we can ski for a great day. We will
+          need to be versatile and adapt to different situations to make the
+          most of the day and the conditions we deserve.
+        </p>
+        <div className="w-[35%]">
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2023/04/img_3940.jpg"
+            alt="Hokkaido Northside"
+            width={379}
+            height={252}
+            layout="responsive"
+          />
+        </div>
+      </section>
       <div className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-6 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] mx-auto">
         <Card className="h-[20rem] sm:h-[22rem]">
           <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
@@ -70,7 +81,7 @@ const KamikawaTour: React.FC = () => {
           </CardHeader>
           <div className="h-[77.5%] flex items-center justify-center">
             <CardContent className="w-[90%] h-auto mx-auto p-0">
-              <ul className="w-full rounded-bl-xl">
+              <ul className="w-full rounded-bl-xl sm:text-lg">
                 {includedItems.map((item, index) => (
                   <li key={index} className="flex items-center p-1 gap-2">
                     <div className="flex-shrink-0">
@@ -108,7 +119,7 @@ const KamikawaTour: React.FC = () => {
             </CardHeader>
             <div className="h-[77.5%] flex items-center justify-center">
               <CardContent className="w-[90%] h-auto mx-auto p-0">
-                <ul className="w-full p-4 rounded-br-xl">
+                <ul className="w-full p-4 rounded-br-xl sm:text-lg">
                   {notIncludedItems.map((item, index) => (
                     <li key={index} className="flex items-center p-1 gap-3">
                       <div className="flex-shrink-0">
@@ -162,6 +173,133 @@ const KamikawaTour: React.FC = () => {
         notIncludedItems={notIncludedItems}
         notes={notes}
       /> */}
+      <div className="flex gap-12 w-[70%] mx-auto items-center justify-center">
+        <div className="w-[60%]">
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2022/12/img_7564.jpg"
+            alt="Daisetzusan National park"
+            layout="responsive"
+            width={512}
+            height={341}
+          />
+        </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="text-2xl font-bold text-black pl-1">Destinations</h3>
+          <ul className="text-lg">
+            <li className="py-2 flex gap-4">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                  fill="#f97316"
+                />
+                <path
+                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                  fill="#f97316"
+                />
+              </svg>
+              Kurodake ropeway
+            </li>
+            <li className="py-2 flex gap-4">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                  fill="#f97316"
+                />
+                <path
+                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                  fill="#f97316"
+                />
+              </svg>
+              Asahidake backcountry
+            </li>
+            <li className="py-2 flex gap-4">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                  fill="#f97316"
+                />
+                <path
+                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                  fill="#f97316"
+                />
+              </svg>
+              Yukiumi house backyard/Backcountry
+            </li>
+            <li className="py-2 flex gap-4">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                  fill="#f97316"
+                />
+                <path
+                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                  fill="#f97316"
+                />
+              </svg>
+              Pippu ski area
+            </li>
+            <li className="py-2 flex gap-4">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                  fill="#f97316"
+                />
+                <path
+                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                  fill="#f97316"
+                />
+              </svg>
+              Daisetzusan National park
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* <div */}
     </div>
   );
 };
