@@ -72,7 +72,7 @@ const KamikawaTour: React.FC = () => {
           />
         </div>
       </section>
-      <div className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-6 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] mx-auto">
+      <section className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-6 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] mx-auto">
         <Card className="h-[20rem] sm:h-[22rem]">
           <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
             <CardTitle className="text-center text-2xl font-semibold p-4 w-full">
@@ -167,14 +167,14 @@ const KamikawaTour: React.FC = () => {
             </CardDescription>
           </CardFooter>
         </div>
-      </div>
+      </section>
       {/*  <IncludedNotIncluded
         includedItems={includedItems}
         notIncludedItems={notIncludedItems}
         notes={notes}
       /> */}
-      <div className="flex gap-12 w-[70%] mx-auto items-center justify-center">
-        <div className="w-[60%]">
+      <section className="flex flex-col sm:flex-row gap-8 sm:gap-20 w-[90%] sm:w-[70%] mx-auto items-center justify-center">
+        <div className="w-full lg:w-[58%]">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2022/12/img_7564.jpg"
             alt="Daisetzusan National park"
@@ -183,123 +183,171 @@ const KamikawaTour: React.FC = () => {
             height={341}
           />
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="text-2xl font-bold text-black pl-1">Destinations</h3>
-          <ul className="text-lg">
-            <li className="py-2 flex gap-4">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.5"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
-                  fill="#f97316"
-                />
-                <path
-                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
-                  fill="#f97316"
-                />
-              </svg>
-              Kurodake ropeway
-            </li>
-            <li className="py-2 flex gap-4">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.5"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
-                  fill="#f97316"
-                />
-                <path
-                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
-                  fill="#f97316"
-                />
-              </svg>
-              Asahidake backcountry
-            </li>
-            <li className="py-2 flex gap-4">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.5"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
-                  fill="#f97316"
-                />
-                <path
-                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
-                  fill="#f97316"
-                />
-              </svg>
-              Yukiumi house backyard/Backcountry
-            </li>
-            <li className="py-2 flex gap-4">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.5"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
-                  fill="#f97316"
-                />
-                <path
-                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
-                  fill="#f97316"
-                />
-              </svg>
-              Pippu ski area
-            </li>
-            <li className="py-2 flex gap-4">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.5"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
-                  fill="#f97316"
-                />
-                <path
-                  d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
-                  fill="#f97316"
-                />
-              </svg>
-              Daisetzusan National park
-            </li>
-          </ul>
+        <Card className="w-full lg:w-[60%] xl:w-[30%] h-fit shadow-xl">
+          <CardHeader className="rounded-t-xl pb-2">
+            <CardTitle className="text-center text-2xl font-semibold w-full pb-2">
+              Diary
+            </CardTitle>
+            <hr className="w-2/3 mx-auto" />
+          </CardHeader>
+          <CardContent className="p-8 pt-0">
+            <ul className="sm:text-lg">
+              <li className="py-4 flex gap-4">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                    fill="#213b91"
+                  />
+                  <path
+                    d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                    fill="#213b91"
+                  />
+                </svg>
+                <p className="w-full mx-auto">Kurodake ropeway</p>
+              </li>
+              <li className="py-4 flex gap-4">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                    fill="#213b91"
+                  />
+                  <path
+                    d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                    fill="#213b91"
+                  />
+                </svg>
+                <p className="w-full mx-auto">Asahidake backcountry</p>
+              </li>
+              <li className="py-4 flex gap-4">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                    fill="#213b91"
+                  />
+                  <path
+                    d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                    fill="#213b91"
+                  />
+                </svg>
+                <p className="w-full mx-auto">
+                  Yukiumi house backyard/Backcountry
+                </p>
+              </li>
+              <li className="py-4 flex gap-4">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                    fill="#213b91"
+                  />
+                  <path
+                    d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                    fill="#213b91"
+                  />
+                </svg>
+                <p className="w-full mx-auto">Pippu ski area</p>
+              </li>
+              <li className="py-4 flex gap-4">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.5 1.75C6.5 1.33579 6.16421 1 5.75 1C5.33579 1 5 1.33579 5 1.75V21.75C5 22.1642 5.33579 22.5 5.75 22.5C6.16421 22.5 6.5 22.1642 6.5 21.75V13.6V3.6V1.75Z"
+                    fill="#213b91"
+                  />
+                  <path
+                    d="M13.3486 3.78947L13.1449 3.70801C11.5821 3.08288 9.8712 2.9258 8.22067 3.25591L6.5 3.60004V13.6L8.22067 13.2559C9.8712 12.9258 11.5821 13.0829 13.1449 13.708C14.8385 14.3854 16.7024 14.5119 18.472 14.0695L18.6864 14.0159C19.3115 13.8597 19.75 13.298 19.75 12.6538V5.28673C19.75 4.50617 19.0165 3.93343 18.2592 4.12274C16.628 4.53055 14.9097 4.41393 13.3486 3.78947Z"
+                    fill="#213b91"
+                  />
+                </svg>
+                <p className="w-full mx-auto">Daisetzusan National park</p>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+      <section className="flex flex-col sm:flex-row gap-8 sm:gap-20 w-[90%] mx-auto justify-center items-center pt-8">
+        <Card className="w-full lg:w-[30%] h-fit shadow-xl">
+          <CardHeader className="rounded-t-xl pb-2">
+            <CardTitle className="text-center text-2xl font-semibold w-full pb-2">
+              Diary
+            </CardTitle>
+            <hr className="w-2/3 mx-auto" />
+          </CardHeader>
+          <CardContent className="p-8 pt-0">
+            <ul className="sm:text-lg list-disc list-inside">
+              <li className="px-1 py-4">
+                We like to wake up early and have a{" "}
+                <strong>good breakfast</strong>. While making a morning briefing
+                we will decide where we will go.
+              </li>
+              <li className="px-1 py-4">
+                <strong>Riding time</strong>! That is why we are here! Let's
+                enjoy and be safe.
+              </li>
+              <li className="px-1 py-4">
+                Go to the <strong>onsen</strong>! Nothing better than the
+                Japanese hot springs to recover the tired body.
+              </li>
+              <li className="px-1 py-4">
+                <strong>Dinner</strong> at yukiumi house or outside. Ready to
+                sleep and ride again.
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        <div className="w-[48%]">
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2023/04/dsc_5595.jpg"
+            alt="Diary"
+            width={3}
+            height={2}
+            layout="responsive"
+          />
         </div>
-      </div>
-      {/* <div */}
+      </section>
     </div>
   );
 };
