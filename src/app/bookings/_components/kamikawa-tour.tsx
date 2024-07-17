@@ -1,6 +1,6 @@
 import React from "react";
-// import ImageCarousel from "./image-carousel";
 import Image from "next/image";
+import { useQuery } from "react-query";
 // import IncludedNotIncluded from "./included-not-included";
 import {
   Card,
@@ -11,25 +11,47 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const KamikawaTour: React.FC = () => {
-  const includedItems = [
-    "6 Nights Accommodation",
-    "Breakfast each morning",
-    "5 Days of Guide",
-    "Kurodake Ropeway pass",
-    "Transport for the duration of the trip including airport pickup and drop",
-  ];
+interface Slot {
+  period: string;
+  availableSpots: number;
+}
 
-  const notIncludedItems = [
-    "Flights",
-    "Travel and medical insurance",
-    "Ski rental, avy equipment *",
-    "Lunch, drinks",
-    "Ski passes different from Kurodake",
-  ];
-  const notes = [
-    "We can provide rental equipment or sell equipment if requested with time",
-  ];
+const fetchSlots = async () => {
+  const res = await fetch(`/api/slots?tour=${encodeURIComponent(0)}`, {
+    method: "GET",
+  });
+  if (!res.ok) {
+    throw new Error("Something went wrong!");
+  }
+  const data = await res.json();
+  return data.map((slot: [string, string]) => ({
+    period: slot[0],
+    availableSpots: parseInt(slot[1], 10),
+  }));
+};
+
+const includedItems = [
+  "6 Nights Accommodation",
+  "Breakfast each morning",
+  "5 Days of Guide",
+  "Kurodake Ropeway pass",
+  "Transport for the duration of the trip including airport pickup and drop",
+];
+
+const notIncludedItems = [
+  "Flights",
+  "Travel and medical insurance",
+  "Ski rental, avy equipment *",
+  "Lunch, drinks",
+  "Ski passes different from Kurodake",
+];
+
+const KamikawaTour: React.FC = () => {
+  const {
+    data: slots = [],
+    isLoading,
+    isError,
+  } = useQuery<Slot[], Error>(["slots"], () => fetchSlots());
 
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
@@ -401,20 +423,37 @@ const KamikawaTour: React.FC = () => {
         <h2 className="text-4xl font-bold text-black text-center pb-6">
           Tour Dates 2023-24
         </h2>
-        <p className="text-lg sm:text-xl/loose pb-6">
-          Safety is our main priority. We will provide you with all the
-          necessary safety equipment. We will also provide you with a safety
-          briefing before we start the tour. We will also have a guide with us
-          at all times to ensure your safety.
-        </p>
+        {isLoading && <p>Loading...</p>}
+        {isError && <p>Error loading slots</p>}
+        <div className="w-[50%] mx-auto grid grid-cols-2 items-center justify-center">
+          {slots.map((slot, index) => (
+            <div
+              className="w-full flex gap-2 items-end justify-center py-4"
+              key={index}
+            >
+              <div
+                className={`flex items-center justify-center text-lg w-[80%] h-14 shadow-lg text-black p-2 rounded-md border-gray-300 border-[1px] ${
+                  slot.availableSpots === 0 ? "line-through" : ""
+                }`}
+              >
+                {slot.period}
+              </div>
+              <span className="text-base italic font-semibold w-24 text-red-500">
+                {slot.availableSpots === 0 ? "Sold out" : ""}
+              </span>
+            </div>
+          ))}
+        </div>
       </section>
       <section className="w-[90%] mx-auto">
         <h2 className="text-4xl font-bold text-black text-center pb-6">
           Price and Duration
         </h2>
-        <p className="text-xl sm:text-2xl pb-6 text-center">
-          6 Nights, 7 Days $3000/person
-        </p>
+        <div className="flex items-end justify-center">
+          <p className="text-xl">6 Nights, 7 Days&nbsp;</p>
+          <p className="text-4xl font-medium"> $3000</p>
+          <p className="text-sm pb-3">/person</p>
+        </div>
       </section>
     </div>
   );

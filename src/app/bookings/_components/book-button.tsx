@@ -51,7 +51,7 @@ const BookButton = ({ tour }: { tour: Tours }) => {
 
   return (
     <Dialog>
-      <DialogTrigger className="ml-auto w-[30%] md:w-[20%] xl:w-[12%] h-14 bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md">
+      <DialogTrigger className="mx-auto w-[30%] md:w-[20%] xl:w-[17%] text-2xl h-16 font-medium bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md">
         Book Now
       </DialogTrigger>
       <DialogContent className="p-5 w-[80%] lg:w-[50%] 2xl:w-[30%] h-[82.5%] bg-white border-none overflow-x-hidden">
