@@ -59,12 +59,12 @@ export default function TabSwitch() {
               key={item.title}
               className={`${
                 item === selectedTab ? "bg-[#eee]" : ""
-              } w-full h-full flex flex-col rounded-xl bg-gray-200 cursor-pointer items-center min-w-0 relative select-none`}
+              } w-full h-full flex flex-col rounded-lg bg-gray-200 cursor-pointer items-center min-w-0 relative select-none`}
               onClick={() => setSelectedTab(item)}
             >
               <div className="h-[72%] w-full relative">
                 <Image
-                  className="rounded-t-xl"
+                  className="rounded-t-lg"
                   src={item.image}
                   alt={item.title}
                   fill

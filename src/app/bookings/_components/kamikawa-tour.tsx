@@ -11,13 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const images = [
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
-  "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
-  "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
-  "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
-];
-
 const KamikawaTour: React.FC = () => {
   const includedItems = [
     "6 Nights Accommodation",
@@ -41,18 +34,18 @@ const KamikawaTour: React.FC = () => {
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
       <h1 className="text-4xl font-bold text-black">KURODAKE KAMIKAWA</h1>
-      <div className="w-[80%] mx-auto">
+      <div className="relative aspect-[1719/967] w-[80%] rounded-lg mx-auto">
         <Image
           src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0945.jpg"
           alt="Kurodake Kamikawa"
-          width={1719}
-          height={967}
-          layout="responsive"
+          fill
+          style={{ objectFit: "cover" }}
+          className="rounded-lg"
         />
       </div>
       <h2 className="text-2xl font-bold text-black pt-6">HOKKAIDO NORTHSIDE</h2>
-      <section className="w-[90%] mx-auto sm:text-lg flex gap-16 justify-center pb-7">
-        <p className="w-[43%] sm:text-lg">
+      <section className="w-[90%] mx-auto sm:text-lg flex gap-16 items-center justify-center pb-7">
+        <p className="w-[43%]  text-lg sm:text-xl/loose">
           Hokkaido Northside is a multi-day tour where clients can explore
           beyond what Hokkaido's best mountains have to offer. We will locate
           you in the northern side of Daisetsuzan National Park. We will use
@@ -62,17 +55,17 @@ const KamikawaTour: React.FC = () => {
           need to be versatile and adapt to different situations to make the
           most of the day and the conditions we deserve.
         </p>
-        <div className="w-[35%]">
+        <div className="relative aspect-[379/252] w-[35%] rounded-lg">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/img_3940.jpg"
             alt="Hokkaido Northside"
-            width={379}
-            height={252}
-            layout="responsive"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg"
           />
         </div>
       </section>
-      <section className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-6 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] mx-auto">
+      <section className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-16 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[56%] mx-auto">
         <Card className="h-[20rem] sm:h-[22rem]">
           <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
             <CardTitle className="text-center text-2xl font-semibold p-4 w-full">
@@ -174,19 +167,19 @@ const KamikawaTour: React.FC = () => {
         notes={notes}
       /> */}
       <section className="flex flex-col sm:flex-row gap-8 sm:gap-20 w-[90%] sm:w-[70%] mx-auto items-center justify-center">
-        <div className="w-full lg:w-[58%]">
+        <div className="relative aspect-[512/341] w-full lg:w-[58%] rounded-lg">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2022/12/img_7564.jpg"
             alt="Daisetzusan National park"
-            layout="responsive"
-            width={512}
-            height={341}
+            style={{ objectFit: "cover" }}
+            fill
+            className="rounded-lg"
           />
         </div>
         <Card className="w-full lg:w-[60%] xl:w-[30%] h-fit shadow-xl">
           <CardHeader className="rounded-t-xl pb-2">
             <CardTitle className="text-center text-2xl font-semibold w-full pb-2">
-              Diary
+              Destinations
             </CardTitle>
             <hr className="w-2/3 mx-auto" />
           </CardHeader>
@@ -338,15 +331,90 @@ const KamikawaTour: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-        <div className="w-[48%]">
+        <div className="relative aspect-[3/2] w-[48%] rounded-xl">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/dsc_5595.jpg"
             alt="Diary"
-            width={3}
-            height={2}
-            layout="responsive"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg"
           />
         </div>
+      </section>
+      <section className="w-[90%] mx-auto pt-8">
+        <h2 className="text-2xl font-bold text-black text-center pb-6">
+          Weather Reports
+        </h2>
+        <p className="text-lg sm:text-xl/loose">
+          Our team it's always tracking the forecast, the snow stability and the
+          mountain conditions to ensure we are having a safe day on the
+          mountain. We will make sure to adequate terrain to the group level and
+          to keep safety as 1st priority in the backcountry. During dinner time,
+          our best choices would be discussed within the group and in the
+          morning last decisions would be taken according to the weather
+          situation.
+        </p>
+      </section>
+      <section className="w-[90%] mx-auto pt-8">
+        <h2 className="text-2xl font-bold text-black text-center pb-6">
+          Ability
+        </h2>
+        <p className="text-lg sm:text-xl/loose pb-6">
+          Good riding skills in all types of slopes are required and some
+          previous backcountry experience too. Healthy cardio form is one of the
+          most important things to be able to enjoy the tour. The guides running
+          the trip will adjust the level at the client's desire and skills
+          ability.
+        </p>
+        <div className="relative aspect-[276/155] w-[50%] mx-auto">
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2023/06/pxl_20230204_030604118-edited.jpg"
+            alt="Ability"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg"
+          />
+        </div>
+      </section>
+      <section className="w-[90%] mx-auto pt-8">
+        <h2 className="text-2xl font-bold text-black text-center pb-6">
+          Equipment
+        </h2>
+        <p className="text-lg sm:text-xl/loose  pb-6">
+          Self equipment as touring gear, touring skis, splitboard or snowshoes,
+          are the preferable option. As well as safety equipment is required. In
+          terms of skis we recommend wide and large set up as we are going to go
+          through the deepest snow, for snowboarders we recommend to be on a
+          splitboard
+        </p>
+        <div className="relative aspect-[524/294] w-[50%] mx-auto">
+          <Image
+            src="https://yukiumihouse.files.wordpress.com/2023/06/img_20230326_164710-edited.jpg"
+            alt="Equipment"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg"
+          />
+        </div>
+      </section>
+      <section className="w-[90%] mx-auto pt-8">
+        <h2 className="text-4xl font-bold text-black text-center pb-6">
+          Tour Dates 2023-24
+        </h2>
+        <p className="text-lg sm:text-xl/loose pb-6">
+          Safety is our main priority. We will provide you with all the
+          necessary safety equipment. We will also provide you with a safety
+          briefing before we start the tour. We will also have a guide with us
+          at all times to ensure your safety.
+        </p>
+      </section>
+      <section className="w-[90%] mx-auto">
+        <h2 className="text-4xl font-bold text-black text-center pb-6">
+          Price and Duration
+        </h2>
+        <p className="text-xl sm:text-2xl pb-6 text-center">
+          6 Nights, 7 Days $3000/person
+        </p>
       </section>
     </div>
   );
