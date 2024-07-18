@@ -35,7 +35,7 @@ const tours = [
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2023/04/06/315/index.html",
+    href: "bookings/kamikawa",
   },
   {
     title: "Furano: Sea of Snow",
@@ -43,7 +43,7 @@ const tours = [
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2022/12/01/mayan-history/index.html",
+    href: "bookings/furano",
   },
   {
     title: "Day tours to all central and North Hokkaido locations",
@@ -51,7 +51,7 @@ const tours = [
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    href: "/2022/12/01/nunnery-quadrangle/index.html",
+    href: "bookings/day-tours",
   },
   /*   {
     title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
@@ -127,7 +127,7 @@ export default function Landing() {
         <h1 className="text-4xl font-bold text-black pb-4 ">Blogs</h1>
         <BlogSection />
         <Link
-          href="/reviews"
+          href="/blog"
           className="self-end mr-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100"
         >
           See all Blogs {">>"}

@@ -52,7 +52,7 @@ export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
             Watch video
           </Link>
           <Link
-            href="/bookings"
+            href="/bookings/kamikawa"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Book now
