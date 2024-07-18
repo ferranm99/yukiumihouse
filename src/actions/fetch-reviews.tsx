@@ -1,4 +1,4 @@
-"use server";
+/* "use server";
 
 import { google } from "googleapis";
 
@@ -67,3 +67,4 @@ export async function fetchReviews() {
     return [];
   }
 }
+ */

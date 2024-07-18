@@ -55,7 +55,7 @@ const KamikawaTour: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
-      <h1 className="text-4xl font-bold text-black">KURODAKE KAMIKAWA</h1>
+      <h2 className="text-3xl font-semibold text-black">KURODAKE KAMIKAWA</h2>
       <div className="relative aspect-[1719/967] w-[80%] rounded-lg mx-auto">
         <Image
           src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0945.jpg"

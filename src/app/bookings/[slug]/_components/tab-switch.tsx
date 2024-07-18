@@ -1,19 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import KamikawaTour from "./kamikawa-tour";
 import FuranoTour from "./furano-tour";
 import DayTours from "./day-tours";
-import SurfTour from "./surf-tour";
+// import SurfTour from "./surf-tour";
 import BookButton from "./book-button";
 
 enum Tours {
   Kamikawa,
   Furano,
   DayTours,
-  SurfTour,
 }
 
 const tabs = [
@@ -23,6 +22,7 @@ const tabs = [
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     content: <KamikawaTour />,
     tour: Tours.Kamikawa,
+    url: "/bookings/kamikawa",
   },
   {
     title: "Furano: Sea of Snow",
@@ -30,6 +30,7 @@ const tabs = [
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     content: <FuranoTour />,
     tour: Tours.Furano,
+    url: "/bookings/furano",
   },
   {
     title: "Day tours to all central and North Hokkaido locations",
@@ -37,23 +38,52 @@ const tabs = [
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     content: <DayTours />,
     tour: Tours.DayTours,
+    url: "/bookings/day-tours",
   },
-  {
+  /* {
     title: "Surf tour: Hokkaido pacífic and Okhotsk sea",
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
     content: <SurfTour />,
     tour: Tours.SurfTour,
-  },
+  }, */
 ];
 
-export default function TabSwitch() {
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+const tourNames = {
+  kamikawa: Tours.Kamikawa,
+  furano: Tours.Furano,
+  "day-tours": Tours.DayTours,
+};
+
+interface TabSwitchProps {
+  tour: string;
+}
+
+export default function TabSwitch({ tour }: TabSwitchProps) {
+  if (!(tour in tourNames)) {
+    // Handle the error, e.g., by throwing an exception or returning early
+    throw new Error("Invalid tour name");
+  }
+  const [selectedTab, setSelectedTab] = useState(
+    tabs[tourNames[tour as keyof typeof tourNames]]
+  );
+
+  // useEffect(() => {
+  //   const tourEnum = Tours[tour as keyof typeof Tours];
+  //   const foundTab = tabs.find((tab) => tab.tour === tourEnum);
+  //   if (foundTab) {
+  //     setSelectedTab(foundTab);
+  //   }
+  // }, [tour]);
+
+  useEffect(() => {
+    window.history.pushState({}, "", selectedTab.url);
+  }, [selectedTab]);
 
   return (
     <div className="w-[90%] h-full flex flex-col gap-4 overflow-auto">
-      <nav className="h-80 md:h-48 xl:h-72">
-        <ul className="grid grid-cols-2 md:grid-cols-4 w-full h-full items-center gap-2 xl:gap-5">
+      <nav className="h-80 md:h-48 xl:h-72 2xl:w-[90%] mx-auto">
+        <ul className="grid grid-cols-3 w-full h-full items-center gap-2 xl:gap-8">
           {tabs.map((item) => (
             <li
               key={item.title}

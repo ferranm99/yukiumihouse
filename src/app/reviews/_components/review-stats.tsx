@@ -34,7 +34,7 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
   const twoStarPercentage = (starCounts[1] / totalReviews) * 100;
   const oneStarPercentage = (starCounts[0] / totalReviews) * 100;
 
-  const getStarColor = (index: number): string => {
+  /*   const getStarColor = (index: number): string => {
     // Round to nearest 0.5
     const roundedRating = Math.round(ratingAvg * 2) / 2;
     if (index < roundedRating) {
@@ -45,10 +45,10 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
     }
     return "empty";
   };
-
+ */
   return (
-    <div className="my-20 pl-16 2xl:pl-24 w-full">
-      <div className="flex items-center mb-2">
+    <div className="my-20 w-[45%] mx-auto">
+      <div className="flex items-center w-full mb-2">
         <StarRating rating={ratingAvg} />
         <p className="ms-1 text-sm font-medium">{ratingAvg}</p>
         <p className="ms-1 text-sm font-medium">out of</p>
@@ -56,15 +56,18 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
       </div>
       <p className="text-sm font-medium">{reviews.length} global ratings</p>
       <div className="flex items-center mt-4">
-        <div className="text-sm font-medium hover:underline">5 star</div>
-        <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+        <div className="w-[5%] text-sm font-medium hover:underline">5 star</div>
+        <div className="w-[90%] h-5 bg-gray-200 rounded dark:bg-gray-700">
           <div
             style={{ width: `${fiveStarPercentage}%` }}
             className="h-5 bg-yellow-400 rounded"
           />
         </div>
-        <span className="text-sm font-medium">{fiveStarPercentage}%</span>
+        <span className="w-[5%] pl-2 text-sm font-medium">
+          {fiveStarPercentage}%
+        </span>
       </div>
+      {/* 
       <div className="flex items-center mt-4">
         <div className="text-sm font-medium hover:underline">4 star</div>
         <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
@@ -104,7 +107,7 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
           />
         </div>
         <span className="text-sm font-medium">{oneStarPercentage}%</span>
-      </div>
+      </div> */}
     </div>
   );
 }

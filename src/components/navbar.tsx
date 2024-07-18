@@ -41,23 +41,23 @@ const seasons: { name: string; href: string; description: string }[] = [
   },
 ];
 
-const locations: { title: string; href: string; description: string }[] = [
-  {
-    title: "Daily Tours",
-    href: "/daily-tours/index.html",
-    description: "Choose your destination",
-  },
+const tours: { title: string; href: string; description: string }[] = [
   {
     title: "Kurodake-Kamikawa",
-    href: "/kamikawa/index.html",
+    href: "/bookings/kamikawa/",
     description:
-      "Multi-day tour in Hokkaido’s best mountains and backcountry paradise.",
+      "Multi-day tour in Hokkaido's best mountains and backcountry paradise.",
   },
   {
     title: "Furano",
-    href: "/furano/index.html",
+    href: "/bookings/furano",
     description:
       "Experience Furano's top snow, cozy lodge, and epic mountain trips.",
+  },
+  {
+    title: "Daily Tours",
+    href: "/bookings/day-tours",
+    description: "Choose your destination",
   },
 ];
 
@@ -77,36 +77,47 @@ export default function Navbar() {
       </div>
       <NavigationMenu className="z-[100]">
         <NavigationMenuList>
-          {/* <NavigationMenuItem>
-            <Link href="/house" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn("no-underline", navigationMenuTriggerStyle())}
-              >
-                HOUSE
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem> */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>LOCATIONS</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              <NavigationMenuLink href="/bookings/kamikawa">
+                BOOKINGS
+              </NavigationMenuLink>
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {locations.map((loc) => (
-                  <ListItem key={loc.title} title={loc.title} href={loc.href}>
-                    {loc.description}
+                {tours.map((tour) => (
+                  <ListItem
+                    key={tour.title}
+                    title={tour.title}
+                    href={tour.href}
+                  >
+                    {tour.description}
                   </ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/bookings" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={cn("no-underline", navigationMenuTriggerStyle())}
-              >
-                BOOKINGS
+            <NavigationMenuTrigger>
+              <NavigationMenuLink href="/bookings/furano">
+                LOCATIONS
               </NavigationMenuLink>
-            </Link>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                {tours.map((tour) => (
+                  <ListItem
+                    key={tour.title}
+                    title={tour.title}
+                    href={tour.href}
+                  >
+                    {tour.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuItem>
             <Link href="/reviews" legacyBehavior passHref>
               <NavigationMenuLink
