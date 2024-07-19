@@ -22,16 +22,24 @@ type MenuItemWithSubMenuProps = {
 
 const navItemsTop: NavLink[] = [
   {
-    label: "LOCATIONS",
+    label: "BOOKING",
+    href: "/bookings/kamikawa",
+    subMenu: true,
+    subMenuItems: [
+      { label: "Kamikawa", href: "/bookings/kamikawa" },
+      { label: "Furano", href: "/bookings/furano" },
+      { label: "Daily tours", href: "/bookings/daily-tours" },
+    ],
+  },
+  {
+    label: "ACOMMODATIONS",
     href: "",
     subMenu: true,
     subMenuItems: [
-      { label: "Daily tours", href: "/daily-tours/index.html" },
-      { label: "Kurodake-Kamikawa", href: "/kamikawa/index.html" },
-      { label: "Furano", href: "/furano/index.html" },
+      { label: "Yukiumi House Furano", href: "/daily-tours/index.html" },
+      { label: "Yukiumi House Kamikawa", href: "/kamikawa/index.html" },
     ],
   },
-  { label: "BOOKING", href: "/bookings" },
   { label: "REVIEWS", href: "/reviews" },
 
   { label: "BLOG", href: "/blog" },

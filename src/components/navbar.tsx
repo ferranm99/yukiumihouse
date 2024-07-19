@@ -43,8 +43,8 @@ const seasons: { name: string; href: string; description: string }[] = [
 
 const tours: { title: string; href: string; description: string }[] = [
   {
-    title: "Kurodake-Kamikawa",
-    href: "/bookings/kamikawa/",
+    title: "Kamikawa",
+    href: "/bookings/kamikawa",
     description:
       "Multi-day tour in Hokkaido's best mountains and backcountry paradise.",
   },
@@ -57,7 +57,18 @@ const tours: { title: string; href: string; description: string }[] = [
   {
     title: "Daily Tours",
     href: "/bookings/day-tours",
-    description: "Choose your destination",
+    description: "You choose the destination, we take care of the rest!",
+  },
+];
+
+const accomodations: { title: string; href: string }[] = [
+  {
+    title: "Yukiumi House Kamikawa",
+    href: "/accomodations/kamikawa",
+  },
+  {
+    title: "Yukiumi House Furano",
+    href: "/accomodations/furano",
   },
 ];
 
@@ -70,8 +81,6 @@ export default function Navbar() {
             src="/logos/logo_rectangular.JPG"
             alt="yukiumi house logo"
             fill
-            /* width={160}
-            height={80} */
           />
         </Link>
       </div>
@@ -99,19 +108,15 @@ export default function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <NavigationMenuLink href="/bookings/furano">
-                LOCATIONS
+              <NavigationMenuLink href="/accomodations">
+                ACOMMODATIONS
               </NavigationMenuLink>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {tours.map((tour) => (
-                  <ListItem
-                    key={tour.title}
-                    title={tour.title}
-                    href={tour.href}
-                  >
-                    {tour.description}
+                {accomodations.map((acc) => (
+                  <ListItem key={acc.title} title={acc.title} href={acc.href}>
+                    {/* {acc.description} */}
                   </ListItem>
                 ))}
               </ul>
