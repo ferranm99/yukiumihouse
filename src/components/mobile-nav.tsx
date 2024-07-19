@@ -33,11 +33,11 @@ const navItemsTop: NavLink[] = [
   },
   {
     label: "ACOMMODATIONS",
-    href: "",
+    href: "/accomodations",
     subMenu: true,
     subMenuItems: [
-      { label: "Yukiumi House Furano", href: "/daily-tours/index.html" },
-      { label: "Yukiumi House Kamikawa", href: "/kamikawa/index.html" },
+      { label: "Yukiumi House Kamikawa", href: "/accomodations/kamikawa" },
+      { label: "Yukiumi House Furano", href: "/accomodations/furano" },
     ],
   },
   { label: "REVIEWS", href: "/reviews" },
@@ -106,7 +106,6 @@ const MobileNav = () => {
                 alt="yukiumi house logo"
                 width={160}
                 height={80}
-                className=""
               />
             </Link>
           </MenuItem>
@@ -201,17 +200,14 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
   return (
     <>
       <MenuItem>
-        <button
-          className="relative justify-center w-full text-2xl"
+        <div
+          className="relative text-center justify-center w-full text-2xl"
           onClick={() => setSubMenuOpen(!subMenuOpen)}
         >
-          {/* <div className="flex flex-row text-center"> */}
-          <span
-            //   className={`${pathname.includes(item.href) ? "font-bold" : ""}`}
-            className=""
-          >
+          <Link href={item.href} onClick={() => toggleOpen()}>
+            {/* className={`${pathname.includes(item.href) ? "font-bold" : ""}`} */}
             {item.label}
-          </span>
+          </Link>
           <svg
             className={`absolute right-0 top-1 h-auto transform transition duration-300 ${
               subMenuOpen ? "rotate-180" : ""
@@ -219,10 +215,11 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
+            onClick={() => setSubMenuOpen(!subMenuOpen)}
           >
             <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
           </svg>
-        </button>
+        </div>
       </MenuItem>
       <div className="mt-2 ml-2 flex flex-col items-center space-y-2">
         {subMenuOpen && (
