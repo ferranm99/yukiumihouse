@@ -240,7 +240,7 @@ const ContactPage: React.FC = () => {
               <span className="sr-only">Instagram account</span>
             </a>
             <a
-              href="https://t.me/@Gerarddmc13"
+              href="https://t.me/Gerarddmc13"
               target="_blank"
               className="text-blue-500 hover:opacity-85 ms-5"
             >
@@ -257,7 +257,7 @@ const ContactPage: React.FC = () => {
             </a>
 
             <a
-              href="https://wa.me/34"
+              href="https://wa.me/818019879909"
               target="_blank"
               className="text-green-500 hover:opacity-85 ms-5"
             >
