@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
               <span className="sr-only">Instagram account</span>
             </a>
             <a
-              href="https://t.me/@Gerarddmc13"
+              href="https://t.me/Gerarddmc13"
               target="_blank"
               className="text-gray-500 hover:text-white ms-5"
             >
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
             </a>
 
             <a
-              href="https://wa.me/34"
+              href="https://wa.me/818019879909"
               target="_blank"
               className="text-gray-500 hover:text-white ms-5"
             >

@@ -1,4 +1,4 @@
-// import Gallery from "../_components/photo-album";
+import PhotoAlbum from "../_components/photo-album";
 
 export const photos = [
   {
@@ -114,8 +114,8 @@ const Page = () => {
       <h1 className="text-4xl font-bold text-center mt-16">
         Yukiumi House Kamikawa
       </h1>
-      <div className="w-[85%] mx-auto my-8">
-        {/* <Gallery photos={photos} /> */}
+      <div className="my-8">
+        <PhotoAlbum photos={photos} />
       </div>
     </div>
   );
