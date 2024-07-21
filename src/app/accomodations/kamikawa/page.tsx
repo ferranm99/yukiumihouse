@@ -47,11 +47,6 @@ export const photos = [
     height: 3120,
   },
   {
-    src: "/images/yukihouse_kamikawa/IMG-20240717-WA0023.jpg",
-    width: 4160,
-    height: 3120,
-  },
-  {
     src: "/images/yukihouse_kamikawa/IMG-20240717-WA0024.jpg",
     width: 4160,
     height: 3120,
@@ -77,11 +72,6 @@ export const photos = [
     height: 3120,
   },
   {
-    src: "/images/yukihouse_kamikawa/IMG-20240717-WA0030.jpg",
-    width: 2680,
-    height: 3871,
-  },
-  {
     src: "/images/yukihouse_kamikawa/IMG-20240717-WA0031.jpg",
     width: 3120,
     height: 4160,
@@ -93,11 +83,6 @@ export const photos = [
   },
   {
     src: "/images/yukihouse_kamikawa/IMG-20240717-WA0035.jpg",
-    width: 4160,
-    height: 3120,
-  },
-  {
-    src: "/images/yukihouse_kamikawa/IMG-20240717-WA0037.jpg",
     width: 4160,
     height: 3120,
   },
