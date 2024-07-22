@@ -1,4 +1,11 @@
 import PhotoAlbum from "../_components/photo-album";
+import ImageCarousel from "../_components/image-carousel";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "@/components/ui/animated-modal";
 
 export const photos = [
   {
@@ -100,7 +107,16 @@ const Page = () => {
         Yukiumi House Kamikawa
       </h1>
       <div className="my-8">
-        <PhotoAlbum photos={photos} />
+        <Modal>
+          <ModalTrigger>
+            <PhotoAlbum photos={photos} />
+          </ModalTrigger>
+          <ModalBody>
+            <ModalContent>
+              <ImageCarousel images={photos} />
+            </ModalContent>
+          </ModalBody>
+        </Modal>
       </div>
     </div>
   );
