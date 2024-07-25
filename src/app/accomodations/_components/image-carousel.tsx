@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -10,62 +10,102 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-type Image = {
+type Photo = {
   src: string;
   width: number;
   height: number;
+  alt?: string;
 };
 
 type ImageCarouselProps = {
-  images: Image[];
+  images: Photo[];
+  selectedIndex: number;
 };
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
+const ImageCarousel: React.FC<ImageCarouselProps> = ({
+  images,
+  selectedIndex,
+}) => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(selectedIndex);
+  const [count, setCount] = useState(images.length);
+  const [calculatedWidth, setCalculatedWidth] = useState(0);
+  const [calculatedHeight, setCalculatedHeight] = useState(0);
 
-  React.useEffect(() => {
+  const calculateDimensions = (index: number) => {
+    const aspectRatio = images[index].width / images[index].height;
+    const maxWidth = window.innerWidth * 0.9;
+    const maxHeight = window.innerHeight * 0.9;
+
+    let width, height;
+    if (maxWidth / aspectRatio <= maxHeight) {
+      width = maxWidth;
+      height = maxWidth / aspectRatio;
+    } else {
+      width = maxHeight * aspectRatio;
+      height = maxHeight;
+    }
+
+    setCalculatedWidth(width);
+    setCalculatedHeight(height);
+  };
+
+  useEffect(() => {
+    console.log("selected index", selectedIndex);
+    console.log("current", current);
+    const handleResize = () => {
+      calculateDimensions(current);
+    };
+
+    // Initial calculation
+    handleResize();
+
+    // Recalculate on window resize
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [current]);
+
+  useEffect(() => {
     if (!api) {
       return;
     }
 
     setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    setCurrent(api.selectedScrollSnap());
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
+      setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
 
   return (
-    <div>
-      <Carousel setApi={setApi} className="w-full">
-        <CarouselContent>
+    <div className="flex flex-col items-center justify-center h-full w-full max-w-[100vw] max-h-[100vh]">
+      <Carousel
+        setApi={setApi}
+        opts={{ startIndex: current, align: "center" }}
+        className="w-full h-full"
+      >
+        <CarouselContent className="max-w-[90vw] max-h-[90vh]">
           {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <div className="w-[90%] h-fit">
-                <Image
-                  src={image.src}
-                  alt="House image"
-                  layout="responsive"
-                  width={image.width}
-                  height={image.height}
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    maxHeight: "100vh",
-                  }}
-                />
-              </div>
+            <CarouselItem
+              key={index}
+              className="flex items-center justify-center"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt || "Photo " + index}
+                width={calculatedWidth}
+                height={calculatedHeight}
+                style={{ maxWidth: "100%", maxHeight: "100%" }}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="invisible md:visible" />
+        <CarouselNext className="invisible md:visible" />
       </Carousel>
-      <div className="py-2 text-center text-sm text-muted-foreground">
-        Slide {current} of {count}
+      <div className="py-2 text-center text-sm text-muted-foreground font-medium text-white">
+        Slide {current + 1} of {count}
       </div>
     </div>
   );

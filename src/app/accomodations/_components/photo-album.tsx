@@ -13,9 +13,13 @@ type Photo = {
 
 type PhotoAlbumProps = {
   photos: Photo[];
+  handlePhotoClick: (index: number) => void;
 };
 
-const PhotoAlbum: React.FC<PhotoAlbumProps> = ({ photos }) => {
+const PhotoAlbum: React.FC<PhotoAlbumProps> = ({
+  photos,
+  handlePhotoClick,
+}) => {
   const getRowDimensions = () => {
     const width = window.innerWidth;
     console.log(width);
@@ -72,7 +76,7 @@ const PhotoAlbum: React.FC<PhotoAlbumProps> = ({ photos }) => {
   rows[rows.length - 2] = temp;
 
   return (
-    <div className="w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
+    <div className="w-full">
       {dimensions.rowWidth === 0 && dimensions.minRowHeight === 0 ? (
         <LoadingSkeleton />
       ) : (
@@ -88,7 +92,7 @@ const PhotoAlbum: React.FC<PhotoAlbumProps> = ({ photos }) => {
               {row.map((photo, index) => {
                 const photoHeight = rowHeight;
                 const photoWidth = (photo.width / photo.height) * photoHeight;
-
+                const photoIndex = photos.indexOf(photo);
                 return (
                   <div
                     key={index}
@@ -104,6 +108,7 @@ const PhotoAlbum: React.FC<PhotoAlbumProps> = ({ photos }) => {
                       fill
                       style={{ objectFit: "cover" }}
                       className="p-[0.1rem]"
+                      onClick={() => handlePhotoClick(photoIndex)}
                     />
                   </div>
                 );

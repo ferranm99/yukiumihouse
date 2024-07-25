@@ -84,7 +84,7 @@ export default function Navbar() {
           />
         </Link>
       </div>
-      <NavigationMenu className="z-[100]">
+      <NavigationMenu className="z-[90]">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>

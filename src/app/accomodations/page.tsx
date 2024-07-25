@@ -7,6 +7,15 @@ export default async function Page() {
       <h1 className="text-4xl font-bold text-center mt-16">
         We have 2 incredible accomodations for you!
       </h1>
+      <h3 className="text-center mt-8 text-lg w-[70%] mx-auto">
+        Yukiumi has two lodges, one in Furano town and one in Kamikawa village.
+        Both places are at the bed of the biggest National park in Japan,
+        Daisetsusan National Park. Both of the lodges are cataloged as Japanese
+        Ryokan, being just simply austere cozy and comfortable japanese houses
+        opened for our guests. During winter we operate our Backcountry tours in
+        these two locations, and in summer the guest houses are open to receive
+        all the guests and travelers that come through.
+      </h3>
       <div className="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 w-full md:w-[80%] xl:w-[50%] mx-auto h-fit my-16">
         <Link
           className="h-fit relative  flex items-center justify-center cursor-pointer"
