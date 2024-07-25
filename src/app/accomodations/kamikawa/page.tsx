@@ -213,6 +213,16 @@ const Page = () => {
         offer. Not to mention in front of our lodge there is this beautiful
         ancient Japanese temple, where we can delight its magic culture.
       </h3>
+      <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
+        <iframe
+          width="600"
+          height="500"
+          className="border-0 w-full"
+          loading="lazy"
+          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9cZ3P-4jDV8Rma89S85o4eU&key=${process.env.GOOGLE_EMBED_MAP_API_KEY}`}
+          allowFullScreen
+        ></iframe>
+      </div>
       <h2 className="text-2xl font-bold text-center mt-16">House Interior</h2>
       <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         <Modal>

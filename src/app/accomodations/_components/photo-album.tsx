@@ -71,9 +71,9 @@ const PhotoAlbum: React.FC<PhotoAlbumProps> = ({
 
   const rows = createRows(photos, dimensions.rowWidth);
   //Exchange the last two rows to make the layout more balanced
-  const temp = rows[rows.length - 1];
+  /*   const temp = rows[rows.length - 1];
   rows[rows.length - 1] = rows[rows.length - 2];
-  rows[rows.length - 2] = temp;
+  rows[rows.length - 2] = temp; */
 
   return (
     <div className="w-full">

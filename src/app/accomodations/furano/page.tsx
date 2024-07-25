@@ -12,7 +12,7 @@ type Photo = {
 };
 
 export const photos: Photo[] = [
-  {
+  /*  {
     src: "/images/yukihouse_furano/IMG_4397.HEIC",
     width: 512,
     height: 512,
@@ -95,7 +95,7 @@ export const photos: Photo[] = [
     width: 512,
     height: 512,
     alt: "Yukiumi House Furano Terrace",
-  },
+  }, */
   {
     src: "/images/yukihouse_furano/PXL_20231121_044756527.jpg",
     width: 4080,
@@ -141,7 +141,7 @@ const Page = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold text-center mt-16">
-        Yukiumi House Kamikawa
+        Yukiumi House Furano
       </h1>
       <h3 className="text-center mt-8 text-lg w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         In the center of the little village of Kamikawa in the deep heart of
@@ -156,7 +156,17 @@ const Page = () => {
         Hokkaido with the tranquility and recommendations we got for you all
         year round.
       </h3>
-      <h2 className="text-2xl font-bold text-center mt-16">House Interior</h2>
+      <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
+        <iframe
+          width="600"
+          height="500"
+          className="border-0 w-full"
+          loading="lazy"
+          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJv7CeWgBRc18R_rz_VYnXZ1E&key=${process.env.GOOGLE_EMBED_MAP_API_KEY}`}
+          allowFullScreen
+        ></iframe>
+      </div>
+      <h2 className="text-2xl font-bold text-center mt-16">House Photos</h2>
       <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         <Modal>
           <ModalTrigger className="p-0">
