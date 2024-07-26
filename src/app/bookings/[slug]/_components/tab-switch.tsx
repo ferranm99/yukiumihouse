@@ -6,8 +6,9 @@ import Image from "next/image";
 import KamikawaTour from "./kamikawa-tour";
 import FuranoTour from "./furano-tour";
 import DayTours from "./day-tours";
+import BookCustomTourButton from "./book-custom-tour";
 // import SurfTour from "./surf-tour";
-import BookButton from "./book-tour-button";
+import BookTourButton from "./book-tour-button";
 
 enum Tours {
   Kamikawa,
@@ -125,7 +126,11 @@ export default function TabSwitch({ tour }: TabSwitchProps) {
           >
             <div className="w-full flex flex-col xl:gap-12 gap-[4.5rem] pb-10">
               {selectedTab.content}
-              <BookButton tour={selectedTab.tour} />
+              {tour === "day-tours" ? (
+                <BookCustomTourButton />
+              ) : (
+                <BookTourButton tour={selectedTab.tour} />
+              )}
             </div>
           </motion.div>
         </AnimatePresence>
