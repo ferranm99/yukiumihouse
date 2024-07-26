@@ -7,7 +7,7 @@ import KamikawaTour from "./kamikawa-tour";
 import FuranoTour from "./furano-tour";
 import DayTours from "./day-tours";
 // import SurfTour from "./surf-tour";
-import BookButton from "./book-button";
+import BookButton from "./book-tour-button";
 
 enum Tours {
   Kamikawa,
@@ -33,7 +33,7 @@ const tabs = [
     url: "/bookings/furano",
   },
   {
-    title: "Day tours to all central and North Hokkaido locations",
+    title: "Custom Day Tour",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     content: <DayTours />,

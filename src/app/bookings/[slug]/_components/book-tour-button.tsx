@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useQueryClient } from "react-query";
+// import { useQueryClient } from "react-query";
 import {
   Dialog,
   DialogContent,
@@ -18,14 +18,13 @@ enum Tours {
   SurfTour,
 }
 
-const tourNames = {
+/* const tourNames = {
   [Tours.Kamikawa]: "Kamikawa Tour",
   [Tours.Furano]: "Furano Tour",
-  [Tours.DayTours]: "Day Tours",
   [Tours.SurfTour]: "Surf Tour",
-};
+}; */
 
-const fetchSlots = async (tour: Tours) => {
+/* const fetchSlots = async (tour: Tours) => {
   const res = await fetch(`/api/slots?tour=${encodeURIComponent(tour)}`, {
     method: "GET",
   });
@@ -37,17 +36,26 @@ const fetchSlots = async (tour: Tours) => {
     period: slot[0],
     availableSpots: parseInt(slot[1], 10),
   }));
-};
+}; */
 
-const BookButton = ({ tour }: { tour: Tours }) => {
+const BookTourButton = ({ tour }: { tour: Tours }) => {
+  if (tour === Tours.DayTours || tour === Tours.SurfTour) {
+    return <p>Invalid tour</p>;
+  }
   const [showQuestionnaire, setShowQuestionnaire] = useState<boolean>(false);
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
-  const queryClient = useQueryClient();
+  // const queryClient = useQueryClient();
 
-  useEffect(() => {
+  /*  useEffect(() => {
     // Prefetch data when the component mounts
-    queryClient.prefetchQuery(["slots", tour], () => fetchSlots(tour));
-  }, [queryClient, tour]);
+    if (tourNames[tour] === "Kamiakawa Tour") {
+      queryClient.prefetchQuery(["kamikawaSlots", tour], () =>
+        fetchSlots(tour)
+      );
+    } else if (tourNames[tour] === "Furano Tour") {
+      queryClient.prefetchQuery(["furanoSlots", tour], () => fetchSlots(tour));
+    }
+  }, [queryClient, tour]); */
 
   return (
     <Dialog>
@@ -56,7 +64,7 @@ const BookButton = ({ tour }: { tour: Tours }) => {
       </DialogTrigger>
       <DialogContent className="p-5 w-[80%] lg:w-[50%] 2xl:w-[30%] h-[82.5%] bg-white border-none overflow-x-hidden">
         <DialogTitle className="mx-auto mt-5 text-3xl">
-          {tourNames[tour]}
+          {tour === Tours.Kamikawa ? "Kamikawa Tour" : "Furano Tour"}
         </DialogTitle>
         <div className="relative w-full h-full">
           <AnimatePresence initial={false}>
@@ -100,4 +108,4 @@ const BookButton = ({ tour }: { tour: Tours }) => {
   );
 };
 
-export default BookButton;
+export default BookTourButton;

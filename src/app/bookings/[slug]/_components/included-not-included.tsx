@@ -1,25 +1,33 @@
 import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 interface IncludedNotIncludedProps {
   includedItems: string[];
   notIncludedItems: string[];
-  notes?: string[];
 }
 
 const IncludedNotIncluded: React.FC<IncludedNotIncludedProps> = ({
   includedItems,
   notIncludedItems,
-  notes,
 }) => {
   return (
-    <div className="mx-auto w-[90%] sm:w-[80%] xl:w-[70%] flex flex-col">
-      <div className="container p-0 shadow-md rounded-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 rounded-xl gap-2">
-          <div className="flex flex-col items-center justify-center rounded-xl">
-            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-200 w-full rounded-tl-xl">
-              Included
-            </h2>
-            <ul className="w-full p-4 rounded-bl-xl">
+    <div className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-16 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[56%] mx-auto">
+      <Card className="h-[20rem] sm:h-[22rem]">
+        <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
+          <CardTitle className="text-center text-2xl font-semibold p-4 w-full">
+            Included
+          </CardTitle>
+        </CardHeader>
+        <div className="h-[77.5%] flex items-center justify-center">
+          <CardContent className="w-[90%] h-auto mx-auto p-0">
+            <ul className="w-full rounded-bl-xl sm:text-lg">
               {includedItems.map((item, index) => (
                 <li key={index} className="flex items-center p-1 gap-2">
                   <div className="flex-shrink-0">
@@ -45,61 +53,66 @@ const IncludedNotIncluded: React.FC<IncludedNotIncludedProps> = ({
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
-            <h2 className="text-center text-2xl font-semibold p-4 bg-slate-200 w-full rounded-tr-xl">
+          </CardContent>
+        </div>
+      </Card>
+      <div className="flex flex-col">
+        <Card className="h-[20rem] sm:h-[22rem]">
+          <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
+            <CardTitle className="text-center text-2xl font-semibold p-4 w-full">
               Not Included
-            </h2>
-            <ul className="w-full p-4 rounded-br-xl">
-              {notIncludedItems.map((item, index) => (
-                <li key={index} className="flex items-center p-1 gap-2">
-                  <div className="flex-shrink-0">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        opacity="0.4"
-                        d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                        fill="#db0000"
-                      />
-                      <line
-                        x1="8.5"
-                        y1="8.5"
-                        x2="15.5"
-                        y2="15.5"
-                        stroke="#db0000"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="8.5"
-                        y1="15.5"
-                        x2="15.5"
-                        y2="8.5"
-                        stroke="#db0000"
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex-grow">{item}</div>
-                </li>
-              ))}
-            </ul>
+            </CardTitle>
+          </CardHeader>
+          <div className="h-[77.5%] flex items-center justify-center">
+            <CardContent className="w-[90%] h-auto mx-auto p-0">
+              <ul className="w-full p-4 rounded-br-xl sm:text-lg">
+                {notIncludedItems.map((item, index) => (
+                  <li key={index} className="flex items-center p-1 gap-3">
+                    <div className="flex-shrink-0">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.4"
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          fill="#db0000"
+                        />
+                        <line
+                          x1="8.5"
+                          y1="8.5"
+                          x2="15.5"
+                          y2="15.5"
+                          stroke="#db0000"
+                          strokeWidth="2"
+                        />
+                        <line
+                          x1="8.5"
+                          y1="15.5"
+                          x2="15.5"
+                          y2="8.5"
+                          stroke="#db0000"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </div>
+                    <div className="flex-grow">{item}</div>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
           </div>
-        </div>
+        </Card>
+        <CardFooter className="px-1">
+          <CardDescription className="text-sm pt-1">
+            * We can provide rental equipment or sell equipment if requested
+            with time
+          </CardDescription>
+        </CardFooter>
       </div>
-      {notes && notes.length > 0 && (
-        <div className="pt-1 italic">
-          {notes.map((note, index) => (
-            <p key={index}>
-              {"*".repeat(index + 1)} {note}
-            </p>
-          ))}
-        </div>
-      )}
     </div>
   );
 };

@@ -26,9 +26,9 @@ const navItemsTop: NavLink[] = [
     href: "/bookings/kamikawa",
     subMenu: true,
     subMenuItems: [
-      { label: "Kamikawa", href: "/bookings/kamikawa" },
-      { label: "Furano", href: "/bookings/furano" },
-      { label: "Daily tours", href: "/bookings/daily-tours" },
+      { label: "Kamikawa Tour", href: "/bookings/kamikawa" },
+      { label: "Furano Tour", href: "/bookings/furano" },
+      { label: "Custom Day Tour", href: "/bookings/daily-tours" },
     ],
   },
   {

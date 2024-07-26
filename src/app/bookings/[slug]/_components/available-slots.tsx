@@ -1,6 +1,5 @@
 "use client";
 import { useQuery } from "react-query";
-// import ReactQueryProvider from "@/app/react-query-provider";
 
 enum Tours {
   Kamikawa,
@@ -34,17 +33,22 @@ const fetchSlots = async (tour: Tours) => {
 };
 
 const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
+  if (tour === Tours.DayTours || tour === Tours.SurfTour) {
+    return <p>Invalid tour</p>;
+  }
   const {
     data: slots = [],
     isLoading,
     isError,
-  } = useQuery<Slot[], Error>(["slots", tour], () => fetchSlots(tour));
+  } = useQuery<Slot[], Error>(
+    [tour === Tours.Kamikawa ? "kamikawaSlots" : "furanoSlots", tour],
+    () => fetchSlots(tour)
+  );
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error loading slots</p>;
 
   return (
-    // <ReactQueryProvider>
     <div className="flex flex-col gap-5">
       <h3>Choose a date and time for your tour:</h3>
       {slots.map((slot, index) => (
@@ -68,7 +72,6 @@ const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
         </div>
       ))}
     </div>
-    // </ReactQueryProvider>
   );
 };
 

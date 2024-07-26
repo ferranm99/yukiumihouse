@@ -43,19 +43,19 @@ const seasons: { name: string; href: string; description: string }[] = [
 
 const tours: { title: string; href: string; description: string }[] = [
   {
-    title: "Kamikawa",
+    title: "Kamikawa Tour",
     href: "/bookings/kamikawa",
     description:
       "Multi-day tour in Hokkaido's best mountains and backcountry paradise.",
   },
   {
-    title: "Furano",
+    title: "Furano Tour",
     href: "/bookings/furano",
     description:
       "Experience Furano's top snow, cozy lodge, and epic mountain trips.",
   },
   {
-    title: "Daily Tours",
+    title: "Custom Day Tour",
     href: "/bookings/day-tours",
     description: "You choose the destination, we take care of the rest!",
   },
