@@ -194,7 +194,7 @@ const Questionnaire = ({ onBack, selectedSlot, tour }: QuestionnaireProps) => {
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="Medium">Medium</SelectItem>
-                  <SelectItem value="Advance">Advance</SelectItem>
+                  <SelectItem value="Advance">Advanced</SelectItem>
                   <SelectItem value="Expert">Expert</SelectItem>
                 </SelectContent>
               </Select>

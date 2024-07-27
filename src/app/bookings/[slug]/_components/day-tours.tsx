@@ -10,8 +10,9 @@ const DayTours: React.FC = () => {
       </h3>
       <section className="w-[90%] mx-auto sm:text-lg flex gap-16 items-center justify-center py-7">
         <div className="w-[40%]">
-          <h2 className="text-2xl font-bold text-black pb-6">Price</h2>
-          <div className="flex items-end justify-center pb-6">
+          {/* <h2 className="text-2xl font-bold text-black pb-6">Price</h2> */}
+          <div className="flex items-end justify-start pb-6">
+            <p className="text-2xl font-medium">Price:&nbsp;&nbsp;&nbsp;</p>
             <p className="text-4xl font-medium"> ¥80.000</p>
             <p className="text-sm pb-3">/group</p>
           </div>
