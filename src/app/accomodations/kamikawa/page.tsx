@@ -11,7 +11,7 @@ type Photo = {
   alt?: string;
 };
 
-export const interiorPhotos: Photo[] = [
+const interiorPhotos: Photo[] = [
   {
     src: "/images/yukihouse_kamikawa/IMG-20240717-WA0000.jpg",
     width: 4160,
@@ -110,7 +110,7 @@ export const interiorPhotos: Photo[] = [
   },
 ];
 
-export const exteriorPhotos: Photo[] = [
+const exteriorPhotos: Photo[] = [
   {
     src: "/images/yukihouse_kamikawa/IMG-20240717-WA0035.jpg",
     width: 4160,

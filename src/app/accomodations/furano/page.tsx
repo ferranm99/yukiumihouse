@@ -11,7 +11,7 @@ type Photo = {
   alt?: string;
 };
 
-export const photos: Photo[] = [
+const photos: Photo[] = [
   /*  {
     src: "/images/yukihouse_furano/IMG_4397.HEIC",
     width: 512,
