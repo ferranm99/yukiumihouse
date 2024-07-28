@@ -8,11 +8,12 @@ const DayTours: React.FC = () => {
       <h3 className="text-2xl font-semibold text-black">
         Choose when and where you want to go!
       </h3>
-      <section className="w-[90%] mx-auto sm:text-lg flex gap-16 items-center justify-center py-7">
-        <div className="w-[40%]">
+      <section className="flex flex-col lg:flex-row gap-10 xl:gap-12 2xl:gap-16 w-[100%] md:w-[90%] lg:w-[100%] 2xl:w-[85%] mx-auto items-center justify-center pt-8">
+        {" "}
+        <div className="w-full lg:w-[60%] 2xl:w-[80%] order-2 lg:order-1">
           {/* <h2 className="text-2xl font-bold text-black pb-6">Price</h2> */}
-          <div className="flex items-end justify-start pb-6">
-            <p className="text-2xl font-medium">Price:&nbsp;&nbsp;&nbsp;</p>
+          <div className="flex items-end justify-center pb-6">
+            <p className="text-2xl font-medium">Price:&nbsp;&nbsp;</p>
             <p className="text-4xl font-medium"> ¥80.000</p>
             <p className="text-sm pb-3">/group</p>
           </div>
@@ -35,7 +36,7 @@ const DayTours: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className="relative aspect-[16/9] w-[55%] rounded-lg mx-auto">
+        <div className="relative aspect-[16/9] w-full rounded-lg mx-auto order-1 lg:order-2">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2023/04/caldera-1.jpg"
             alt="Furano"

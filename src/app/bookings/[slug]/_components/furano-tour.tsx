@@ -48,7 +48,7 @@ const FuranoTour: React.FC = () => {
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
       <h2 className="text-3xl font-semibold text-black">FURANO</h2>
-      <div className="relative aspect-[2/1] w-[80%] rounded-lg mx-auto">
+      <div className="relative aspect-[2/1] w-[100%] xl:w-[90%] 2xl:w-[80%] rounded-lg mx-auto">
         <Image
           src="https://yukiumihouse.files.wordpress.com/2023/06/pano-corta-1.jpg"
           alt="Furano"
@@ -60,12 +60,12 @@ const FuranoTour: React.FC = () => {
       <h2 className="text-2xl font-bold text-black pt-6">
         Sea of snow Tour - Yukiumi Furano
       </h2>
-      <section className="w-[90%] mx-auto sm:text-lg flex gap-16 items-center justify-center pb-7">
-        <p className="w-[43%]  text-lg sm:text-xl/loose">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto sm:text-lg flex gap-16 items-center justify-center pb-7">
+        <p className="w-full  text-lg sm:text-xl/loose">
           We will go through one of the best ski resorts in Hokkaido and the
           best snow in the world. We will locate you in Furano town, in our
           private lodge, Yukiumi Furano, a cozy Japanese-style house operated by
-          our own staff. Far from queues, closer to the deepest! We’ve chosen
+          our own staff. Far from queues, closer to the deepest! We've chosen
           this place as it provides the deepest and easiest access terrain. We
           will go all around and further of what Furano Resort has to offer. 1
           day trip to Asahidake, the highest mountain in Hokkaido, and 1 day
@@ -74,7 +74,7 @@ const FuranoTour: React.FC = () => {
           life, as the snow, culture and food you are going to experience will
           exceed your expectations.
         </p>
-        <div className="relative aspect-[3/2] w-[42.5%] rounded-lg">
+        <div className="relative aspect-[3/2] w-full rounded-lg">
           <Image
             src="/images/IMG_7423.JPG"
             alt="Daisetzusan National park"
@@ -88,8 +88,8 @@ const FuranoTour: React.FC = () => {
         includedItems={includedItems}
         notIncludedItems={notIncludedItems}
       />
-      <section className="flex flex-col sm:flex-row gap-8 sm:gap-20 w-[90%] sm:w-[70%] mx-auto items-center justify-center">
-        <div className="relative aspect-[16/9] w-full lg:w-[58%] rounded-lg">
+      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[80%] md:w-[100%] 2xl:w-[85%] mx-auto items-center justify-center">
+        <div className="relative aspect-[16/9] w-full lg:w-full rounded-lg">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0260.jpg"
             alt="Ability"
@@ -98,7 +98,7 @@ const FuranoTour: React.FC = () => {
             className="rounded-lg"
           />
         </div>
-        <Card className="w-full lg:w-[60%] xl:w-[30%] h-fit shadow-xl">
+        <Card className="w-full md:w-[60%] lg:w-[55%] xl:w-[60%] 2xl:w-[80%] h-fit shadow-xl">
           <CardHeader className="rounded-t-xl pb-2">
             <CardTitle className="text-center text-2xl font-semibold w-full pb-2">
               Destinations
@@ -199,8 +199,8 @@ const FuranoTour: React.FC = () => {
           </CardContent>
         </Card>
       </section>
-      <section className="flex flex-col sm:flex-row gap-8 sm:gap-20 w-[90%] mx-auto justify-center items-center pt-8">
-        <Card className="w-full lg:w-[30%] h-fit shadow-xl">
+      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[80%] md:w-[100%] 2xl:w-[85%] mx-auto items-center justify-center pt-8">
+        <Card className="w-full md:w-[60%] lg:w-[55%] xl:w-[60%] 2xl:w-[80%] h-fit shadow-xl order-2 md:order-1">
           <CardHeader className="rounded-t-xl pb-2">
             <CardTitle className="text-center text-2xl font-semibold w-full pb-2">
               Tour Diary
@@ -229,7 +229,7 @@ const FuranoTour: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-        <div className="relative aspect-[3/2] w-[48%] rounded-xl">
+        <div className="relative aspect-[3/2] w-full rounded-xl order-1 md:order-2">
           <Image
             src="/images/IMG_7964.JPG"
             alt="Diary"
@@ -239,7 +239,7 @@ const FuranoTour: React.FC = () => {
           />
         </div>
       </section>
-      <section className="w-[90%] mx-auto pt-8">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-8">
         <h2 className="text-2xl font-bold text-black text-center pb-6">
           Weather Reports
         </h2>
@@ -253,7 +253,7 @@ const FuranoTour: React.FC = () => {
           situation.
         </p>
       </section>
-      <section className="w-[90%] mx-auto pt-8">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-8">
         <h2 className="text-2xl font-bold text-black text-center pb-6">
           Ability
         </h2>
@@ -274,7 +274,7 @@ const FuranoTour: React.FC = () => {
           />
         </div>
       </section>
-      <section className="w-[90%] mx-auto pt-8">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-8">
         <h2 className="text-2xl font-bold text-black text-center pb-6">
           Equipment
         </h2>
@@ -294,7 +294,7 @@ const FuranoTour: React.FC = () => {
           />
         </div>
       </section>
-      <section className="w-[90%] mx-auto pt-8">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-8">
         <h2 className="text-4xl font-bold text-black text-center pb-6">
           Tour Dates 2023-24
         </h2>
@@ -309,28 +309,32 @@ const FuranoTour: React.FC = () => {
           </p>
         )}
         {!isLoading && !isError && (
-          <div className="w-[50%] mx-auto grid grid-cols-2 items-center justify-center">
+          <div className="w-[90%] xl:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center">
             {slots.map((slot, index) => (
               <div
-                className="w-full flex gap-2 items-end justify-center py-4"
+                className="w-full flex items-center justify-center py-4"
                 key={index}
               >
-                <div
-                  className={`flex items-center justify-center text-lg w-[80%] h-14 shadow-lg text-black p-2 rounded-md border-gray-300 border-[1px] ${
-                    slot.availableSpots === 0 ? "line-through" : ""
-                  }`}
-                >
-                  {slot.period}
+                <div className="relative flex items-center justify-center text-lg w-[80%] md:w-[95%] lg:w-[80%] h-14 shadow-lg text-black p-2 rounded-md border-gray-300 border-[1px]">
+                  <div
+                    className={`flex items-center justify-center ${
+                      slot.availableSpots === 0 ? "line-through" : ""
+                    }`}
+                  >
+                    {slot.period}
+                  </div>
+                  {slot.availableSpots === 0 && (
+                    <span className="absolute bottom-0 right-0 text-base italic font-semibold pr-2 text-red-500">
+                      Sold out
+                    </span>
+                  )}
                 </div>
-                <span className="text-base italic font-semibold w-24 text-red-500">
-                  {slot.availableSpots === 0 ? "Sold out" : ""}
-                </span>
               </div>
             ))}
           </div>
         )}
       </section>
-      <section className="w-[90%] mx-auto">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto">
         <h2 className="text-4xl font-bold text-black text-center pb-6">
           Price and Duration
         </h2>

@@ -18,7 +18,7 @@ const IncludedNotIncluded: React.FC<IncludedNotIncludedProps> = ({
   notIncludedItems,
 }) => {
   return (
-    <div className="grid grid-col-1 sm:grid-cols-2 gap-6 sm:gap-3 lg:gap-16 justify-center w-[95%] lg:w-[80%] xl:w-[70%] 2xl:w-[56%] mx-auto">
+    <div className="grid grid-col-1 min-[700px]:grid-cols-2 gap-6 sm:gap-3 lg:gap-16 justify-center w-[95%] sm:w-[85%] lg:w-[80%] xl:w-[70%] 2xl:w-[56%] mx-auto">
       <Card className="h-[20rem] sm:h-[22rem]">
         <CardHeader className="justify-center bg-slate-200 rounded-t-xl h-[22.5%]">
           <CardTitle className="text-center text-2xl font-semibold p-4 w-full">
