@@ -92,7 +92,7 @@ export default function Landing() {
           <HeroLayoutGrid />
         </div>
       </section>
-      <div>
+      <section>
         <h1 className="text-4xl font-bold text-center mt-2">
           Our Accomodations
         </h1>
@@ -106,7 +106,7 @@ export default function Landing() {
           houses are open to receive all the guests and travelers that come
           through.
         </h3>
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-center items-center w-full md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto h-fit my-16">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-center items-center w-full md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] mx-auto h-fit my-16">
           <Link
             className="h-fit relative  flex items-center justify-center cursor-pointer"
             href="/accomodations/kamikawa"
@@ -133,8 +133,8 @@ export default function Landing() {
               <p className="font-normal text-sm">$60 / night</p>
             </DirectionAwareHover>
           </Link>
-        </section>
-      </div>
+        </div>
+      </section>
       <section id="tours" className="flex flex-col items-center w-full px-8">
         <h1 className="text-4xl font-bold text-black">Our Tours</h1>
         <HoverEffect items={tours} />

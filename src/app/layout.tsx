@@ -37,7 +37,7 @@ export default function RootLayout({
           <nav className="lg:hidden flex z-50">
             <MobileNav />
           </nav>
-          {children}
+          <main className="flex-grow">{children}</main>
           <Footer />
         </body>
       </ReactQueryProvider>

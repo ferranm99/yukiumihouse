@@ -9,9 +9,8 @@ const posts = [
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     alt: "Ishimuro hut mission",
     category: "Mountain huts",
-    href: "/2022/12/01/mayan-history/index.html",
     date: "April 6, 2023",
-    url: "/blog/ishimuro-hut-mission",
+    url: "/blog/1",
   },
   {
     title: "Beyond the mountains",
@@ -20,7 +19,7 @@ const posts = [
     alt: "Beyond the mountains",
     category: "Short film",
     date: "April 6, 2023",
-    url: "/2022/12/01/nunnery-quadrangle/index.html",
+    url: "/blog/2",
   },
   {
     title: "Trail running Numanodaira",
@@ -29,7 +28,7 @@ const posts = [
     alt: "Trail running Numanodaira",
     category: "Trail running",
     date: "April 6, 2023",
-    url: "/2022/12/01/pyramid-of-the-magician/index.html",
+    url: "blog/3",
   },
 ];
 

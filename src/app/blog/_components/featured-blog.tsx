@@ -7,7 +7,7 @@ const featuredBlog = {
   alt: "5 days Daisetsu san traverse",
   description:
     "We decided to join our Japanese friends in the traverse south to north of the Daisetsuzan National Park! We did pack our big backpacks with food, fuel, and sleeping gear to be able to be self-sufficient for at least 6 days out in the mountains. Backpacks were heavy!! But our stoke was higher.",
-  href: "/blog/5-days-daisetsu-san-traverse",
+  href: "/blog/0",
   date: "April 6, 2023",
   category: "Hike",
 };

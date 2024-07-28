@@ -3,10 +3,17 @@ import Image from "next/image";
 import { useQuery } from "react-query";
 import IncludedNotIncluded from "./included-not-included";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import BookTourButton from "./book-tour-button";
 
 interface Slot {
   period: string;
   availableSpots: number;
+}
+
+enum Tours {
+  Kamikawa,
+  Furano,
+  DayTours,
 }
 
 const fetchSlots = async () => {
@@ -344,6 +351,7 @@ const FuranoTour: React.FC = () => {
           <p className="text-sm pb-3">/person</p>
         </div>
       </section>
+      <BookTourButton tour={Tours.Furano} />
     </div>
   );
 };

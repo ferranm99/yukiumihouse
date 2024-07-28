@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import BookCustomTourButton from "./book-custom-tour";
 
 const DayTours: React.FC = () => {
   return (
@@ -46,64 +47,7 @@ const DayTours: React.FC = () => {
           />
         </div>
       </section>
-      {/* <h4 className="text-xl font-semibold text-black">
-        FURANO RESORT, TOKACHI RANGE
-      </h4>
-      <div className="flex gap-6 w-[85%] h-fit mb-8">
-        <div className="relative aspect-[16/9] w-[100%] rounded-lg mx-auto">
-          <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/dji_0260.jpg"
-            alt="Furano"
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-lg"
-          />
-        </div>
-        <div className="relative aspect-[3/2] w-[100%] rounded-lg mx-auto">
-          <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/06/dji_0020.jpg"
-            alt="Furano"
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-lg"
-          />
-        </div>
-      </div>
-      <h4 className="text-xl font-semibold text-black">
-        KURODAKE ROPEWAY, ASAHIDAKE ROPEWAY
-      </h4>
-      <div className="flex gap-6 w-[85%] h-fit mb-8">
-        <div className="relative aspect-[16/9] w-[100%] rounded-lg mx-auto">
-          <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/caldera-1.jpg"
-            alt="Furano"
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-lg"
-          />
-        </div>
-        <div className="relative aspect-[73/41] w-[100%] rounded-lg mx-auto">
-          <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/vlcsnap-2022-12-05-15h57m47s4961.png"
-            alt="Furano"
-            fill
-            style={{ objectFit: "cover" }}
-            className="rounded-lg"
-          />
-        </div>
-      </div>
-      <h4 className="text-xl font-semibold text-black">
-        YUKIUMI HOUSE BACKYARD
-      </h4>
-      <div className="relative aspect-[2/1] w-[65%] rounded-lg mx-auto">
-        <Image
-          src="https://yukiumihouse.files.wordpress.com/2023/04/manekiiwa-sunrise.jpg"
-          alt="Furano"
-          fill
-          style={{ objectFit: "cover" }}
-          className="rounded-lg"
-        />
-      </div> */}
+      <BookCustomTourButton />
     </div>
   );
 };
