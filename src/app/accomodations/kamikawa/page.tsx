@@ -166,40 +166,6 @@ const Page = () => {
     null
   );
 
-  /*   const [calculatedWidth, setCalculatedWidth] = useState(0);
-  const [calculatedHeight, setCalculatedHeight] = useState(0);
-
-  useEffect(() => {
-    if (selectedPhotoIndex) {
-      const handleResize = () => {
-        const aspectRatio =
-          photos[selectedPhotoIndex].width / photos[selectedPhotoIndex].height;
-        console.log(window.innerWidth);
-        console.log(window.innerHeight);
-        const maxWidth = window.innerWidth * 0.9;
-        const maxHeight = window.innerHeight * 0.9;
-
-        let width, height;
-        if (maxWidth / aspectRatio <= maxHeight) {
-          width = maxWidth;
-          height = maxWidth / aspectRatio;
-        } else {
-          width = maxHeight * aspectRatio;
-          height = maxHeight;
-        }
-
-        setCalculatedWidth(width);
-        setCalculatedHeight(height);
-      };
-
-      // Initial calculation
-      handleResize();
-
-      // Recalculate on window resize
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, [selectedPhotoIndex]); */
   return (
     <div>
       <h1 className="text-4xl font-bold text-center mt-16">
@@ -219,7 +185,7 @@ const Page = () => {
           height="500"
           className="border-0 w-full"
           loading="lazy"
-          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9cZ3P-4jDV8Rma89S85o4eU&key=${process.env.GOOGLE_EMBED_MAP_API_KEY}`}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.2192431745266!2d142.77352677679087!3d43.851284271093384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0d23ee3f77c6f5%3A0xe5e168ce4b3daf99!2sYukiumi%20House!5e0!3m2!1sca!2ses!4v1722187708128!5m2!1sca!2ses"
           allowFullScreen
         ></iframe>
       </div>

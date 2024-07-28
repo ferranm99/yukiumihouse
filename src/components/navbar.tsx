@@ -15,32 +15,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const seasons: { name: string; href: string; description: string }[] = [
-  {
-    name: "Winter",
-    href: "/winter.html",
-    description:
-      "Ride the best snow in the world and fulfill your powder dreams",
-  },
-  {
-    name: "Spring",
-    href: "/spring.html",
-    description:
-      "Mountain hikes, hut and snow caves stays, long descents, and rafting",
-  },
-  {
-    name: "Summer",
-    href: "/summer.html",
-    description: "Trekking, trail running and rock climbing",
-  },
-  {
-    name: "Autumn",
-    href: "/autumn.html",
-    description:
-      "Surfing, salmon fishing and delicious menus with the fresh-caught salmon",
-  },
-];
-
 const tours: { title: string; href: string; description: string }[] = [
   {
     title: "Kamikawa Tour",
@@ -87,11 +61,7 @@ export default function Navbar() {
       <NavigationMenu className="z-[90]">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <NavigationMenuLink href="/bookings/kamikawa">
-                BOOKINGS
-              </NavigationMenuLink>
-            </NavigationMenuTrigger>
+            <NavigationMenuTrigger>BOOKINGS</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {tours.map((tour) => (
@@ -107,11 +77,7 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <NavigationMenuLink href="/accomodations">
-                ACOMMODATIONS
-              </NavigationMenuLink>
-            </NavigationMenuTrigger>
+            <NavigationMenuTrigger>ACOMMODATIONS</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {accomodations.map((acc) => (

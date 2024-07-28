@@ -33,7 +33,7 @@ const navItemsTop: NavLink[] = [
   },
   {
     label: "ACOMMODATIONS",
-    href: "/accomodations",
+    href: "/accomodations/kamikawa",
     subMenu: true,
     subMenuItems: [
       { label: "Yukiumi House Kamikawa", href: "/accomodations/kamikawa" },
@@ -204,10 +204,10 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
           className="relative text-center justify-center w-full text-2xl"
           onClick={() => setSubMenuOpen(!subMenuOpen)}
         >
-          <Link href={item.href} onClick={() => toggleOpen()}>
+          <span>
             {/* className={`${pathname.includes(item.href) ? "font-bold" : ""}`} */}
             {item.label}
-          </Link>
+          </span>
           <svg
             className={`absolute right-0 top-1 h-auto transform transition duration-300 ${
               subMenuOpen ? "rotate-180" : ""

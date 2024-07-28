@@ -162,7 +162,7 @@ const Page = () => {
           height="500"
           className="border-0 w-full"
           loading="lazy"
-          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJv7CeWgBRc18R_rz_VYnXZ1E&key=${process.env.GOOGLE_EMBED_MAP_API_KEY}`}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.5335192667!2d142.3937433767666!3d43.28214767112204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f7351005a9eb0bf%3A0x5167d78955ffbcfe!2sYukiumi%20Furano!5e0!3m2!1sca!2ses!4v1722187841805!5m2!1sca!2ses"
           allowFullScreen
         ></iframe>
       </div>
