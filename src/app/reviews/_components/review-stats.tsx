@@ -47,7 +47,7 @@ export default function ReviewStats({ reviews }: ReviewStatsProps) {
   };
  */
   return (
-    <div className="mt-12 mb-16 w-[45%] mx-auto">
+    <div className="mt-12 mb-16 w-[88%] md:w-[75%] 2xl:w-[50%] pr-1 mx-auto">
       <div className="flex items-center w-full mb-2">
         <StarRating rating={ratingAvg} />
         <p className="ms-1 text-sm font-medium">{ratingAvg}</p>

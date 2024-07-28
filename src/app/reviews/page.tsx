@@ -77,7 +77,7 @@ export default async function Page() {
         What Our Guests Say About Yukiumi House?
       </h1>
       <ReviewStats reviews={reviews} />
-      <div className="px-16 2xl:px-24 w-full">
+      <div className="px-6 sm:px-16 2xl:px-24 w-full">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
           {reviews.map((review, index) => (
             <div
