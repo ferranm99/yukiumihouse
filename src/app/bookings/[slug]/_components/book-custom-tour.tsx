@@ -28,10 +28,6 @@ const BookCustomTourButton = () => {
   const [showQuestionnaire, setShowQuestionnaire] = useState<boolean>(false);
   const [date, setDate] = useState<Date>();
 
-  useEffect(() => {
-    console.log(date);
-  }, [date]);
-
   return (
     <Dialog>
       <DialogTrigger className="mx-auto w-[30%] md:w-[20%] xl:w-[17%] text-2xl h-16 font-medium bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md">

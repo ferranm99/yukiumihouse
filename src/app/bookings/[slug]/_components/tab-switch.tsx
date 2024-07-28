@@ -83,7 +83,7 @@ export default function TabSwitch({ tour }: TabSwitchProps) {
 
   return (
     <div className="w-[90%] h-full flex flex-col gap-4 overflow-auto">
-      <nav className="h-80 md:h-48 xl:h-72 2xl:w-[90%] mx-auto">
+      <nav className="h-36 sm:h-40 md:h-48 xl:h-72 2xl:w-[90%] w-full mx-auto">
         <ul className="grid grid-cols-3 w-full h-full items-center gap-2 xl:gap-8">
           {tabs.map((item) => (
             <li
@@ -93,7 +93,7 @@ export default function TabSwitch({ tour }: TabSwitchProps) {
               } w-full h-full flex flex-col rounded-lg bg-gray-200 cursor-pointer items-center min-w-0 relative select-none`}
               onClick={() => setSelectedTab(item)}
             >
-              <div className="h-[72%] w-full relative">
+              <div className="h-[62%] sm:h-[72%] w-full relative">
                 <Image
                   className="rounded-t-lg"
                   src={item.image}
@@ -101,7 +101,7 @@ export default function TabSwitch({ tour }: TabSwitchProps) {
                   fill
                 />
               </div>
-              <div className="w-full h-[28%] px-4 flex justify-center items-center text-xs md:text-sm xl:text-base 2xl:text-lg font-bold text-center">
+              <div className="w-full h-[38%] sm:h-[28%] px-4 flex justify-center items-center text-xs md:text-sm xl:text-base 2xl:text-lg font-bold text-center">
                 {item.title}
               </div>
               {item === selectedTab ? (
