@@ -31,8 +31,8 @@ const ContactPage: React.FC = () => {
     <div className="flex flex-col my-6 gap-10">
       <section className="pt-8 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-black pb-8 ">Who Are We?</h1>
-        <div className="w-full flex flex-col justify-center items-center gap-12 lg:flex-row">
-          <Card className="w-[92%] h-auto md:w-[40rem] border-[1px] shadow-md py-5">
+        <div className="w-full h-full flex flex-col justify-center items-center gap-12 lg:flex-row lg:px-4 lg:items-stretch">
+          <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
               <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
               <CardTitle className="text-2xl">Sergi Martínez</CardTitle>
               <hr className="w-full border-gray-300" />
             </CardHeader>
-            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0">
+            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0 flex-grow">
               Sergi is a POW rider. Usually on his board, he loves to ride deep
               powder snow. Eider spinning laps in the resort or taking you to
               the untouched backcountry terrain, you will have a blast joining
@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
               don't miss a day with Sergi.
             </CardContent>
           </Card>
-          <Card className="w-[92%] h-auto md:w-[40rem] border-[1px] shadow-md py-5">
+          <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
               <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
@@ -74,7 +74,7 @@ const ContactPage: React.FC = () => {
               <CardTitle className="text-2xl">Gerard Martínez</CardTitle>
               <hr className="w-full border-gray-300" />
             </CardHeader>
-            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0">
+            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0 flex-grow">
               Gerard is a mountain lover and over all, a ski geek. He likes to
               go out for long days, push the vertical gain in the backcountry
               and summit some special mountains. He will always be talking about
