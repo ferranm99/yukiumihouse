@@ -49,26 +49,35 @@ const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
   if (isError) return <p>Error loading slots</p>;
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 pb-6">
       <h3>Choose a date and time for your tour:</h3>
       {slots.map((slot, index) => (
-        <div className="flex gap-2 items-end justify-center" key={index}>
+        <div
+          className="flex gap-2 items-end justify-center sm:px-10"
+          key={index}
+        >
           <button
-            className="w-40 h-14 disabled:cursor-not-allowed bg-slate-100 text-black p-2 rounded-md hover:bg-slate-200 font-semibold border-black border-[1px]"
+            className="w-full h-16 sm:h-14 disabled:cursor-not-allowed bg-slate-100 text-black p-2 rounded-md hover:bg-slate-200 font-semibold border-black border-[1px] relative flex items-center justify-center"
             disabled={slot.availableSpots === 0}
             onClick={() => onSlotSelect(slot.period)}
           >
-            {slot.period}
+            <span
+              className={`absolute inset-0 pb-1 sm:pb-0 flex items-center justify-center ${
+                slot.availableSpots === 0 ? "line-through" : ""
+              }`}
+            >
+              {slot.period}
+            </span>
+            <span
+              className={`absolute bottom-1 right-1 text-sm italic font-semibold ${
+                slot.availableSpots === 0 ? "text-red-500" : "text-green-600"
+              }`}
+            >
+              {slot.availableSpots === 0
+                ? "Sold out"
+                : `${slot.availableSpots} spots left`}
+            </span>
           </button>
-          <span
-            className={`text-sm italic font-semibold w-24 ${
-              slot.availableSpots === 0 ? "text-red-500" : "text-green-600"
-            }`}
-          >
-            {slot.availableSpots === 0
-              ? "Sold out"
-              : `${slot.availableSpots} spots left`}
-          </span>
         </div>
       ))}
     </div>

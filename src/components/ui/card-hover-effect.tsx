@@ -57,7 +57,9 @@ export const HoverEffect = ({
               <CardTitle className="text-center text-2xl">
                 {item.title}
               </CardTitle>
-              <CardDescription>{item.description}</CardDescription>
+              <CardDescription className="text-base">
+                {item.description}
+              </CardDescription>
               <CardButton link={item?.href} />
             </div>
           </Card>

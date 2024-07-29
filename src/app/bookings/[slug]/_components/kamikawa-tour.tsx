@@ -31,7 +31,7 @@ const fetchSlots = async () => {
 };
 
 const includedItems = [
-  "6 Nights Accommodation",
+  "6 Nights Accommodation at Yukiumi House Kamikawa",
   "Breakfast each morning",
   "5 Days of Guide",
   "Kurodake Ropeway pass",

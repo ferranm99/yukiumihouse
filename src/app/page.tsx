@@ -51,7 +51,7 @@ const tours = [
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Choose when and where you want to go and we take care of the rest!",
     href: "bookings/day-tours",
   },
   /*   {
