@@ -49,7 +49,7 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
+          <Card className="h-full">
             <CardImage>
               <Image src={item.image} alt={item.title} fill={true} />
             </CardImage>
@@ -60,7 +60,7 @@ export const HoverEffect = ({
               <CardDescription className="text-base">
                 {item.description}
               </CardDescription>
-              <CardButton link={item?.href} />
+              <CardButton className="" link={item?.href} />
             </div>
           </Card>
         </div>
@@ -84,7 +84,7 @@ export const Card = ({
       )}
     >
       <div className="relative z-50">
-        <div className="">{children}</div>
+        <div className="h-full">{children}</div>
       </div>
     </div>
   );

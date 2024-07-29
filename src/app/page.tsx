@@ -47,11 +47,11 @@ const tours = [
     href: "bookings/furano",
   },
   {
-    title: "Day tours to all central and North Hokkaido locations",
+    title: "Custom Day Tours",
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
     description:
-      "Choose when and where you want to go and we take care of the rest!",
+      "Explore central and North Hokkaido your way. Choose when and where you want to go and we take care of the rest!",
     href: "bookings/day-tours",
   },
   /*   {
