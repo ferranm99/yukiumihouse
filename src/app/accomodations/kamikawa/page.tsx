@@ -172,12 +172,17 @@ const Page = () => {
         Yukiumi House Kamikawa
       </h1>
       <h3 className="text-center mt-8 text-lg w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
-        Located 10min out of Furano city center in a rural neighborhood where
-        peace, tranquility and nature can be felt. With good access to the ski
-        slopes, big supermarkets and good restaurants make for a perfect combo
-        of disconnection while we still have the best services a big town has to
-        offer. Not to mention in front of our lodge there is this beautiful
-        ancient Japanese temple, where we can delight its magic culture.
+        In the center of the little village of Kamikawa in the deep heart of
+        Hokkaido. Here is where our project originally was born. The Lodge is 7
+        minutes walking from the train station of this remote town inside of the
+        natural environment of Hokkaido. In Kamikawa town there are few cafes to
+        visit, one supermarket with the most essential and a couple of
+        convenient stores. The place itself is well known to have one of the
+        best accés to different points of Daisetsusan National Park like
+        Sounkyo, Kogen onsens and Aizankei would be the most popular ones. Our
+        lodge offer the possibility to access one of the most remote areas of
+        Hokkaido with the tranquility and recommendations we got for you all
+        year round.
       </h3>
       <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         <iframe
@@ -210,17 +215,14 @@ const Page = () => {
         House Exterior and Food
       </h2>
       <h3 className="text-center mt-8 text-lg w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
-        In the center of the little village of Kamikawa in the deep heart of
-        Hokkaido. Here is where our project originally was born. The Lodge is 7
-        minutes walking from the train station of this remote town inside of the
-        natural environment of Hokkaido. In Kamikawa town there are few cafes to
-        visit, one supermarket with the most essential and a couple of
-        convenient stores. The place itself is well known to have one of the
-        best accés to different points of Daisetsusan National Park like
-        Sounkyo, Kogen onsens and Aizankei would be the most popular ones. Our
-        lodge offer the possibility to access one of the most remote areas of
-        Hokkaido with the tranquility and recommendations we got for you all
-        year round.
+        We are offering the service of breakfast and dinner. We have previous
+        experience working as chefs in restaurants back in the time. We do a
+        fusion of Japanse cuisine and overseas food. This will turn out to be
+        such a nice experience and pleasant time, as you will be eating all
+        local products with much love and experience. During summer and autumn
+        time we would be having fresh products from our own vegetable garden.
+        Meals need to be ordered with some time in advance to have time to
+        prepare it.
       </h3>
       <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         <Modal>

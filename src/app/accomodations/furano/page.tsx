@@ -144,14 +144,12 @@ const Page = () => {
         Yukiumi House Furano
       </h1>
       <h3 className="text-center mt-8 text-lg w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
-        We are offering the service of breakfast and dinner. We have previous
-        experience working as chefs in restaurants back in the time. We do a
-        fusion of Japanse cuisine and overseas food. This will turn out to be
-        such a nice experience and pleasant time, as you will be eating all
-        local products with much love and experience. During summer and autumn
-        time we would be having fresh products from our own vegetable garden.
-        Meals need to be ordered with some time in advance to have time to
-        prepare it.
+        Located 10min out of Furano city center in a rural neighborhood where
+        peace, tranquility and nature can be felt. With good access to the ski
+        slopes, big supermarkets and good restaurants make for a perfect combo
+        of disconnection while we still have the best services a big town has to
+        offer. Not to mention in front of our lodge there is this beautiful
+        ancient Japanese temple, where we can delight its magic culture.
       </h3>
       <div className="my-8 w-[90%] md:w-[80%] 2xl:w-[65%] mx-auto">
         <iframe
