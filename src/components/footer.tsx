@@ -29,41 +29,38 @@ const Footer: React.FC = () => {
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline">
+                  <Link href="/bookings/kamikawa" className="hover:underline">
                     Kamikawa
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link href="/bookings/furano" className="hover:underline">
                     Furano
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link href="/bookings/day-tours" className="hover:underline">
                     Custom Day Tour
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                Useful Links
+                Accomodations
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/accomodations" className="hover:underline ">
-                    Accomodations
+                  <a
+                    href="/accomodations/kamikawa"
+                    className="hover:underline "
+                  >
+                    Kamikawa
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="hover:underline">
-                    Contact
+                  <a href="/accomodations/furano" className="hover:underline">
+                    Furano
                   </a>
                 </li>
               </ul>
@@ -76,14 +73,20 @@ const Footer: React.FC = () => {
                 <li className="mb-4">
                   <a
                     href="https://www.instagram.com/yukiumi_house/"
+                    target="_blank"
                     className="hover:underline "
                   >
                     Instagram
                   </a>
                 </li>
-                <li>
+                <li className="mb-4">
                   <a href="/blog" className="hover:underline">
                     Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="hover:underline">
+                    Contact
                   </a>
                 </li>
               </ul>
