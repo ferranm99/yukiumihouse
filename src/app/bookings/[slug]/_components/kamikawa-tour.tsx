@@ -91,7 +91,7 @@ const KamikawaTour: React.FC = () => {
         includedItems={includedItems}
         notIncludedItems={notIncludedItems}
       />
-      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[80%] md:w-[100%] 2xl:w-[85%] mx-auto items-center justify-center">
+      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[100%] 2xl:w-[85%] mx-auto items-center justify-center">
         <div className="relative aspect-[512/341] w-full rounded-lg">
           <Image
             src="https://yukiumihouse.files.wordpress.com/2022/12/img_7564.jpg"
@@ -226,7 +226,7 @@ const KamikawaTour: React.FC = () => {
           </CardContent>
         </Card>
       </section>
-      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[80%] md:w-[100%] 2xl:w-[85%] mx-auto items-center justify-center pt-8">
+      <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[100%] 2xl:w-[85%] mx-auto items-center justify-center pt-8">
         <Card className="w-full md:w-[60%] lg:w-[55%] xl:w-[60%] 2xl:w-[80%] h-fit shadow-xl order-2 md:order-1">
           <CardHeader className="rounded-t-xl pb-2">
             <CardTitle className="text-center text-2xl font-semibold w-full pb-2">

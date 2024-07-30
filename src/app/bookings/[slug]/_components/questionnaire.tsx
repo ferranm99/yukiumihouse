@@ -5,12 +5,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useTransition } from "react";
 import { QuestionnaireSchema } from "@/schemas";
-import {
+/* import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"; */
 import { Input } from "@/components/ui/input";
 import {
   Form,
@@ -76,24 +76,28 @@ const Questionnaire = ({ onBack, selectedSlot, tour }: QuestionnaireProps) => {
 
   return (
     <div>
-      <div className="flex items-center my-2 ml-3 gap-2">
+      <div className="flex flex-col mt-2 ml-3 gap-2">
         <h2 className="text-2xl font-semibold">Questionnaire</h2>
-        <TooltipProvider>
+        <h4 className="text-sm">
+          For client safety, we require a minimum skill level for the tour's
+          high-level descents.
+        </h4>
+        {/* <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger asChild>
-              <div className="flex items-center justify-center text-[0.75rem] font-semibold rounded-full border-[1px] w-[0.9rem] h-[0.9rem] border-black border-dashed">
-                ?
-              </div>
+            <TooltipTrigger
+              onTouchStart={handleTouchStart}
+              className="flex items-center justify-center text-[0.75rem] font-semibold rounded-full border-[1px] w-[0.9rem] h-[0.9rem] border-black border-dashed"
+            >
+              ?
             </TooltipTrigger>
             <TooltipContent className="w-80" sideOffset={4}>
               <p className="rounded-md border-gray-700 border-[1px] p-1 border-dashed text-gray-800">
-                To ensure the safety of our clients, we must verify that a
-                certain skill level is met. The tour involves high-level
-                descents that require experience and proficiency.
+                For client safety, we require a minimum skill level for the
+                tour's high-level descents.
               </p>
             </TooltipContent>
           </Tooltip>
-        </TooltipProvider>
+        </TooltipProvider> */}
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="p-4 space-y-6">
