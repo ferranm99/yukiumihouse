@@ -143,12 +143,12 @@ const textVariants = {
   initial: {
     y: 0,
     x: 0,
-    opacity: 0,
+    opacity: 1,
   },
   exit: {
     y: 0,
     x: 0,
-    opacity: 0,
+    opacity: 1,
   },
   top: {
     y: -20,
