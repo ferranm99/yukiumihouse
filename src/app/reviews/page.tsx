@@ -1,6 +1,8 @@
+"use client";
 import ReviewCard from "./_components/review-card";
-import { google } from "googleapis";
+// import { google } from "googleapis";
 import ReviewStats from "./_components/review-stats";
+import { useQuery } from "react-query";
 
 type Review = [
   string, // name
@@ -12,8 +14,16 @@ type Review = [
   string | null // reviewText
 ];
 
-export default async function Page() {
-  async function getReviews() {
+const fetchReviews = async (): Promise<Review[]> => {
+  const res = await fetch("/api/reviews");
+  if (!res.ok) {
+    throw new Error("Something went wrong!");
+  }
+  return res.json();
+};
+
+export default function Page() {
+  /*   async function getReviews() {
     "use server";
     const auth = await google.auth.getClient({
       credentials: {
@@ -67,28 +77,40 @@ export default async function Page() {
       console.error("Error getching sheets data:", error);
       return [];
     }
-  }
+  } */
+  const { data, error, isLoading } = useQuery<Review[], Error>(
+    "reviews",
+    fetchReviews
+  );
 
-  const reviews: Review[] = await getReviews();
+  const reviews = data || [];
+
+  // const reviews: Review[] = await getReviews();
 
   return (
     <div className="flex flex-col items-center my-10">
       <h1 className="text-4xl font-bold text-black">
         What Our Guests Say About Yukiumi House?
       </h1>
-      <ReviewStats reviews={reviews} />
-      <div className="px-6 sm:px-16 2xl:px-24 w-full">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="border border-gray-300 p-8 rounded-xl shadow-md"
-            >
-              <ReviewCard review={review} />
+      {isLoading && <p>Loading...</p>}
+      {error && <p>Something went wrong loading the reviews</p>}
+      {!isLoading && !error && (
+        <div>
+          <ReviewStats reviews={reviews} />
+          <div className="px-6 sm:px-16 2xl:px-24 w-full">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
+              {reviews.map((review, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-300 p-8 rounded-xl shadow-md"
+                >
+                  <ReviewCard review={review} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
