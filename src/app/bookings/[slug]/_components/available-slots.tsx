@@ -41,7 +41,7 @@ const AvailableSlots = ({ tour, onSlotSelect }: AvailableSlotsProps) => {
     isLoading,
     isError,
   } = useQuery<Slot[], Error>(
-    [tour === Tours.Kamikawa ? "kamikawaSlots" : "furanoSlots", tour],
+    [/* tour === Tours.Kamikawa ? "kamikawaSlots" : "furanoSlots", */ tour],
     () => fetchSlots(tour)
   );
 

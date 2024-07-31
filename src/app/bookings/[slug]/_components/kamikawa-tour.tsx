@@ -51,7 +51,7 @@ const KamikawaTour: React.FC = () => {
     data: slots = [],
     isLoading,
     isError,
-  } = useQuery<Slot[], Error>(["kamikawaSlots"], () => fetchSlots());
+  } = useQuery<Slot[], Error>([Tours.Kamikawa], () => fetchSlots());
 
   return (
     <div className="flex flex-col gap-8 items-center mt-4">

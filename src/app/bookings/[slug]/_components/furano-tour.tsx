@@ -50,7 +50,7 @@ const FuranoTour: React.FC = () => {
     data: slots = [],
     isLoading,
     isError,
-  } = useQuery<Slot[], Error>(["furanoSlots"], () => fetchSlots());
+  } = useQuery<Slot[], Error>([Tours.Furano], () => fetchSlots());
 
   return (
     <div className="flex flex-col gap-8 items-center mt-4">
