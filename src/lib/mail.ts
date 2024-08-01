@@ -25,7 +25,7 @@ export const sendBookingEmail = async (
 ) => {
   await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: process.env.EMAIL_ADDRESS!,
+    to: "yukiumihouse@gmail.com",
     subject: "Booking Request",
     html: `
       <h1>Nova reserva per ${tourNames[tour]} al slot de ${selectedSlot}</h1>
