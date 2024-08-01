@@ -12,8 +12,8 @@ export function HeroLayoutGrid() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Yukiumi House</p>
-      <p className="font-semibold text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-bold text-3xl xl:text-4xl text-white">Yukiumi House</p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         This is where you will be staying! A place where you can relax and
         unwind, and enjoy the beauty of nature.
       </p>
@@ -24,7 +24,7 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Rafting</p>
+      <p className="font-bold text-3xl xl:text-4xl text-white ">Skiing</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Rafting is a fun and exciting activity that you can enjoy while staying
         at Yukiumi House. It&apos;s the perfect way to experience the beauty of
@@ -36,7 +36,7 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Snowboarding</p>
+      <p className="font-bold text-3xl xl:text-4xl text-white">Snowboarding</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         At Yukiumi we are snow lovers! We know the best spots for the greatests
         descends that will pump your adrenaline to the max.
@@ -47,7 +47,7 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Trail Running</p>
+      <p className="font-bold text-3xl xl:text-4xl text-white">Trail Running</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Trail running is a great way to stay fit and enjoy the outdoors. At
         Yukiumi House we have a variety of trails that are perfect for runners
