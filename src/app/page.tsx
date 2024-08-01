@@ -43,7 +43,7 @@ const tours = [
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     description:
-      "Come meet the the champany snow Furano valey has to offer.All that combined with all the comfort and commodities  resort town has to offer.",
+      "Come meet the champany snow Furano valey has to offer.All that combined with all the comfort and commodities  resort town has to offer.",
     href: "bookings/furano",
   },
   {
@@ -92,6 +92,10 @@ export default function Landing() {
           <HeroLayoutGrid />
         </div>
       </section>
+      <section id="tours" className="flex flex-col items-center w-full px-8">
+        <h1 className="text-4xl font-bold text-black">Our Tours</h1>
+        <HoverEffect items={tours} />
+      </section>
       <section>
         <h1 className="text-4xl font-bold text-center mt-2">
           Our Accomodations
@@ -132,10 +136,6 @@ export default function Landing() {
             </DirectionAwareHover>
           </Link>
         </div>
-      </section>
-      <section id="tours" className="flex flex-col items-center w-full px-8">
-        <h1 className="text-4xl font-bold text-black">Our Tours</h1>
-        <HoverEffect items={tours} />
       </section>
       <section
         id="testimonials"
