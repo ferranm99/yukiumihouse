@@ -57,11 +57,8 @@ export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
             <ModalBody className="h-fit w-fit">
               <iframe
                 className="w-full h-full absolute top-0 left-0"
-                // width="770"
-                // height="480"
                 src="https://www.youtube.com/embed/fg3cpG6DTGE?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=es&amp;autohide=2&amp;wmode=transparent"
                 style={{ border: 0 }}
-                // frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 title="Embedded youtube"

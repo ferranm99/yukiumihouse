@@ -82,13 +82,13 @@ export default function Landing() {
   return (
     <div className="flex flex-col">
       <section className="flex flex-col md:flex-row h-[85rem] xs:h-[60rem] md:h-[90vh] p-6 md:p-8 gap-4">
-        <div className="w-full md:w-[45%] flex items-start md:items-center mt-4 md:mt-0">
+        <div className="w-full md:w-[45%] flex items-start md:items-center mt-4 md:mt-0 z-20">
           <HeroInfo
             rating={!isLoading && !error ? ratingAvg : 4.8}
             numOfReviews={!isLoading && !error ? numOfReviews : 25}
           />
         </div>
-        <div className="w-full md:w-[55%] h-full">
+        <div className="w-full md:w-[55%] h-full z-10">
           <HeroLayoutGrid />
         </div>
       </section>
