@@ -70,7 +70,7 @@ export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
             </svg>
           </Link>
         </div>
-        <div className="flex gap-5 items-center text-lg">
+        <div className="flex gap-2 sm:gap-5 items-center text-lg">
           <div className="relative rounded-full w-20 h-20 border-[1px] border-gray-300">
             <Image
               src="/logos/logo_circular.JPG"
@@ -91,10 +91,9 @@ export function HeroInfo({ rating, numOfReviews }: HeroInfoProps) {
               <StarRating rating={rating} />
               <div>{rating}</div>
             </div>
-            <div className="flex">
+            <div className="flex justify-start whitespace-nowrap">
               Rated Best Over&nbsp;
-              <span className="font-bold">{numOfReviews}</span>
-              &nbsp;Reviews
+              <span className="font-bold">{numOfReviews}&nbsp;Reviews</span>
             </div>
           </button>
         </div>

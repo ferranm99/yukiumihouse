@@ -28,8 +28,8 @@ const ContactPage: React.FC = () => {
     resolver: zodResolver(ContactUsSchema),
   });
   return (
-    <div className="flex flex-col my-6 gap-10">
-      <section className="pt-8 flex flex-col items-center justify-center">
+    <div className="flex flex-col my-10 gap-10">
+      <section className="flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-black pb-8 ">Who Are We?</h1>
         <div className="w-full h-full flex flex-col justify-center items-center gap-12 lg:flex-row lg:px-4 lg:items-stretch">
           <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
