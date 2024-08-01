@@ -195,7 +195,7 @@ const CloseIcon = () => {
   return (
     <button
       onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
+      className="absolute top-4 right-4 group z-20"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -203,8 +203,8 @@ const CloseIcon = () => {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
+        stroke="white"
+        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
         className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
