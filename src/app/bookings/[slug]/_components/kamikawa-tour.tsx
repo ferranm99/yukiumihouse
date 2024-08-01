@@ -66,7 +66,7 @@ const KamikawaTour: React.FC = () => {
         />
       </div>
       <h2 className="text-2xl font-bold text-black pt-6">HOKKAIDO NORTHSIDE</h2>
-      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto sm:text-lg flex flex-col lg:flex-row gap-16 items-center justify-center pb-7">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto sm:text-lg flex flex-col lg:flex-row gap-12 items-center justify-center pb-7">
         <p className="w-full text-lg sm:text-xl/loose">
           Hokkaido Northside is a multi-day tour where clients can explore
           beyond what Hokkaido's best mountains have to offer. We will locate

@@ -71,8 +71,7 @@ const cards = [
     id: 2,
     content: <SkeletonTwo />,
     className: "md:col-span-2",
-    thumbnail:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dsc_0740_original.jpg",
+    thumbnail: "/images/hero/JMT_20230226_3400-2.jpg",
     fitX: 25,
     fitY: 10,
   },
@@ -81,8 +80,7 @@ const cards = [
     id: 3,
     content: <SkeletonThree />,
     className: "md:col-span-2",
-    thumbnail:
-      "https://yukiumihouse.files.wordpress.com/2023/04/img_20210215_124534.jpg?w=5122048",
+    thumbnail: "/images/hero/JMT_20230227_3635.jpg",
     fitX: 75,
     fitY: 10,
   },

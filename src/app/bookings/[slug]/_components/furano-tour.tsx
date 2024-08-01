@@ -67,7 +67,7 @@ const FuranoTour: React.FC = () => {
       <h2 className="text-2xl font-bold text-black pt-6">
         Sea of snow Tour - Yukiumi Furano
       </h2>
-      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto sm:text-lg flex gap-16 items-center justify-center pb-7">
+      <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto sm:text-lg flex flex-col lg:flex-row gap-12 items-center justify-center pb-7">
         <p className="w-full  text-lg sm:text-xl/loose">
           We will go through one of the best ski resorts in Hokkaido and the
           best snow in the world. We will locate you in Furano town, in our
@@ -83,7 +83,7 @@ const FuranoTour: React.FC = () => {
         </p>
         <div className="relative aspect-[3/2] w-full rounded-lg">
           <Image
-            src="/images/IMG_7423.JPG"
+            src="/images/tours/DSCF8033.jpg"
             alt="Daisetzusan National park"
             style={{ objectFit: "cover" }}
             fill

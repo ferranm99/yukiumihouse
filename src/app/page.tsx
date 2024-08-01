@@ -35,7 +35,7 @@ const tours = [
     image:
       "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Get to  discover the endless untrack powder fields of Kurodake and central Hokkaido. Visit the deepest of depth.",
     href: "bookings/kamikawa",
   },
   {
@@ -43,7 +43,7 @@ const tours = [
     image:
       "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Come meet the the champany snow Furano valey has to offer.All that combined with all the comfort and commodities  resort town has to offer.",
     href: "bookings/furano",
   },
   {
@@ -117,7 +117,7 @@ export default function Landing() {
               }
             >
               <p className="font-bold text-xl">Yukiumi House Kamikawa</p>
-              <p className="font-normal text-sm">$60 / night</p>
+              <p className="font-semibold text-sm">¥12.000 / night</p>
             </DirectionAwareHover>
           </Link>
           <Link
@@ -125,12 +125,10 @@ export default function Landing() {
             href="/accomodations/furano"
           >
             <DirectionAwareHover
-              imageUrl={
-                "https://yukiumihouse.files.wordpress.com/2023/04/psx_20230225_053505.jpg"
-              }
+              imageUrl={"/images/landing/photo_2024-08-01_13-27-14.jpg"}
             >
               <p className="font-bold text-xl">Yukiumi House Furano</p>
-              <p className="font-normal text-sm">$60 / night</p>
+              <p className="font-semibold text-sm">¥12.000 / night</p>
             </DirectionAwareHover>
           </Link>
         </div>
