@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import PhotoAlbum from "../_components/photo-album";
 import ImageCarousel from "../_components/image-carousel";
-import { Modal, ModalBody, ModalTrigger } from "@/components/ui/animated-modal";
+import {
+  Modal,
+  ModalBody,
+  ModalTrigger,
+} from "@components/ui/animated-photos-modal";
 
 type Photo = {
   src: string;

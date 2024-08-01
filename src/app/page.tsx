@@ -129,7 +129,7 @@ export default function Landing() {
             href="/accomodations/furano"
           >
             <DirectionAwareHover
-              imageUrl={"/images/landing/photo_2024-08-01_13-27-14.jpg"}
+              imageUrl={"/images/photo_2024-08-01_13-27-14.jpg"}
             >
               <p className="font-bold text-xl">Yukiumi House Furano</p>
               <p className="font-semibold text-sm">¥12.000 / night</p>

@@ -55,9 +55,9 @@ const BlogSection = () => {
                       {post.category}
                     </div>
                     <div className="border-b-2 border-primary-500 w-8"></div>
-                    <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
+                    {/* <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
                       {post.date}
-                    </div>
+                    </div> */}
                     <h2 className="text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
                       {post.title}
                     </h2>

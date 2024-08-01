@@ -26,8 +26,12 @@ const blogData: BlogProps[] = [
         content:
           "It's a Ropeway that saves you 650m vertical. And accés you to a Plato where you can contemplate, the beauty of the volcano with it's smoky fumaroles making you feel small and in a living earth. Either climb to the top or loop the Ropeway in search of the deepest of deepest snows will end in an unforgettable day out! The fact that the base of the ropeway lays on a 1000m elevation, which is very high for Hokkaido basis give to it extremely unic snow conditions.",
       },
-      /* { type: "image", content: "/path/to/image2.jpg" },
-    { type: "text", content: "This is the final paragraph of my blog." }, */
+      /* { type: "image", content: "/path/to/image2.jpg" },*/
+      {
+        type: "text",
+        content:
+          "Ski terrain under the Ropeway is quite easy to guess on a sunny day, but those deep stormy days when the snow it's fresh at its prime the terrain can become more difficult to acknowledge and dangerous. Going for the summit even though it may look reasonable can become more difficult than expected. Its freezing temperatures and high speed wind plus a very unpredictable weather make it for a non mistake mission. Say all that if we are able to enjoy the sunset from the crater we may say it is our best ski day in our life's. All in all we highly recommend to contract well educate and wise terrain knowledge ski guide to make the experience a pleasure at its fullest.",
+      },
     ],
   },
   {
