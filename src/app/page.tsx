@@ -33,7 +33,8 @@ const tours = [
   {
     title: "Kamikawa: Hokkaido north side",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
+      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+
     description:
       "Get to  discover the endless untrack powder fields of Kurodake and central Hokkaido. Visit the deepest of depth.",
     href: "bookings/kamikawa",
@@ -41,7 +42,7 @@ const tours = [
   {
     title: "Furano: Sea of Snow",
     image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+      "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
     description:
       "Come meet the champany snow Furano valey has to offer.All that combined with all the comfort and commodities  resort town has to offer.",
     href: "bookings/furano",

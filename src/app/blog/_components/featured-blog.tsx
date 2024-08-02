@@ -9,7 +9,7 @@ const featuredBlog = {
     "Asahidake is the highest peak of Hokkaido with 2290m, and it's and active volcano. At its foot lies the Asahidake Ropeway, becoming one of the best highlights of the Hokkaido powder hunters.",
   href: "/blog/0",
   // date: "April 6, 2023",
-  // category: "Hike",
+  category: "Place Insights",
 };
 
 const FeaturedBlog = async () => {
@@ -32,9 +32,9 @@ const FeaturedBlog = async () => {
         </div>
         <div className="sm:w-1/2 lg:w-1/3 bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 relative">
           <Link href={featuredBlog.href} className="cursor-pointer">
-            {/* <div className="font-display uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content">
+            <div className="font-display uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content">
               {featuredBlog.category}
-            </div> */}
+            </div>
             <div className="border-b-2 border-primary-500 w-8"></div>
             {/* <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
               {featuredBlog.date}
