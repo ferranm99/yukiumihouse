@@ -36,34 +36,6 @@ const ContactPage: React.FC = () => {
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
               <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
-                  src="https://yukiumihouse.files.wordpress.com/2023/04/sergi-1.png"
-                  alt="Sergi Martinez"
-                  layout="responsive"
-                  width={20}
-                  height={20}
-                />
-              </div>
-              <CardTitle className="text-2xl">Sergi Martínez</CardTitle>
-              <hr className="w-full border-gray-300" />
-            </CardHeader>
-            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0 flex-grow">
-              Sergi is a POW rider. Usually on his board, he loves to ride deep
-              powder snow. Eider spinning laps in the resort or taking you to
-              the untouched backcountry terrain, you will have a blast joining
-              him for a day. He will be caring about you, sharing some great
-              tips on splitboard science, and last but not least, setting up
-              high riding skills that are going to empower you to overcome your
-              boundaries. Operations Level 1 by Canadian avalanche association
-              and Japanese avalanche Network, ski and snowboard instructor,
-              kitesurfer and drone pilot. If you are a snow surfer and you are
-              looking for a great day out in the Furano area or central Hokkaido
-              don't miss a day with Sergi.
-            </CardContent>
-          </Card>
-          <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
-            <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
-              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
-                <Image
                   src="https://yukiumihouse.files.wordpress.com/2023/04/geri-copia.png"
                   alt="Gerard Martinez"
                   layout="responsive"
@@ -87,6 +59,34 @@ const ContactPage: React.FC = () => {
               If you are looking for an adventure day in Central Hokkaido,
               tailor made for you, based on your skills and desires don't miss
               to hit him out as he is your guide!
+            </CardContent>
+          </Card>
+          <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
+            <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
+              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
+                <Image
+                  src="https://yukiumihouse.files.wordpress.com/2023/04/sergi-1.png"
+                  alt="Sergi Martinez"
+                  layout="responsive"
+                  width={20}
+                  height={20}
+                />
+              </div>
+              <CardTitle className="text-2xl">Sergi Martínez</CardTitle>
+              <hr className="w-full border-gray-300" />
+            </CardHeader>
+            <CardContent className="text-sm sm:text-base w-[90%] mx-auto pb-0 flex-grow">
+              Sergi is a POW rider. Usually on his board, he loves to ride deep
+              powder snow. Eider spinning laps in the resort or taking you to
+              the untouched backcountry terrain, you will have a blast joining
+              him for a day. He will be caring about you, sharing some great
+              tips on splitboard science, and last but not least, setting up
+              high riding skills that are going to empower you to overcome your
+              boundaries. Operations Level 1 by Canadian avalanche association
+              and Japanese avalanche Network, ski and snowboard instructor,
+              kitesurfer and drone pilot. If you are a snow surfer and you are
+              looking for a great day out in the Furano area or central Hokkaido
+              don't miss a day with Sergi.
             </CardContent>
           </Card>
         </div>

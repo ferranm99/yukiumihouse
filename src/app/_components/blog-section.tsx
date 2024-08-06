@@ -4,30 +4,27 @@ import Image from "next/image";
 
 const posts = [
   {
-    title: "Ishimuro hut mission",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
-    alt: "Ishimuro hut mission",
-    category: "Mountain huts",
-    date: "April 6, 2023",
+    title: "Aymar Navarro & Leo Slemett visit Hokkaido and Yukiumi house",
+    image: "/images/blogs/blog-1/team_firmas.jpg",
+    alt: "Aymar Navarro, Leo Slemett and Yukiumi house Team",
+    category: "Legendary Guests",
+    // date: "January, 2024",
     url: "/blog/1",
   },
   {
-    title: "Beyond the mountains",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
-    alt: "Beyond the mountains",
-    category: "Short film",
-    date: "April 6, 2023",
+    title: "Ski mountaineering in Rishiri",
+    image: "/images/blogs/blog-2/island.jpg",
+    alt: "Rishiri Fuji island",
+    category: "Place Insights",
+    // date: "April 6, 2023",
     url: "/blog/2",
   },
   {
-    title: "Trail running Numanodaira",
-    image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg?w=1024",
-    alt: "Trail running Numanodaira",
-    category: "Trail running",
-    date: "April 6, 2023",
+    title: "Kurodake Ropeway Hokkaido's freeride Paradise",
+    image: "/images/blogs/blog-3/JMT_20230227_3635.jpg",
+    alt: "Kurodake Ropeway Descent",
+    category: "Place Insights",
+    // date: "April 6, 2023",
     url: "blog/3",
   },
 ];

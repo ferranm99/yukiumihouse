@@ -13,7 +13,7 @@ interface BlogProps {
 const BlogTemplate: React.FC<BlogProps> = ({ title, content }) => {
   return (
     <div className="max-w-4xl mx-auto p-4 my-10">
-      <h1 className="text-3xl font-bold mb-4">{title}</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">{title}</h1>
       {content.map((item, index) => {
         if (item.type === "text") {
           return (
