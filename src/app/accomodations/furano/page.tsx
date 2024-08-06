@@ -15,91 +15,13 @@ type Photo = {
   alt?: string;
 };
 
-const photos: Photo[] = [
-  /*  {
-    src: "/images/yukihouse_furano/IMG_4397.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
+export const photos: Photo[] = [
   {
-    src: "/images/yukihouse_furano/IMG_4398.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4399.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4401.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4402.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4403.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4404.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4405.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4407.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4414.HEIC",
-    width: 512,
-    height: 512,
+    src: "/images/yukihouse_furano/IMG_20240801_195409_246.jpg",
+    width: 5952,
+    height: 3968,
     alt: "Yukiumi House Furano Room",
   },
-  {
-    src: "/images/yukihouse_furano/IMG_4415.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4424.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4426.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Living Room",
-  },
-  {
-    src: "/images/yukihouse_furano/IMG_4432.HEIC",
-    width: 512,
-    height: 512,
-    alt: "Yukiumi House Furano Terrace",
-  }, */
   {
     src: "/images/yukihouse_furano/PXL_20231121_044756527.jpg",
     width: 4080,
@@ -110,7 +32,7 @@ const photos: Photo[] = [
     src: "/images/yukihouse_furano/PXL_20240228_065718007.jpg",
     width: 2268,
     height: 4032,
-    alt: "Yukiumi House Furano Room View",
+    alt: "Yukiumi House Furano Room",
   },
   {
     src: "/images/yukihouse_furano/PXL_20240228_065740961.jpg",
@@ -122,7 +44,7 @@ const photos: Photo[] = [
     src: "/images/yukihouse_furano/PXL_20240228_085203058.jpg",
     width: 4032,
     height: 2268,
-    alt: "Yukiumi House Furano  Room",
+    alt: "Yukiumi House Furano Room",
   },
   {
     src: "/images/yukihouse_furano/PXL_20240228_085225584.jpg",
@@ -134,6 +56,36 @@ const photos: Photo[] = [
     src: "/images/yukihouse_furano/PXL_20240228_085516543.jpg",
     width: 4032,
     height: 2268,
+    alt: "Yukiumi House Furano Room",
+  },
+  {
+    src: "/images/yukihouse_furano/PXL_20240628_021348623.jpg",
+    width: 4080,
+    height: 3072,
+    alt: "Yukiumi House Furano Room",
+  },
+  {
+    src: "/images/yukihouse_furano/PXL_20240628_021441364.jpg",
+    width: 4080,
+    height: 3072,
+    alt: "Yukiumi House Furano Room",
+  },
+  {
+    src: "/images/yukihouse_furano/PXL_20240628_021646584.jpg",
+    width: 4080,
+    height: 3072,
+    alt: "Yukiumi House Furano Room",
+  },
+  {
+    src: "/images/yukihouse_furano/PXL_20240628_021729175.MP.jpg",
+    width: 4080,
+    height: 3072,
+    alt: "Yukiumi House Furano Room",
+  },
+  {
+    src: "/images/yukihouse_furano/PXL_20240628_023217839.jpg",
+    width: 4080,
+    height: 3072,
     alt: "Yukiumi House Furano Room",
   },
 ];
