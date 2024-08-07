@@ -34,15 +34,16 @@ const ContactPage: React.FC = () => {
         <div className="w-full h-full flex flex-col justify-center items-center gap-12 lg:flex-row lg:px-4 lg:items-stretch">
           <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
-              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
+              <div className="relative w-72 h-72 rounded-full overflow-hidden">
                 <Image
                   src="/images/contact/photo_2024-08-06_22-53-35.jpg"
                   alt="Gerard Martinez"
-                  layout="responsive"
-                  width={20}
-                  height={20}
+                  style={{ objectFit: "cover" }}
+                  className="rounded-full"
+                  fill
                 />
               </div>
+
               <CardTitle className="text-2xl">Gerard Martínez</CardTitle>
               <hr className="w-full border-gray-300" />
             </CardHeader>
@@ -63,13 +64,13 @@ const ContactPage: React.FC = () => {
           </Card>
           <Card className="w-[92%] md:w-[40rem] border-[1px] shadow-md py-5 flex flex-col">
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
-              <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
+              <div className="relative w-72 h-72 rounded-full overflow-hidden">
                 <Image
-                  src="https://yukiumihouse.files.wordpress.com/2023/04/sergi-1.png"
+                  src="/images/contact/photo_2024-08-06_22-53-30.jpg"
                   alt="Sergi Martinez"
-                  layout="responsive"
-                  width={20}
-                  height={20}
+                  style={{ objectFit: "cover" }}
+                  className="rounded-full"
+                  fill
                 />
               </div>
               <CardTitle className="text-2xl">Sergi Martínez</CardTitle>
