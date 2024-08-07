@@ -26,9 +26,8 @@ const SkeletonTwo = () => {
     <div>
       <p className="font-bold text-3xl xl:text-4xl text-white ">Skiing</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Rafting is a fun and exciting activity that you can enjoy while staying
-        at Yukiumi House. It&apos;s the perfect way to experience the beauty of
-        nature and have a great time with friends and family.
+        At Yukiumi we are snow lovers! We know the best spots for the greatests
+        descends that will pump your adrenaline to the max.
       </p>
     </div>
   );
