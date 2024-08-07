@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
             <CardHeader className="flex flex-col gap-3 items-center w-[75%] sm:w-[64%] md:w-[60%] lg:w-[50%] h-auto mx-auto rounded-t-xl p-0">
               <div className="pb-[100%] h-0 overflow-hidden rounded-t-xl">
                 <Image
-                  src="https://yukiumihouse.files.wordpress.com/2023/04/geri-copia.png"
+                  src="/images/contact/photo_2024-08-06_22-53-35.jpg"
                   alt="Gerard Martinez"
                   layout="responsive"
                   width={20}
