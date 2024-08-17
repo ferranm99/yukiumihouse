@@ -2,7 +2,19 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const posts = [
+interface Post {
+  title: string;
+  image: string;
+  alt: string;
+  category: string;
+  url: string;
+}
+
+interface BlogSectionProps {
+  limit?: number;
+}
+
+const posts: Post[] = [
   {
     title: "Aymar Navarro & Leo Slemett visit Hokkaido and Yukiumi house",
     image: "/images/blogs/blog-1/team_firmas.jpg",
@@ -63,13 +75,15 @@ const posts = [
   },
 ];
 
-const BlogSection = () => {
+const BlogSection: React.FC<BlogSectionProps> = ({ limit }) => {
+  // Determine the posts to display based on the limit prop
+  const displayedPosts = limit ? posts.slice(0, limit) : posts;
   return (
     <div className="relative px-8 mb-6">
       <div className="max-w-screen-xl mx-auto">
-        <div className="">
+        <div>
           <div className="grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, idx) => (
+            {displayedPosts.map((post, idx) => (
               <Link href={post.url} key={idx}>
                 <div className="flex-col group mb-8 md:mb-0">
                   <div className="relative h-64 w-full overflow-clip">

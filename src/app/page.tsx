@@ -160,7 +160,7 @@ export default function Landing() {
       </section>
       <section id="blogs" className="py-8 flex flex-col items-center gap-8">
         <h1 className="text-4xl font-bold text-black pb-4 ">Blogs</h1>
-        <BlogSection />
+        <BlogSection limit={3} />
         <Link
           href="/blog"
           className="self-end mr-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100"

@@ -173,16 +173,6 @@ const blogData: BlogProps[] = [
     title: "5 days Daisetsu san traverse",
     content: [
       {
-        type: "image",
-        content:
-          "https://yukiumihouse.files.wordpress.com/2023/04/hakun-koya-pano-2.jpg",
-      },
-      {
-        type: "video",
-        content:
-          "https://www.youtube.com/embed/enBzU_094n0?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=es&autohide=2&wmode=transparent",
-      },
-      {
         type: "text",
         content:
           "We decided to join our Japanese friends in the traverse south to north of the Daisetsuzan National Park!",
@@ -192,6 +182,12 @@ const blogData: BlogProps[] = [
         content:
           "We packed our big backpacks with food, fuel, and sleeping gear to be able to be self-sufficient for at least 6 days out in the mountains. Backpacks were heavy!! But our stoke was higher.",
       },
+      {
+        type: "video",
+        content:
+          "https://www.youtube.com/embed/enBzU_094n0?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=es&autohide=2&wmode=transparent",
+      },
+
       {
         type: "image",
         content:
