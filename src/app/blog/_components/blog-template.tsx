@@ -1,7 +1,7 @@
 import React from "react";
 
 type BlogContent = {
-  type: "text" | "image";
+  type: "text" | "image" | "video";
   content: string;
 };
 
@@ -29,6 +29,17 @@ const BlogTemplate: React.FC<BlogProps> = ({ title, content }) => {
               alt=""
               className="mb-4 w-full h-auto"
             />
+          );
+        } else if (item.type === "video") {
+          return (
+            <iframe
+              key={index}
+              src={item.content}
+              style={{ border: 0 }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="mb-4 w-full h-72 sm:h-96 2xl:h-[34rem] xl:h-[34rem]"
+            ></iframe>
           );
         }
         return null;
