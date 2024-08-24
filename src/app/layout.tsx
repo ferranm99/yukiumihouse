@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
 import ReactQueryProvider from "@/app/react-query-provider";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -27,6 +28,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        {/* Google Tag Manager */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16681422523"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16681422523');
+            `,
+          }}
+        />
+      </Head>
       <ReactQueryProvider>
         <body
           className={cn(
