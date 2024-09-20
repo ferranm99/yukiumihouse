@@ -325,7 +325,7 @@ const KamikawaTour: React.FC = () => {
       </section>
       <section className="w-[100%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-8">
         <h2 className="text-4xl font-bold text-black text-center pb-6">
-          Tour Dates 2023-24
+          Tour Dates 2024-25
         </h2>
         {isLoading && <p>Loading...</p>}
         {isError && <p>Error loading slots</p>}
