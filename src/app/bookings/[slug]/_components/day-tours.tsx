@@ -15,7 +15,7 @@ const DayTours: React.FC = () => {
           {/* <h2 className="text-2xl font-bold text-black pb-6">Price</h2> */}
           <div className="flex items-end justify-center pb-6">
             <p className="text-2xl font-medium">Price:&nbsp;&nbsp;</p>
-            <p className="text-4xl font-medium"> ¥80.000</p>
+            <p className="text-4xl font-medium"> ¥100.000</p>
             <p className="text-sm pb-3">/group</p>
           </div>
           <ul className="text-lg sm:text-xl/loose list-disc list-inside ml-6">

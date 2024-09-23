@@ -347,7 +347,7 @@ const FuranoTour: React.FC = () => {
         </h2>
         <div className="flex items-end justify-center">
           <p className="text-xl">6 Nights, 7 Days&nbsp;</p>
-          <p className="text-4xl font-medium"> $3000</p>
+          <p className="text-4xl font-medium"> $3350</p>
           <p className="text-sm pb-3">/person</p>
         </div>
       </section>
