@@ -73,6 +73,22 @@ const posts: Post[] = [
     // date: "April 6, 2023",
     url: "blog/7",
   },
+  {
+    title: "Best Time of Year for Backcountry Skiing in Furano and Kamikawa",
+    image: "/images/blogs/blog-8/1.jpg",
+    alt: "Furano and Kamikawa",
+    category: "Recommendations",
+    // date: "April 6, 2023",
+    url: "blog/8",
+  },
+  {
+    title: "How to Prepare for a Backcountry Ski Tour",
+    image: "/images/blogs/blog-9/1.jpg",
+    alt: "Backcountry Ski Tour",
+    category: "Information",
+    // date: "April 6, 2023",
+    url: "blog/9",
+  }
 ];
 
 const BlogSection: React.FC<BlogSectionProps> = ({ limit }) => {
