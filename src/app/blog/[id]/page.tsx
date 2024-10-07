@@ -491,8 +491,93 @@ const blogData: BlogProps[] = [
         "content": "<br><b>Conclusion:</b><br><br>● <b>Best for Powder:</b> January and February are ideal for deep powder skiing with reliable snow and frequent storms.<br>● <b>Best for Summits:</b> March and April are perfect for exploring distant peaks and longer routes, thanks to warmer temperatures and extended daylight hours.<br><br>If you’re planning a backcountry ski tour in Furano or Kamikawa, consider your goals. For the deepest powder, mid-winter is unbeatable, but for summiting peaks and venturing into more remote areas, spring offers the best conditions. Book your guided tour with Yukiumi House to make the most of your backcountry adventure in Hokkaido!"
       }
     ]
+  },
+  {
+    "title": "How to Prepare for a Backcountry Ski Tour",
+    "content": [
+      {
+        "type": "text",
+        "content": "Embarking on a backcountry ski tour is a thrilling way to explore untouched snow and remote wilderness. However, it requires careful preparation to ensure a safe and enjoyable experience. From physical fitness to essential gear, here’s everything you need to know to prepare for your backcountry skiing adventure."
+      },
+      {
+        "type": "image",
+        "content": "/images/blogs/blog-9/1.jpg",
+        "alt":"skier makin a turn in very deep snow in kamikawa backcountry"
+      },
+      {
+        "type": "text",
+        "content": "<br><b>1. Physical Preparation</b><br><br>Backcountry skiing demands a high level of physical fitness as it involves climbing uphill in deep snow and skiing down ungroomed terrain. Here’s how to get in shape for the tour:"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Cardiovascular Fitness:</b> Ski touring requires significant endurance, especially for uphill climbs. Incorporate cardio exercises like running, cycling, or hiking into your routine to build stamina.<br><b>● Leg Strength:</b> Skiing through powder requires strong legs. Squats, lunges, and step-ups are great exercises to strengthen your quads, hamstrings, and glutes.<br><b>● Core Stability:</b> A strong core helps with balance and control on difficult terrain. Incorporate planks, Russian twists, and leg raises into your workout routine.<br><b>● Endurance Training:</b> Backcountry tours can last several hours or even a full day. Engage in long-duration activities like long-distance hiking or skiing to mimic the demands of a tour."
+      },
+      {
+        "type": "text",
+        "content": "Start training at least two months before your trip to ensure you have the stamina to handle the physical challenges."
+      },
+      {
+        "type": "image",
+        "content": "/images/blogs/blog-9/2.jpg",
+        "alt":"beautiful scenic view of a hiker in numanodaira, daisetsu san"
+      },
+      {
+        "type": "text",
+        "content": "<br><b>2. Gear Essentials</b><br><br>Having the right gear is crucial for backcountry skiing. Here’s a checklist of essential equipment:"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Skis or Splitboard:</b> Choose touring skis or a splitboard designed for backcountry use. These are lighter and equipped for uphill travel with climbing skins.<br><b>● Climbing Skins:</b> These attach to the bottom of your skis or splitboard, allowing you to grip the snow while climbing uphill.<br><b>● Avalanche Gear:</b> Safety in the backcountry is paramount. Always carry:<br>&nbsp;&nbsp;&nbsp;&nbsp;● Avalanche Beacon: Helps locate you or others if caught in an avalanche.<br>&nbsp;&nbsp;&nbsp;&nbsp;● Shovel: Essential for digging out a buried skier.<br>&nbsp;&nbsp;&nbsp;&nbsp;● Probe: Used to pinpoint the location of a buried skier after using the beacon.<br><b>● Backpack:</b> A ski-specific backpack should include a compartment for your avalanche gear, water, snacks, and extra layers.<br><b>● Helmet:</b> Protects against head injuries from falls or rockslides.<br><b>● Clothing Layers:</b> Dress in moisture-wicking layers to regulate your body temperature. A base layer, insulating mid-layer, and waterproof outer shell are recommended.<br><b>● Ski Boots:</b> Backcountry boots offer a comfortable walking mode for uphill travel and should be compatible with your touring skis or bindings."
+      },
+      {
+        "type": "image",
+        "content": "/images/blogs/blog-9/3.jpg",
+        "alt":"climber, splitboard, crampons, poles, waterproof jacket and pants, sunglasses, snowboard boots"
+      },
+      {
+        "type": "text",
+        "content": "<br><b>3. Safety Protocols</b><br><br>Backcountry skiing carries inherent risks, including avalanches, changing weather conditions, and remote locations. Follow these safety protocols to minimize risks:"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Check Avalanche Conditions:</b> Always review local avalanche reports and forecasts before heading out. Websites like Avalanche.org or local avalanche centers provide real-time data on conditions.<br><b>● Learn How to Use Your Gear:</b> Familiarize yourself with your avalanche gear before your trip. Know how to use your beacon, probe, and shovel, and practice these skills in a safe environment.<br><b>● Travel in Groups:</b> Never ski alone in the backcountry. Group travel ensures you have support in case of an emergency. Always communicate with your group about the plan and terrain choices.<br><b>● Hire a Guide:</b> If you’re new to backcountry skiing, hiring a certified guide is a smart decision. They’ll navigate the terrain, manage risks, and ensure you’re skiing safely.<br><b>● Know Your Limits:</b> Be honest about your skill level and physical fitness. Avoid challenging yourself with terrain that’s beyond your experience."
+      },
+      {
+        "type": "image",
+        "content": "/images/blogs/blog-9/4.JPG",
+        "alt":"snowpit, prove, snow knife, Penguin clothing, Uller sunglasses"
+      },
+      {
+        "type": "text",
+        "content": "<br><b>4. Nutrition and Hydration</b><br><br>Backcountry skiing burns a lot of calories, so it’s important to stay fueled and hydrated throughout the day:"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Bring High-Energy Snacks:</b> Energy bars, nuts, dried fruits, and chocolate are great for quick refueling on the go.<br><b>● Hydration:</b> Carry at least 1.5 liters of water. Hydration bladders with insulated tubes are convenient for keeping water accessible while skiing.<br><b>● Electrolyte Drinks:</b> Consider bringing an electrolyte supplement to help replenish salts lost through sweat."
+      },
+      {
+        "type": "text",
+        "content": "<br><b>5. Weather and Terrain Awareness</b><br><br>Understanding the terrain and weather is crucial for backcountry tours:"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Study Maps and Routes:</b> Familiarize yourself with the route ahead of time using topographic maps or GPS. Know the elevation changes and potential hazards like crevasses or cliff edges.<br>For more information you can visit the following websites:<br>&nbsp;&nbsp;&nbsp;&nbsp;CalTopo - caltopo.com<br>&nbsp;&nbsp;&nbsp;&nbsp;Gaia GPS - gaiagps.com<br>&nbsp;&nbsp;&nbsp;&nbsp;FatMap - fatmap.com"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Monitor Weather:</b> Mountain weather can change quickly. Keep an eye on the forecast and be prepared for unexpected shifts in conditions. Some websites we like to use:<br>&nbsp;&nbsp;&nbsp;&nbsp;Windy - windy.com<br>&nbsp;&nbsp;&nbsp;&nbsp;OpenSnow - opensnow.com<br>&nbsp;&nbsp;&nbsp;&nbsp;Mountain Weather Forecast (MWF) - mountain-forecast.com<br>&nbsp;&nbsp;&nbsp;&nbsp;Snow-Forecast - snow-forecast.com"
+      },
+      {
+        "type": "text",
+        "content": "<b>● Snow Stability:</b> Know how to assess snowpack stability to avoid avalanche-prone areas. Courses in avalanche safety (e.g., AST, AIARE) teach you how to analyze snow conditions and make informed decisions."
+      },
+      {
+        "type": "text",
+        "content": "<br><b>Conclusion:</b><br><br>Preparing for a backcountry ski tour is about more than just the thrill of skiing fresh powder. It requires physical readiness, proper gear, and a strong focus on safety. By taking the time to train, gather the right equipment, and follow safety protocols, you’ll set yourself up for a successful and unforgettable adventure in the backcountry.Make sure you’re fully prepared before heading out, and consider booking a guided backcountry ski tour with Yukiumi House to ensure a safe and thrilling experience in Hokkaido's stunning wilderness!"
+      }
+    ]
   }
-  ,
+  
 ];
 
 export default function Page({ params }: { params: { id: number } }) {
