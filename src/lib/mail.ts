@@ -29,6 +29,8 @@ export const sendBookingEmail = async (
     subject: "Booking Request",
     html: `
       <h1>Nova reserva per ${tourNames[tour]} al slot de ${selectedSlot}</h1>
+      <h3>Nom</h3>
+      <p> ${data.name}</p>
       <h3>Email del client</h3>
       <p><a href="mailto:${data.email}">${data.email}</a></p>
       <h3>País</h3>

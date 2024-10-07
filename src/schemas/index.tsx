@@ -1,6 +1,12 @@
 import * as z from "zod";
 
 export const QuestionnaireSchema = z.object({
+  name: z
+    .string({
+      required_error: "Name is required.",
+    })
+    .min(2, { message: "Invalid name." })
+    .max(200, { message: "Invalid name." }),
   email: z.string().email({ message: "Email is required." }),
   country: z
     .string({
