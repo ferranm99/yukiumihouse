@@ -3,6 +3,7 @@ import React from "react";
 type BlogContent = {
   type: "text" | "image" | "video";
   content: string;
+  alt?: string;
 };
 
 interface BlogProps {
@@ -17,16 +18,16 @@ const BlogTemplate: React.FC<BlogProps> = ({ title, content }) => {
       {content.map((item, index) => {
         if (item.type === "text") {
           return (
-            <p key={index} className="mb-4 text-lg text-gray-800 leading-loose">
-              {item.content}
-            </p>
+            <div key={index} className="mb-4 text-lg text-gray-800 leading-loose">
+                <div dangerouslySetInnerHTML={{ __html: item.content }} />
+            </div>
           );
         } else if (item.type === "image") {
           return (
             <img
               key={index}
               src={item.content}
-              alt=""
+              alt={item.alt || ""}
               className="mb-4 w-full h-auto"
             />
           );
