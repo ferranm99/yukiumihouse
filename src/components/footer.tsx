@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               </span>
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Tours
@@ -87,6 +87,22 @@ const Footer: React.FC = () => {
                 <li>
                   <a href="/contact" className="hover:underline">
                     Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">
+                Legal
+              </h2>
+              <ul className="text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a
+                    href="/Business_Disclosure.pdf"
+                    target="_blank"
+                    className="hover:underline "
+                  >
+                    Business Disclosure
                   </a>
                 </li>
               </ul>
