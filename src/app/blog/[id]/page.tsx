@@ -2,8 +2,8 @@ import React from "react";
 import BlogTemplate from "../_components/blog-template";
 
 type BlogContent = {
-  type: "text" | "image" | "video";
-  content: string;
+  type: "text" | "image" | "video" | "carroussel";
+  content: string | string[];
   alt?: string;
 };
 
@@ -85,6 +85,33 @@ const blogData: BlogProps[] = [
         type: "image",
         content: "/images/blogs/blog-1/PXL_20240113_034726830.jpg",
       },
+      {
+        "type": "text",
+        "content": "<br><b>Gallery</b><br>"
+      },
+      {
+        type: "carroussel",
+        content: [
+          "/images/blogs/blog-1/gallery/1.jpg",
+          "/images/blogs/blog-1/gallery/2.jpg",
+          "/images/blogs/blog-1/gallery/3.jpg",
+          "/images/blogs/blog-1/gallery/4.jpg",
+          "/images/blogs/blog-1/gallery/5.jpg",
+          "/images/blogs/blog-1/gallery/6.jpg",
+          "/images/blogs/blog-1/gallery/7.jpg",
+          "/images/blogs/blog-1/gallery/8.jpg",
+          "/images/blogs/blog-1/gallery/9.jpg",
+          "/images/blogs/blog-1/gallery/10.jpg",
+          "/images/blogs/blog-1/gallery/11.jpg",
+          //"/images/blogs/blog-1/gallery/12.jpg",
+          "/images/blogs/blog-1/gallery/13.jpg",
+          "/images/blogs/blog-1/gallery/14.jpg",
+          "/images/blogs/blog-1/gallery/15.jpg",
+          "/images/blogs/blog-1/gallery/16.jpg",
+          "/images/blogs/blog-1/gallery/17.jpg"
+        ],
+        alt: "Blog gallery images"
+      }
     ],
   },
   {
