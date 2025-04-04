@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg",
+        url: "https://yukiumihouse.com/images/blogs/blog-7/dji_0786.jpg",
         width: 1200,
         height: 630,
         alt: "Trail running Numanodaira",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "Hike from Aizankei onsen, filmed in Numanodaira, with snowed Asahidake in the background. 13/10/2022",
     creator: "@ferranm99",
-    images: ["https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg"],
+    images: ["https://yukiumihouse.com/images/blogs/blog-7/dji_0786.jpg"],
   },
   // Optional: If you use Google Search Console
   // verification: {
@@ -63,10 +63,10 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "https://yukiumihouse.files.wordpress.com/2023/06/dji_0786.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/06/dji_0798.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/06/dji_0805.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/06/dji_0828-2.jpg",
+  "/images/blogs/blog-7/dji_0786.jpg",
+  "/images/blogs/blog-7/dji_0798.jpg",
+  "/images/blogs/blog-7/dji_0805.jpg",
+  "/images/blogs/blog-7/dji_0828-2.jpg",
 ];
 
 export default function TrailRunningNumanodaira() {
