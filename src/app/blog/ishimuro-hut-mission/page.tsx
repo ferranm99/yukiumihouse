@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
+        url: "/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
         width: 1200,
         height: 630,
         alt: "Ishimuro hut mission",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Early season conditions were looking on point up high in Daisetzuzan National Park. Hungry for drawing the first turns, we set up ourselves and head to Ishimuro mountain hut.",
     creator: "@ferranm99",
-    images: ["https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg"],
+    images: ["/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg"],
   },
   // Optional: If you use Google Search Console
   // verification: {
@@ -61,12 +61,12 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "https://yukiumihouse.files.wordpress.com/2022/12/dsc_4408-1.jpg",
-  "https://yukiumihouse.files.wordpress.com/2022/12/dsc_4466-2.jpg",
-  "https://yukiumihouse.files.wordpress.com/2022/12/dsc_4472.jpg",
-  "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-14-04h41m48s319-9.jpg",
-  "https://yukiumihouse.files.wordpress.com/2022/12/dsc_4396.jpg",
-  "https://yukiumihouse.files.wordpress.com/2022/12/dsc_4401.jpg",
+  "/images/blogs/blog-5/dsc_4408-1.jpg",
+  "/images/blogs/blog-5/dsc_4466-2.jpg",
+  "/images/blogs/blog-5/dsc_4472.jpg",
+  "/images/blogs/blog-5/vlcsnap-2022-11-14-04h41m48s319-9.jpg",
+  "/images/blogs/blog-5/dsc_4396.jpg",
+  "/images/blogs/blog-5/dsc_4401.jpg",
 ];
 
 export default function IshimuroHutMission() {
@@ -75,7 +75,7 @@ export default function IshimuroHutMission() {
       <h1 className="text-3xl font-bold mb-4 text-center">Ishimuro hut mission</h1>
       
       <img
-        src="https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg"
+        src="/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg"
         alt="Ishimuro hut mission"
         className="mb-4 w-full h-auto"
       />
