@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://yukiumihouse.files.wordpress.com/2023/04/img_20230326_103520.jpg",
+        url: "/images/blogs/blog-4/img_20230326_103520.jpg",
         width: 1200,
         height: 630,
         alt: "5 days Daisetsu san traverse",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description:
       "Join our Japanese friends in the traverse south to north of the Daisetsuzan National Park!",
     creator: "@ferranm99",
-    images: ["https://yukiumihouse.files.wordpress.com/2023/04/img_20230326_103520.jpg"],
+    images: ["/images/blogs/blog-4/img_20230326_103520.jpg"],
   },
   // Optional: If you use Google Search Console
   // verification: {
@@ -62,17 +62,17 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4226.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4214.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4139.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4103.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4028.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4040.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_2549.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4247-2.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/kimg4943.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/dji_0060.jpg",
-  "https://yukiumihouse.files.wordpress.com/2023/04/img_4063.jpg",
+  "/images/blogs/blog-4/img_4226.jpg",
+  "/images/blogs/blog-4/img_4214.jpg",
+  "/images/blogs/blog-4/img_4139.jpg",
+  "/images/blogs/blog-4/img_4103.jpg",
+  "/images/blogs/blog-4/img_4028.jpg",
+  "/images/blogs/blog-4/img_4040.jpg",
+  "/images/blogs/blog-4/img_2549.jpg",
+  "/images/blogs/blog-4/img_4247-2.jpg",
+  "/images/blogs/blog-4/kimg4943.jpg",
+  "/images/blogs/blog-4/dji_0060.jpg",
+  "/images/blogs/blog-4/img_4063.jpg",
 ];
 
 export default function FiveDaysDaisetsuSanTraverse() {
@@ -97,7 +97,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       ></iframe>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/img_20230326_103520.jpg"
+        src="/images/blogs/blog-4/img_20230326_103520.jpg"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
@@ -107,7 +107,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       </div>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/img_20230326_164710.jpg"
+        src="/images/blogs/blog-4/img_20230326_164710.jpg"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
@@ -117,7 +117,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       </div>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/kimg4961.jpg"
+        src="/images/blogs/blog-4/kimg4961.jpg"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
@@ -127,7 +127,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       </div>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/img_20230328_161552.jpg"
+        src="/images/blogs/blog-4/img_20230328_161552.jpg"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
@@ -137,7 +137,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       </div>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/img_4103.jpg?w=1024"
+        src="/images/blogs/blog-4/img_4103.jpg?w=1024"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
@@ -147,7 +147,7 @@ export default function FiveDaysDaisetsuSanTraverse() {
       </div>
 
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg"
+        src="/images/blogs/blog-4/img_4184.jpg"
         alt="Daisetsu san traverse"
         className="mb-4 w-full h-auto"
       />
