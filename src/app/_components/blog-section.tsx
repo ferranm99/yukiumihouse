@@ -21,7 +21,7 @@ const posts: Post[] = [
     alt: "Aymar Navarro, Leo Slemett and Yukiumi house Team",
     category: "Legendary Guests",
     // date: "January, 2024",
-    url: "/blog/1",
+    url: "/blog/aymar-leo-hokkaido",
   },
   {
     title: "Ski mountaineering in Rishiri",
@@ -29,7 +29,7 @@ const posts: Post[] = [
     alt: "Rishiri Fuji island",
     category: "Place Insights",
     // date: "April 6, 2023",
-    url: "/blog/2",
+    url: "/blog/ski-mountaineering-rishiri",
   },
   {
     title: "Kurodake Ropeway Hokkaido's freeride Paradise",
@@ -37,7 +37,7 @@ const posts: Post[] = [
     alt: "Kurodake Ropeway Descent",
     category: "Place Insights",
     // date: "April 6, 2023",
-    url: "blog/3",
+    url: "blog/kurodake-ropeway-hokkaido",
   },
   {
     title: "5 days Daisetsu san traverse",
@@ -45,7 +45,7 @@ const posts: Post[] = [
     alt: "Daisetsu san traverse",
     category: "Adventure",
     // date: "April 6, 2023",
-    url: "blog/4",
+    url: "blog/5-days-daisetsu-san-traverse",
   },
   {
     title: "Ishimuro hut mission",
@@ -54,7 +54,7 @@ const posts: Post[] = [
     alt: "Ishimuro hut mission",
     category: "Adventure",
     // date: "April 6, 2023",
-    url: "blog/5",
+    url: "blog/ishimuro-hut-mission",
   },
   {
     title: "Behind the mountains: Point of view",
@@ -63,7 +63,7 @@ const posts: Post[] = [
     alt: "Mountains landscape",
     category: "Place insights",
     // date: "April 6, 2023",
-    url: "blog/6",
+    url: "blog/behind-the-mountains",
   },
   {
     title: "Trail running Numanodaira",
@@ -71,7 +71,7 @@ const posts: Post[] = [
     alt: "Numanodaira",
     category: "Adventure",
     // date: "April 6, 2023",
-    url: "blog/7",
+    url: "blog/trail-running-numanodaira",
   },
   {
     title: "Best Time of Year for Backcountry Skiing in Furano and Kamikawa",
@@ -79,7 +79,7 @@ const posts: Post[] = [
     alt: "Furano and Kamikawa",
     category: "Recommendations",
     // date: "April 6, 2023",
-    url: "blog/8",
+    url: "blog/best-time-of-year-for-backcountry-skiing",
   },
   {
     title: "How to Prepare for a Backcountry Ski Tour",
@@ -87,7 +87,23 @@ const posts: Post[] = [
     alt: "Backcountry Ski Tour",
     category: "Information",
     // date: "April 6, 2023",
-    url: "blog/9",
+    url: "blog/how-to-prepare-for-backcountry-ski-tour",
+  },
+  {
+    title: "Top Routes Backcountry Skiing Furano",
+    image: "/images/blogs/blog-10/image1.jpg",
+    alt: "Backcountry Ski Furano",
+    category: "Guide",
+    // date: "April 6, 2023",
+    url: "blog/top-routes-backcountry-skiing-furano-kamikawa",
+  },
+  {
+    title: "Furano Resort Hokkaido",
+    image: "/images/blogs/blog-11/image1.jpg",
+    alt: "Furano Ski Resort",
+    category: "Resort",
+    // date: "April 6, 2023",
+    url: "blog/furano-resort-hokkaido",
   }
 ];
 

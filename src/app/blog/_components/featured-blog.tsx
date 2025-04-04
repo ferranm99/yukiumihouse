@@ -7,7 +7,7 @@ const featuredBlog = {
   alt: "asahidake ropeway",
   description:
     "Asahidake is the highest peak of Hokkaido with 2290m, and it's and active volcano. At its foot lies the Asahidake Ropeway, becoming one of the best highlights of the Hokkaido powder hunters.",
-  href: "/blog/0",
+  href: "/blog/asahidake-ropeway",
   // date: "April 6, 2023",
   category: "Place Insights",
 };
