@@ -75,7 +75,7 @@ export default function TrailRunningNumanodaira() {
       <h1 className="text-3xl font-bold mb-4 text-center">Trail running Numanodaira</h1>
       
       <img
-        src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg"
+        src="/images/tours/dji_0797.jpg"
         alt="Trail running Numanodaira"
         className="mb-4 w-full h-auto"
       />

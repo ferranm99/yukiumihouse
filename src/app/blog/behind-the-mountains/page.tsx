@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg",
+        url: "/images/tours/dji_0072.jpg",
         width: 1200,
         height: 630,
         alt: "Behind the mountains: Point of view",
@@ -66,7 +66,7 @@ export default function BehindTheMountainsPointOfView() {
       <h1 className="text-3xl font-bold mb-4 text-center">Behind the mountains: Point of view</h1>
       
       <img
-        src="https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg"
+        src="/images/tours/dji_0072.jpg"
         alt="Behind the mountains: Point of view"
         className="mb-4 w-full h-auto"
       />

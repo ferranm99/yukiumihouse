@@ -33,7 +33,7 @@ const tours = [
   {
     title: "Kamikawa: Hokkaido north side",
     image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+      "/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
 
     description:
       "Get to  discover the endless untrack powder fields of Kurodake and central Hokkaido. Visit the deepest of depth.",
@@ -42,7 +42,7 @@ const tours = [
   {
     title: "Furano: Sea of Snow",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
+      "/images/blogs/blog-4/img_4184.jpg",
     description:
       "Come meet the champany snow Furano valey has to offer.All that combined with all the comfort and commodities  resort town has to offer.",
     href: "bookings/furano",
@@ -50,7 +50,7 @@ const tours = [
   {
     title: "Custom Day Tours",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
+      "/images/tours/dji_0072.jpg",
     description:
       "Explore central and North Hokkaido your way. Choose when and where you want to go and we take care of the rest!",
     href: "bookings/day-tours",
@@ -118,7 +118,7 @@ export default function Landing() {
           >
             <DirectionAwareHover
               imageUrl={
-                "https://yukiumihouse.files.wordpress.com/2023/04/psx_20230225_053505.jpg"
+                "/images/psx_20230225_053505.jpg"
               }
             >
               <p className="font-bold text-xl">Yukiumi House Kamikawa</p>

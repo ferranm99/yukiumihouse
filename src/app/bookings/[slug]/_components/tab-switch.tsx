@@ -18,7 +18,7 @@ const tabs = [
   {
     title: "Kamikawa: Hokkaido north side",
     image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg?w=1024",
+      "/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
     content: <KamikawaTour />,
     tour: Tours.Kamikawa,
     url: "/bookings/kamikawa",
@@ -26,7 +26,7 @@ const tabs = [
   {
     title: "Furano: Sea of Snow",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg?w=1024",
+      "/images/blogs/blog-4/img_4184.jpg",
 
     content: <FuranoTour />,
     tour: Tours.Furano,
@@ -35,7 +35,7 @@ const tabs = [
   {
     title: "Custom Day Tour",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
+      "/images/tours/dji_0072.jpg",
     content: <DayTours />,
     tour: Tours.DayTours,
     url: "/bookings/day-tours",

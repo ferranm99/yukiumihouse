@@ -41,7 +41,7 @@ const posts: Post[] = [
   },
   {
     title: "5 days Daisetsu san traverse",
-    image: "https://yukiumihouse.files.wordpress.com/2023/04/img_4184.jpg",
+    image: "/images/blogs/blog-4/img_4184.jpg",
     alt: "Daisetsu san traverse",
     category: "Adventure",
     // date: "April 6, 2023",
@@ -50,7 +50,7 @@ const posts: Post[] = [
   {
     title: "Ishimuro hut mission",
     image:
-      "https://yukiumihouse.files.wordpress.com/2022/12/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
+      "/images/blogs/blog-5/vlcsnap-2022-11-13-14h25m09s320-2-4.jpg",
     alt: "Ishimuro hut mission",
     category: "Adventure",
     // date: "April 6, 2023",
@@ -59,7 +59,7 @@ const posts: Post[] = [
   {
     title: "Behind the mountains: Point of view",
     image:
-      "https://yukiumihouse.files.wordpress.com/2023/04/dji_0072.jpg?w=1024",
+      "/images/tours/dji_0072.jpg",
     alt: "Mountains landscape",
     category: "Place insights",
     // date: "April 6, 2023",
@@ -67,7 +67,7 @@ const posts: Post[] = [
   },
   {
     title: "Trail running Numanodaira",
-    image: "https://yukiumihouse.files.wordpress.com/2022/12/dji_0797.jpg",
+    image: "/images/tours/dji_0797.jpg",
     alt: "Numanodaira",
     category: "Adventure",
     // date: "April 6, 2023",
