@@ -1,32 +1,76 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ContactUsSchema } from "@/schemas";
+import ContactForm from "./components/form";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Contact Us | Yukiumi House",
+  description:
+    "Get in touch with Yukiumi House. Contact us for inquiries, reservations, or any questions you may have about our services.",
+  keywords: [
+    "Contact",
+    "Yukiumi House",
+    "Inquiries",
+    "Reservations",
+    "Questions",
+    "Customer Service"
+  ],
+  authors: [{ name: "ferranm99" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  metadataBase: new URL("https://yukiumihouse.com"),
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Us | Yukiumi House",
+    description:
+      "Get in touch with Yukiumi House. Contact us for inquiries, reservations, or any questions you may have about our services.",
+    url: "https://yukiumihouse.com/contact",
+    siteName: "Yukiumi House",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://yukiumihouse.com/images/contact/photo_2024-08-06_22-53-35.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Yukiumi House",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Yukiumi House",
+    description:
+      "Get in touch with Yukiumi House. Contact us for inquiries, reservations, or any questions you may have about our services.",
+    creator: "@ferranm99",
+    images: ["https://yukiumihouse.com/images/contact/photo_2024-08-06_22-53-35.jpg"],
+  },
+  // Optional: If you use Google Search Console
+  // verification: {
+  //   google: "your-google-verification-code",
+  // },
+};
 
 const ContactPage: React.FC = () => {
-  const form = useForm<z.infer<typeof ContactUsSchema>>({
-    resolver: zodResolver(ContactUsSchema),
-  });
+
   return (
     <div className="flex flex-col my-10 gap-10">
       <section className="flex flex-col items-center justify-center">
@@ -96,80 +140,7 @@ const ContactPage: React.FC = () => {
         <h1 className="text-4xl font-bold text-black pb-8 ">
           Ask Us Anything!
         </h1>
-        <Form {...form}>
-          <form
-            action="https://formsubmit.co/yukiumihouse@gmail.com"
-            method="POST"
-            target="_parent"
-            className="p-4 space-y-6 w-[92%] md:w-[80%] lg:w-[70%] xl:w-[50%] 2xl:w-[40%]"
-          >
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Your name *</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Your name"
-                      required
-                      type="text"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email *</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      type="email"
-                      placeholder="example@example.com"
-                      required
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Message</FormLabel>
-                  <FormControl>
-                    <FormControl>
-                      <textarea
-                        {...field}
-                        placeholder="Your message here..."
-                        className="p-2 border rounded w-full text-sm"
-                        required
-                        rows={15}
-                      />
-                    </FormControl>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className="ml-2 bg-orange-500 text-white p-2 rounded hover:bg-orange-600"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </Form>
+        <ContactForm />
       </section>
       <section className="w-full">
         <h1 className="text-4xl font-bold text-black pb-8 text-center">

@@ -12,14 +12,51 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
-
 export const metadata: Metadata = {
-  title: "Yukiumi House",
-  description: "Book tours and stay at Yukiumi House",
+  title: "Hokkaido Backcountry Skiing | Stay at Yukiumi House Japan",
+  description:
+    "Experience Hokkaido backcountry skiing in Furano, Kamikawa, Kurodake, Asahidake and stay in a cozy lodge near Japan’s best terrain - Yukiumi House.",
+  keywords: [
+    "hokkaido skiing",
+    "hokkaido backcountry skiing",
+    "backcountry ski japan",
+    "japan ski season",
+    "best time to ski in japan",
+    "japan ski trip",
+    "japan ski resorts",
+    "hokkaido backcountry guided tours",
+  ],
   icons: {
     icon: "/icons/favicon.png",
   },
+  openGraph: {
+    title: "Hokkaido Backcountry Skiing | Stay at Yukiumi House Japan",
+    description:
+    "Experience Hokkaido backcountry skiing in Furano, Kamikawa, Kurodake, Asahidake and stay in a cozy lodge near Japan’s best terrain - Yukiumi House.",
+    url: "https://yukiumihouse.com/",
+    images: [
+      {
+        url: "/images/blogs/blog-0/PXL_20240104_063155802.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Asahidake Ropeway",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hokkaido Backcountry Skiing | Stay at Yukiumi House Japan",
+    description:
+    "Experience Hokkaido backcountry skiing in Furano, Kamikawa, Kurodake, Asahidake and stay in a cozy lodge near Japan’s best terrain - Yukiumi House.",
+    images: ["/images/blogs/blog-0/PXL_20240104_063155802.jpg"],
+    creator: "@ferranm99",
+  },
+  metadataBase: new URL("https://yukiumihouse.com"),
+  alternates: {
+    canonical: "https://yukiumihouse.com",
+  },
 };
+
 
 export default function RootLayout({
   children,

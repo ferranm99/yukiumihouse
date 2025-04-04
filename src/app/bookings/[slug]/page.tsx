@@ -1,5 +1,53 @@
 import React from "react";
 import TabSwitch from "./_components/tab-switch";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bookings | Yukiumi House",
+  description:
+    "Book your stay at Yukiumi House. Experience the best hospitality and enjoy the beautiful surroundings.",
+  keywords: [
+    "Bookings",
+    "Yukiumi House",
+    "Book Now",
+    "Accommodation",
+    "Hospitality",
+    "Stay",
+    "Reservations"
+  ],
+  authors: [{ name: "ferranm99" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  metadataBase: new URL("https://yukiumihouse.com"),
+  alternates: {
+    canonical: "/bookings",
+  },
+  openGraph: {
+    title: "Bookings | Yukiumi House",
+    description:
+      "Book your stay at Yukiumi House. Experience the best hospitality and enjoy the beautiful surroundings.",
+    url: "https://yukiumihouse.com/bookings",
+    siteName: "Yukiumi House",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookings | Yukiumi House",
+    description:
+      "Book your stay at Yukiumi House. Experience the best hospitality and enjoy the beautiful surroundings.",
+    creator: "@ferranm99",
+  },
+};
 
 const BookingsPage = ({ params }: { params: { slug: string } }) => {
   return (
