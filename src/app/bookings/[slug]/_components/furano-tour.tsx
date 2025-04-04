@@ -57,7 +57,7 @@ const FuranoTour: React.FC = () => {
       <h2 className="text-3xl font-semibold text-black">FURANO</h2>
       <div className="relative aspect-[2/1] w-[100%] xl:w-[90%] 2xl:w-[80%] rounded-lg mx-auto">
         <Image
-          src="https://yukiumihouse.files.wordpress.com/2023/06/pano-corta-1.jpg"
+          src="/images/tours/furano/pano-corta-1.jpg"
           alt="Furano"
           fill
           style={{ objectFit: "cover" }}
@@ -98,7 +98,7 @@ const FuranoTour: React.FC = () => {
       <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[100%] 2xl:w-[85%] mx-auto items-center justify-center">
         <div className="relative aspect-[16/9] w-full lg:w-full rounded-lg">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0260.jpg"
+            src="/images/tours/furano/dji_0260.jpg"
             alt="Ability"
             fill
             style={{ objectFit: "cover" }}
@@ -273,7 +273,7 @@ const FuranoTour: React.FC = () => {
         </p>
         <div className="relative aspect-[276/155] w-[50%] mx-auto">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/img_3949_2-1.jpg"
+            src="/images/tours/furano/img_3949_2-1.jpg"
             alt=""
             fill
             style={{ objectFit: "cover" }}
@@ -293,7 +293,7 @@ const FuranoTour: React.FC = () => {
         </p>
         <div className="relative aspect-[524/294] w-[50%] mx-auto">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/06/img_20230326_164710-edited.jpg"
+            src="/images/tours/kamikawa/img_20230326_164710-edited.jpg"
             alt="Equipment"
             fill
             style={{ objectFit: "cover" }}
