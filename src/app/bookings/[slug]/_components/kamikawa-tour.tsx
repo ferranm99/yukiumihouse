@@ -58,7 +58,7 @@ const KamikawaTour: React.FC = () => {
       <h2 className="text-3xl font-semibold text-black">KURODAKE KAMIKAWA</h2>
       <div className="relative aspect-[1719/967] w-[100%] xl:w-[90%] 2xl:w-[80%] rounded-lg mx-auto">
         <Image
-          src="https://yukiumihouse.files.wordpress.com/2022/12/dji_0945.jpg"
+          src="/images/tours/kamikawa/dji_0945.jpg"
           alt="Kurodake Kamikawa"
           fill
           style={{ objectFit: "cover" }}
@@ -79,7 +79,7 @@ const KamikawaTour: React.FC = () => {
         </p>
         <div className="relative aspect-[379/252] w-full rounded-lg">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/img_3940.jpg"
+            src="/images/tours/kamikawa/img_3940.jpg"
             alt="Hokkaido Northside"
             fill
             style={{ objectFit: "cover" }}
@@ -94,7 +94,7 @@ const KamikawaTour: React.FC = () => {
       <section className="flex flex-col md:flex-row gap-4 xl:gap-12 2xl:gap-16 w-[100%] 2xl:w-[85%] mx-auto items-center justify-center">
         <div className="relative aspect-[512/341] w-full rounded-lg">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2022/12/img_7564.jpg"
+            src="/images/tours/kamikawa/img_7564.jpg"
             alt="Daisetzusan National park"
             style={{ objectFit: "cover" }}
             fill
@@ -258,7 +258,7 @@ const KamikawaTour: React.FC = () => {
         </Card>
         <div className="relative aspect-[3/2] w-full rounded-xl order-1 md:order-2">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/04/dsc_5595.jpg"
+            src="/images/tours/kamikawa/dsc_5595.jpg"
             alt="Diary"
             fill
             style={{ objectFit: "cover" }}
@@ -294,7 +294,7 @@ const KamikawaTour: React.FC = () => {
         </p>
         <div className="relative aspect-[276/155] w-full lg:w-[75%] 2xl:w-[55%] mx-auto">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/06/pxl_20230204_030604118-edited.jpg"
+            src="/images/tours/kamikawa/pxl_20230204_030604118-edited.jpg"
             alt="Ability"
             fill
             style={{ objectFit: "cover" }}
@@ -315,7 +315,7 @@ const KamikawaTour: React.FC = () => {
         </p>
         <div className="relative aspect-[524/294] w-full lg:w-[75%] 2xl:w-[55%] mx-auto">
           <Image
-            src="https://yukiumihouse.files.wordpress.com/2023/06/img_20230326_164710-edited.jpg"
+            src="/images/tours/kamikawa/img_20230326_164710-edited.jpg"
             alt="Equipment"
             fill
             style={{ objectFit: "cover" }}
